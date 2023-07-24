@@ -7,7 +7,17 @@ export default function Disc(){
         outerDisc:{
             width: '540px',
             height: '540px',
-            backgroundColor: 'blue'
+            backgroundColor: 'yellow',
+            
+
+        },
+        transparentDisc:{
+            width: '520px',
+            height: '520px',
+            backgroundColor:'blue',
+            position:'absolute',
+            top:'10px',
+            left:'10px'
         },
         innerDisc:{
             width: '500px',
@@ -15,14 +25,13 @@ export default function Disc(){
             backgroundColor:'red'
         }
     }
-
     return(
         <div className="disc">
-            <Circle customStyle={style.outerDisc} >
-                <Circle customStyle={style.innerDisc}/>
-            </Circle>
-
-
+            <Circle customStyle={style.outerDisc} />
+               
+            <Circle customStyle={style.transparentDisc}/>
         </div>
     )
 }
+
+

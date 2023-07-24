@@ -2,5 +2,31 @@
   width: 1280px;
   height: 800px;
   background-color: #FFEDF7;
+  position: relative;
+
+  .left-section{
+    width: 830px;
+    display:flex;
+    flex-direction: column;
+    .upper{
+      height:249px;
+    }
+    .middle{
+      height:48px;
+    }
+    .lower-middle{
+      height:342.5px;
+    }
+    .lower{
+      height:160.5px;
+    }
+  }
+  .right-section{
+    width:450px;
+    
+
+
+  }
+
 
 }
