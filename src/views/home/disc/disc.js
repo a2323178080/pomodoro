@@ -1,5 +1,9 @@
+
 import "./disc.scss";
-import Circle from '../../../components/circle'
+import Circle from '../../../components/circle';
+import Triangle from "../../../components/triangle";
+import ResetButton from "./reset-button";
+import Input from "../input/input"
 
 export default function Disc(){
 
@@ -7,29 +11,60 @@ export default function Disc(){
         outerDisc:{
             width: '540px',
             height: '540px',
-            backgroundColor: 'yellow',
-            
+            border: `5px solid var(--pink)`,
+
 
         },
-        transparentDisc:{
+        countdownBar:{
             width: '520px',
             height: '520px',
-            backgroundColor:'blue',
-            position:'absolute',
-            top:'10px',
-            left:'10px'
+            backgroundColor:'transparent',
+
+
         },
         innerDisc:{
-            width: '500px',
-            height: '500px',
-            backgroundColor:'red'
+            width: '520px',
+            height: '520px',
+            backgroundColor: 'var(--pink)',
+            margin:'10px',
+            display:'flex',
+            justifyContent:'center',
+            alignItems:'center',
+
+
+        },
+        button:{
+            width: '96px',
+            height: '96px',
+            backgroundColor: 'var(--white)',
+            display:'flex',
+            justifyContent:'center',
+            alignItems:'center',
+        },
+        triangle:{
+            borderColor: 'transparent transparent transparent red',
+            marginLeft:'25px',
+
         }
     }
     return(
         <div className="disc">
-            <Circle customStyle={style.outerDisc} />
-               
-            <Circle customStyle={style.transparentDisc}/>
+
+            <Circle customStyle={style.outerDisc} >
+                <Circle customStyle={style.countdownBar}>
+                    <Circle customStyle={style.innerDisc}>
+                        <Circle customStyle={style.button} >
+                            <Triangle customStyle={style.triangle}></Triangle>
+                        </Circle>
+                    </Circle>
+                </Circle>
+            </Circle>
+
+
+            <ResetButton/>
+
+
+
         </div>
     )
 }
