@@ -5,22 +5,18 @@ import Triangle from "../../../components/triangle";
 import ResetButton from "./reset-button";
 import Input from "../input/input"
 
-export default function Disc(){
+export default function Disc({startAndHold}){
 
     const style={
         outerDisc:{
             width: '540px',
             height: '540px',
             border: `5px solid var(--pink)`,
-
-
         },
         countdownBar:{
             width: '520px',
             height: '520px',
             backgroundColor:'transparent',
-
-
         },
         innerDisc:{
             width: '520px',
@@ -30,8 +26,6 @@ export default function Disc(){
             display:'flex',
             justifyContent:'center',
             alignItems:'center',
-
-
         },
         button:{
             width: '96px',
@@ -44,27 +38,20 @@ export default function Disc(){
         triangle:{
             borderColor: 'transparent transparent transparent red',
             marginLeft:'25px',
-
         }
     }
     return(
         <div className="disc">
-
             <Circle customStyle={style.outerDisc} >
                 <Circle customStyle={style.countdownBar}>
                     <Circle customStyle={style.innerDisc}>
-                        <Circle customStyle={style.button} >
+                        <Circle customStyle={style.button} startAndHold={startAndHold}>
                             <Triangle customStyle={style.triangle}></Triangle>
                         </Circle>
                     </Circle>
                 </Circle>
             </Circle>
-
-
             <ResetButton/>
-
-
-
         </div>
     )
 }
