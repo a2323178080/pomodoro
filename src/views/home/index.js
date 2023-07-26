@@ -9,10 +9,12 @@ import Time from "./time/time.js";
 export default function Home(){
 
 
-    // 與Disc.js組件相關
-    // const startAndHold = () => {
-    //     alert("測試");
-    // }
+
+
+
+
+
+
 
     return(
         <div className="home">
@@ -24,9 +26,13 @@ export default function Home(){
                 <div className="lower"></div>
             </div>
             <div className="right-section">
+
             </div>
 
             <Disc/>
+
+
+
         </div>
     )
 }

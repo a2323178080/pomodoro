@@ -10,16 +10,33 @@ function App() {
   const cartReducer=useReducer((state,action)=>{
     switch(action.type){
       case 'START_AND_HOLD':
-        console.log('actionaction', action)
+
         return {
           ...state,
           buttonSwitch: action.payload
         }
+
+      // case 'RESET':
+      //   console.log('REST測試', action)
+      //   return {
+      //     ...state,
+      //     buttonSwitch: action.payload
+      //   }
+
+      case "END":
+        console.log('111111')
+        return  {
+          ...state,
+          end: true
+        }
+
       default:
         return state
     }
   },{
     buttonSwitch: false,
+    time: 1500,
+    end: false,
     todos: []
   })
 
