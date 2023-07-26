@@ -8,31 +8,23 @@ import Time from "./time/time.js";
 
 export default function Home(){
 
-
-
-
-
-
-
-
-
     return(
         <div className="home">
 
-            <div className="left-section">
-                <div className="upper"><Input/></div>
-                <div className="middle"><Task/></div>
-                <div className="lower-middle"><Time/></div>
-                <div className="lower"></div>
+            <div className="layout">
+                <Input/>
+                <Time/>
+                <Disc/>
             </div>
-            <div className="right-section">
-
-            </div>
-
-            <Disc/>
-
-
-
+            {/*<div className="left-section">*/}
+            {/*    <Input className="upper"/>*/}
+            {/*    /!*<div className="upper"><Input/></div>*!/*/}
+            {/*    <div className="middle"><Task/></div>*/}
+            {/*    <div className="lower-middle"><Time/></div>*/}
+            {/*    <div className="lower"></div>*/}
+            {/*</div>*/}
+            {/*<div className="right-section">*/}
+            {/*</div>*/}
         </div>
     )
 }

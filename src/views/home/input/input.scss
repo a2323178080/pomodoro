@@ -1,10 +1,4 @@
 .input{
-  margin-top: 48px;
-  margin-left: 85px;
-  position: relative;
-
-
-
   .inputArea{
     width: 445px;
     height: 56px;
@@ -34,3 +28,45 @@
 
   }
 }
+
+
+
+
+
+
+//.input{
+//  margin-top: 48px;
+//  margin-left: 85px;
+//  position: relative;
+//
+//
+//
+//  .inputArea{
+//    width: 445px;
+//    height: 56px;
+//    /* UI Properties */
+//    background: #FFFFFF 0% 0% no-repeat padding-box;
+//    opacity: 1;
+//    border:0px;
+//
+//    &__plusIcon{
+//      position: absolute;
+//      left: 405px;
+//      top:16px;
+//      color: var(--pink);
+//
+//    }
+//
+//    &::placeholder {
+//      white-space: nowrap;
+//      font: italic normal bold 16px/19px Roboto;
+//      letter-spacing: 0px;
+//      text-transform: uppercase;
+//      color:var(--pink);
+//    }
+//
+//
+//
+//
+//  }
+//}

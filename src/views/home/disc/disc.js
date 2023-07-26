@@ -7,45 +7,12 @@ import Button from "./button";
 
 export default function Disc({startAndHold}){
 
-    const style={
-        outerDisc:{
-            width: '540px',
-            height: '540px',
-            border: `5px solid var(--pink)`,
-        },
-        countdownBar:{
-            width: '520px',
-            height: '520px',
-            backgroundColor:'transparent',
-        },
-        innerDisc:{
-            width: '520px',
-            height: '520px',
-            backgroundColor: 'var(--pink)',
-            margin:'10px',
-            display:'flex',
-            justifyContent:'center',
-            alignItems:'center',
-        },
-        button:{
-            width: '96px',
-            height: '96px',
-            backgroundColor: 'var(--white)',
-            display:'flex',
-            justifyContent:'center',
-            alignItems:'center',
-        },
-        triangle:{
-            borderColor: 'transparent transparent transparent red',
-            marginLeft:'25px',
-        }
-    }
     return(
         <div className="disc">
 
-            <Circle customStyle={style.outerDisc} >
-                <Circle customStyle={style.countdownBar}>
-                    <Circle customStyle={style.innerDisc}>
+            <Circle size={540} shape="circle" border="bold">
+                <Circle size={520}>
+                    <Circle shape="circle" bg="pink"  size={520}>
                         <Button></Button>
                     </Circle>
                 </Circle>
