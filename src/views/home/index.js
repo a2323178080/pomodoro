@@ -8,21 +8,11 @@ import Time from "./time/time.js";
 
 export default function Home(){
 
-// 與Disc.js組件相關
-    const initialNumber = 2;
-    const [time, setTime] = useState(initialNumber);
-
-    let apple = null;
-    const [workCondition, setWorkCondition] = useState('work');
-    const [startCondition, setStartCondition] = useState('hold');
-// localStorage
-    const localTodoList = JSON.parse(localStorage.getItem("key") || "[]");
-    const localDoneTodoList = JSON.parse(localStorage.getItem("done") || "[]");
 
     // 與Disc.js組件相關
-    const startAndHold = () => {
-        alert("測試");
-    }
+    // const startAndHold = () => {
+    //     alert("測試");
+    // }
 
     return(
         <div className="home">
@@ -36,7 +26,7 @@ export default function Home(){
             <div className="right-section">
             </div>
 
-            <Disc startAndHold={startAndHold}/>
+            <Disc/>
         </div>
     )
 }

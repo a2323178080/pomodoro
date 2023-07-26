@@ -3,7 +3,7 @@ import "./disc.scss";
 import Circle from '../../../components/circle';
 import Triangle from "../../../components/triangle";
 import ResetButton from "./reset-button";
-import Input from "../input/input"
+import Button from "./button";
 
 export default function Disc({startAndHold}){
 
@@ -42,12 +42,11 @@ export default function Disc({startAndHold}){
     }
     return(
         <div className="disc">
+
             <Circle customStyle={style.outerDisc} >
                 <Circle customStyle={style.countdownBar}>
                     <Circle customStyle={style.innerDisc}>
-                        <Circle customStyle={style.button} startAndHold={startAndHold}>
-                            <Triangle customStyle={style.triangle}></Triangle>
-                        </Circle>
+                        <Button></Button>
                     </Circle>
                 </Circle>
             </Circle>
