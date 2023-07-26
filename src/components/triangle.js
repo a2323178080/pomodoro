@@ -1,13 +1,14 @@
 import "./triangle.scss";
 
-export default function Triangle({customStyle}){
+export default function Triangle(){
+
 
 
 
 
 
     return(
-        <div className="triangle" style={customStyle}>
+        <div className="triangle" >
 
         </div>
     )
