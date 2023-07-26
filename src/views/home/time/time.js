@@ -35,7 +35,7 @@ export default function Time(){
             (function(){
                 dispatch({
                     type:'WORK_AND_REST',
-                    payload:state.workCondition=='work'?'rest':'work'
+                    payload:state.workCondition==='work'?'rest':'work'
                 })
             })();
 

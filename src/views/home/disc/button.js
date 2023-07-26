@@ -14,7 +14,7 @@ export default function Button(){
             dispatch({
                 type:'START_AND_HOLD',
                 // payload: !state.startCondition,
-                payload:state.startCondition=='hold'?'start':'hold'
+                payload:state.startCondition==='hold'?'start':'hold'
             })
         }}>
             <Circle  size={96} bg="white">
