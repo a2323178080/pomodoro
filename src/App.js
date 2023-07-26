@@ -8,12 +8,19 @@ import {CartContext} from "./components/store";
 function App() {
 
   const cartReducer=useReducer((state,action)=>{
-    switch(action){
+    switch(action.type){
+      case 'START_AND_HOLD':
+        console.log('actionaction', action)
+        return {
+          ...state,
+          buttonSwitch: action.payload
+        }
       default:
         return state
     }
   },{
-    cartList:[],
+    buttonSwitch: false,
+    todos: []
   })
 
   return (

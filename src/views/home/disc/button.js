@@ -1,7 +1,12 @@
 import "./button.scss";
 import Circle from "../../../components/circle";
 import Triangle from "../../../components/triangle";
+
+import {useContext, useEffect} from 'react';
+import {CartContext} from "../../../components/store";
 export default function Button(){
+
+    const [state,dispatch]=useContext(CartContext);
 
     const style={
         circle:{
@@ -19,11 +24,16 @@ export default function Button(){
     }
 
     return(
-        <div className="button">
+        <div className="button" onClick={()=>{
+            dispatch({
+                type:'START_AND_HOLD',
+                payload: !state.buttonSwitch
+
+            })
+        }}>
             <Circle customStyle={style.circle}>
                 <Triangle customStyle={style.triangle}></Triangle>
             </Circle>
-
 
         </div>
     )
