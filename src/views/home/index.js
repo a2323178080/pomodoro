@@ -14,8 +14,8 @@ export default function Home(){
 
             <div className="layout">
                 <Input/>
-                <Time/>
-                <Disc/>
+                <Time className="position"/>
+                <Disc className="position"/>
                 <TodoList/>
 
             </div>

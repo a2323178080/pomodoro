@@ -32,7 +32,6 @@ function App() {
             newTodo
           ]
         }
-
       case 'REMOVE_TODO':
         const afterRemoveTodo = [...state.todoList].filter((item) => {
           return item.id !== action.payload.id;
@@ -41,22 +40,11 @@ function App() {
           ...state,
           todoList: afterRemoveTodo
         }
-
-
       case 'SHOW_TODO':
-        const afterShowTodo = [...state.todoList].filter((item) => {
-          return item.id == action.payload.id;
-        });
         return {
           ...state,
-          showTodoList: afterShowTodo
+          showTodoList: action.payload.value
         }
-
-
-
-
-
-
       default:
         return state
     }
@@ -64,8 +52,7 @@ function App() {
     startCondition: 'hold',
     workCondition:'work',
     todoList:[],
-    showTodoList:[],
-
+    showTodoList:"",
   })
 
 

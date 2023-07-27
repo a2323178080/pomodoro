@@ -4,7 +4,7 @@ import {CartContext} from "../../../components/store";
 
 let countdown = null;
 
-export default function Time(){
+export default function Time({className}){
 
     const [state, dispatch]=useContext(CartContext);
 
@@ -48,7 +48,7 @@ export default function Time(){
     console.log('time組件',state.workCondition);
 
     return(
-        <div className="time">
+        <div className={`time${className ? ' ' + className : ''}`}>
             <div>{`
                 ${minutes}:${remainderSeconds < 10
                 ? "0" + remainderSeconds

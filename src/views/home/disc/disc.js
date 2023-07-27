@@ -9,7 +9,7 @@ import Triangle from "../../../components/triangle";
 import ResetButton from "./reset-button";
 import Button from "./button";
 
-export default function Disc({startAndHold}){
+export default function Disc({className}){
 
     const [state,dispatch]=useContext(CartContext);
 
@@ -38,9 +38,9 @@ export default function Disc({startAndHold}){
         }
     }
     return(
-        <div className="disc" >
+        <div className={`disc${className ? ' ' + className : ''}`} >
 
-            <Circle size={540} shape="circle" borderColor={borderColor[state.workCondition]} >
+            <Circle size={540} shape="circle" borderColor={borderColor[state.workCondition]}  >
                 <Circle size={520}  >
 
                     <Circle shape="circle" bg={circleColor[state.startCondition][state.workCondition]} size={520}

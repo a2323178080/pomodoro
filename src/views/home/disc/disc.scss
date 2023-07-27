@@ -1,6 +1,8 @@
 
 .disc{
-    position: absolute;
-    top: 82px;
-    left: 480px;
+    &.position{
+        position: absolute;
+        top: 82px;
+        left: 480px;
+    }
 }

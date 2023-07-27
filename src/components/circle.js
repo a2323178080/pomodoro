@@ -2,7 +2,7 @@
 // import {CartContext} from "../../../components/store";
 
 import "./circle.scss"
-export default function Circle({children, startAndHold, size, shape, bg, border,borderColor}){
+export default function Circle({children, startAndHold, size, bg,borderColor}){
 
     // const [state,dispatch]=useContext(CartContext);
 

@@ -1,6 +1,5 @@
 .time{
-  position: absolute;
-  top:249px;
+
   width: 454px;
   height: 206px;
   text-align: center;
@@ -8,6 +7,12 @@
   letter-spacing: 0px;
   color: var(--pink);
   opacity: 1;
+
+  &.position{
+    position: absolute;
+    top:249px;
+
+  }
 
 
 }
