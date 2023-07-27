@@ -23,12 +23,10 @@ export default function Disc({startAndHold}){
             "rest": "white"
         }
     }
-
     const borderColor = {
         "work":"pink",
         "rest":"blue"
     }
-
     const resetColor = {
         "hold": {
             "work": "white",
@@ -39,7 +37,6 @@ export default function Disc({startAndHold}){
             "rest": "blue"
         }
     }
-
     return(
         <div className="disc" >
 
@@ -50,11 +47,9 @@ export default function Disc({startAndHold}){
                             borderColor={borderColor[state.workCondition]}>
                         <Button/>
                     </Circle>
-
                 </Circle>
             </Circle>
             <ResetButton bg={resetColor[state.startCondition][state.workCondition]}/>
-
         </div>
     )
 }

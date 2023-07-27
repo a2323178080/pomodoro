@@ -1,8 +1,42 @@
 .todoList{
+  width:445px;
+  height:32px;
   position: absolute;
   top:610px;
+  &--font{
+    font: normal normal bold 24px/28px Roboto;
+    letter-spacing: 0px;
+    color: #003164;
+    text-transform: uppercase;
+    opacity: 1;
+    margin-left: 0px;
+  }
+  &--icon {
+    cursor: pointer;
+  }
+  &--li{
+    display:flex;
 
+    .playIcon{
+      margin-left: auto;
+    }
+  }
 
+  .more{
+    text-align: right;
+    font: normal normal bold 16px/19px Roboto;
+    letter-spacing: 0px;
+    cursor:pointer;
 
+    &--work{
+      color:var(--pink);
+
+    }
+    &--rest{
+      color:var(--blue);
+
+    }
+
+  }
 
 }

@@ -30,18 +30,15 @@ function App() {
           ]
         }
 
-
       default:
         return state
     }
   },{
-//測試
     startCondition: 'hold',
     workCondition:'work',
     todoList:[]
 
   })
-
   return (
       <CartContext.Provider value={cartReducer}>
     <div>
