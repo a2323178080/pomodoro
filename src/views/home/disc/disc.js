@@ -24,28 +24,39 @@ export default function Disc({startAndHold}){
         }
     }
 
+    const borderColor = {
+        "work":"pink",
+        "rest":"blue"
+    }
+
+    const resetColor = {
+        "hold": {
+            "work": "white",
+            "rest": "white"
+        },
+        "start": {
+            "work": 'pink',
+            "rest": "blue"
+        }
+    }
+
     return(
-        <div className="disc">
+        <div className="disc" >
 
-            <Circle size={540} shape="circle" border="bold" >
-                <Circle size={520} >
+            <Circle size={540} shape="circle" borderColor={borderColor[state.workCondition]} >
+                <Circle size={520}  >
 
-
-                    <Circle shape="circle" bg={circleColor[state.startCondition][state.workCondition]} size={520} >
+                    <Circle shape="circle" bg={circleColor[state.startCondition][state.workCondition]} size={520}
+                            borderColor={borderColor[state.workCondition]}>
                         <Button/>
                     </Circle>
 
                 </Circle>
             </Circle>
-            <ResetButton/>
+            <ResetButton bg={resetColor[state.startCondition][state.workCondition]}/>
+
         </div>
     )
 }
 
 
-// {state.startCondition=='hold'?<Circle shape="circle" bg="pink"  size={520} >
-//         <Button/>
-//     </Circle>:
-//     <Circle shape="circle" bg="white"  size={520} >
-//         <Button/>
-//     </Circle>}

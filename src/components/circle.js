@@ -1,9 +1,8 @@
 // import {useContext} from 'react';
 // import {CartContext} from "../../../components/store";
 
-
 import "./circle.scss"
-export default function Circle({children, startAndHold, size, shape, bg, border}){
+export default function Circle({children, startAndHold, size, shape, bg, border,borderColor}){
 
     // const [state,dispatch]=useContext(CartContext);
 
@@ -12,11 +11,6 @@ export default function Circle({children, startAndHold, size, shape, bg, border}
         height: size,
     }
 
-    const newShape = {
-        circle: {
-            border: '1px solid var(--pink)'
-        },
-    }
 
     const bgColor = {
         pink: {
@@ -27,18 +21,28 @@ export default function Circle({children, startAndHold, size, shape, bg, border}
         },
         blue: {
             backgroundColor: 'var(--blue)',
-        }
+        },
+
     }
-    const borderWidth = {
-        bold: {
-            borderWidth: '5px'
-        }
+
+    const newBorderColor = {
+        pink: {
+            border: '3px solid var(--pink)',
+        },
+        white: {
+            border: '3px solid var(--white)',
+        },
+
+        blue: {
+            border: '3px solid var(--blue)',
+        },
+
     }
+
     const newStyle = {
         ...initStyle,
-        ...newShape[shape],
         ...bgColor[bg],
-        ...borderWidth[border]
+        ...newBorderColor[borderColor]
     }
 
     return(
