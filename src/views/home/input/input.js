@@ -19,7 +19,6 @@ export default function Input({className}) {
                     value
                 },
             })
-
             setValue("");
         }
     };

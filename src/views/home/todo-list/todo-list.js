@@ -16,6 +16,17 @@ export default function TodoList(){
         })
     }
 
+    const showTodo = (id) => {
+        dispatch({
+            type: 'SHOW_TODO',
+            payload: {
+                id
+            }
+        })
+    }
+
+    console.log("asdasdasdasd",state.showTodoList)
+
     return(
         <div className="todoList" >
             {state.todoList.map((todo,index)=>{
@@ -27,12 +38,14 @@ export default function TodoList(){
                                     onClick={() => removeTodo(todo.id)}
                                     >radio_button_unchecked</span>
                                     <span>{todo.do}</span>
-                                    <span className="material-icons todoList--icon playIcon">play_circle_outline</span>
+                                    <span className="material-icons todoList--icon playIcon"
+                                          onClick={() => showTodo(todo.id)}>play_circle_outline</span>
                                 </li>
                     </ul>)
                 }
             })}
             {state.todoList.length>3?<div className={`more more--${state.workCondition}`}>MORE</div>:<div></div>}
+
         </div>
     )
 }

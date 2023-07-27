@@ -34,13 +34,28 @@ function App() {
         }
 
       case 'REMOVE_TODO':
-        const newTodoList = [...state.todoList].filter((item) => {
+        const afterRemoveTodo = [...state.todoList].filter((item) => {
           return item.id !== action.payload.id;
         });
         return {
           ...state,
-          todoList: newTodoList
+          todoList: afterRemoveTodo
         }
+
+
+      case 'SHOW_TODO':
+        const afterShowTodo = [...state.todoList].filter((item) => {
+          return item.id == action.payload.id;
+        });
+        return {
+          ...state,
+          showTodoList: afterShowTodo
+        }
+
+
+
+
+
 
       default:
         return state
@@ -48,9 +63,12 @@ function App() {
   },{
     startCondition: 'hold',
     workCondition:'work',
-    todoList:[]
+    todoList:[],
+    showTodoList:[],
 
   })
+
+
   return (
       <CartContext.Provider value={cartReducer}>
     <div>
