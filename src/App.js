@@ -20,13 +20,25 @@ function App() {
           workCondition: action.payload
         }
 
+
+      case 'ADD_TODO':
+        return {
+          ...state,
+          todoList: [
+              ...state.todoList,
+            action.payload
+          ]
+        }
+
+
       default:
         return state
     }
   },{
-
+//測試
     startCondition: 'hold',
-    workCondition:'work'
+    workCondition:'work',
+    todoList:[]
 
   })
 

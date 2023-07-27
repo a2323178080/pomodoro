@@ -5,6 +5,7 @@ import "./home.scss"
 import Input from "./input/input";
 import Task from "./task/task.js";
 import Time from "./time/time.js";
+import TodoList from "./todo-list/todo-list"
 
 export default function Home(){
 
@@ -15,16 +16,10 @@ export default function Home(){
                 <Input/>
                 <Time/>
                 <Disc/>
+                <TodoList/>
+
             </div>
-            {/*<div className="left-section">*/}
-            {/*    <Input className="upper"/>*/}
-            {/*    /!*<div className="upper"><Input/></div>*!/*/}
-            {/*    <div className="middle"><Task/></div>*/}
-            {/*    <div className="lower-middle"><Time/></div>*/}
-            {/*    <div className="lower"></div>*/}
-            {/*</div>*/}
-            {/*<div className="right-section">*/}
-            {/*</div>*/}
+
         </div>
     )
 }
