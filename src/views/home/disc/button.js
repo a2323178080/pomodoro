@@ -8,17 +8,22 @@ export default function Button(){
 
     const [state,dispatch]=useContext(CartContext);
 
+    const style={
 
+        triangle:{
+            borderColor: 'transparent transparent transparent red',
+            marginLeft:'25px',
+        }
+    }
     return(
         <div className="button" onClick={()=>{
             dispatch({
                 type:'START_AND_HOLD',
-                // payload: !state.startCondition,
-                payload:state.startCondition==='hold'?'start':'hold'
+                payload: state.startCondition==='hold'?'start':'hold'
             })
         }}>
             <Circle  size={96} bg="white">
-                <Triangle ></Triangle>
+                <Triangle customStyle={style.triangle}></Triangle>
             </Circle>
         </div>
     )

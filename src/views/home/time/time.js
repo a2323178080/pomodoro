@@ -14,7 +14,7 @@ export default function Time(){
 
     // 與Disc.js組件相關
     useEffect(() => {
-        if (state.startCondition) {
+        if (state.startCondition==='start') {
             countdown= setInterval(function() {
                 setTime((pre) => pre - 1)
             }, 1000);
@@ -31,16 +31,16 @@ export default function Time(){
         if(time === 0) {
             clearInterval(countdown);
 
-
             (function(){
                 dispatch({
                     type:'WORK_AND_REST',
                     payload:state.workCondition==='work'?'rest':'work'
                 })
+                dispatch({
+                    type:'START_AND_HOLD',
+                    payload: 'hold'
+                })
             })();
-
-
-
 
         }
     }, [time])

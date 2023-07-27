@@ -13,6 +13,16 @@ export default function Disc({startAndHold}){
 
     const [state,dispatch]=useContext(CartContext);
 
+    const circleColor = {
+        "hold": {
+            "work": "pink",
+            "rest": "blue"
+        },
+        "start": {
+            "work": 'white',
+            "rest": "white"
+        }
+    }
 
     return(
         <div className="disc">
@@ -21,8 +31,7 @@ export default function Disc({startAndHold}){
                 <Circle size={520} >
 
 
-
-                    <Circle shape="circle" bg={state.startCondition==='hold'?'pink':'white'} size={520} >
+                    <Circle shape="circle" bg={circleColor[state.startCondition][state.workCondition]} size={520} >
                         <Button/>
                     </Circle>
 
