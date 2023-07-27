@@ -21,7 +21,6 @@
       margin-left: auto;
     }
   }
-
   .more{
     text-align: right;
     font: normal normal bold 16px/19px Roboto;
@@ -30,13 +29,9 @@
 
     &--work{
       color:var(--pink);
-
     }
     &--rest{
       color:var(--blue);
-
     }
-
   }
-
 }

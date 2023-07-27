@@ -34,7 +34,7 @@ export default function ResetButton({bg}){
              onClick={()=>{
             dispatch({
                 type:'START_AND_HOLD',
-                payload: false
+                payload: "hold"
             })
         }}>
 

@@ -20,14 +20,26 @@ function App() {
           workCondition: action.payload
         }
 
-
       case 'ADD_TODO':
+        const newTodo = {
+          do: action.payload.value,
+          id: Date.now()
+        }
         return {
           ...state,
           todoList: [
               ...state.todoList,
-            action.payload
+            newTodo
           ]
+        }
+
+      case 'REMOVE_TODO':
+        const newTodoList = [...state.todoList].filter((item) => {
+          return item.id !== action.payload.id;
+        });
+        return {
+          ...state,
+          todoList: newTodoList
         }
 
       default:

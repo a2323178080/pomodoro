@@ -12,10 +12,11 @@ export default function Input({className}) {
     };
     const addTodo = () => {
         if (value.trim() !== "") {
-            //測試
+
             dispatch({
-                type: 'ADD_TODO', payload: {
-                    do: value, id: Date.now()
+                type: 'ADD_TODO',
+                payload: {
+                    value
                 },
             })
 
