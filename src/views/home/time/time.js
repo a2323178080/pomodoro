@@ -15,11 +15,25 @@ export default function Time({className}){
     // 與Disc.js組件相關
     useEffect(() => {
         if (state.startCondition==='start') {
+
+            // 沒有延遲
+            // function instant() {
+            //         setTime((pre) => pre - 1)
+            //     }
+            // countdown=setInterval(instant,1000)
+            // instant();
+
+
+            // 有遲延
             countdown= setInterval(function() {
                 setTime((pre) => pre - 1)
             }, 1000);
 
+
+
         }
+
+
         return () => {
             clearInterval(countdown);
         }
