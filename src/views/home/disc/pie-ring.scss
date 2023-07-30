@@ -13,10 +13,9 @@
     height:540px;
     border-radius:0px 270px 270px 0px;
     overflow:hidden;
-    animation:a1 5s infinite linear;
-    //&--hold{
-    //  animation-play-state: paused;
-    //}
+    //animation:a1 5s infinite linear;
+    animation:a1 5s linear 0s infinite;
+
     &--work--hold {
       border-color:#FF4384;
       animation-play-state: paused;
@@ -49,9 +48,7 @@
     transform:rotate(-90deg);
     z-index:1;
     animation:a2 5s infinite linear;
-    //&--hold{
-    //  animation-play-state: paused;
-    //}
+
 
     &--work--hold {
       border-color:#FF4384;
@@ -86,9 +83,7 @@
     transform:rotate(90deg);
     z-index:2;
     animation:a3 5s infinite linear;
-    //&--hold{
-    //  animation-play-state: paused;
-    //}
+
 
     &--work--hold {
       border-color:#FF4384;

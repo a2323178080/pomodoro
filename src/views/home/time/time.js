@@ -19,8 +19,6 @@ export default function Time({className}){
                 setTime((pre) => pre - 1)
             }, 1000);
 
-        } else {
-            setTime(5)
         }
         return () => {
             clearInterval(countdown);
@@ -29,7 +27,8 @@ export default function Time({className}){
 
     useEffect(() => {
         if(time === 0) {
-            clearInterval(countdown);
+            setTime(5);
+            // clearInterval(countdown);
 
             (function(){
                 dispatch({
