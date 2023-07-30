@@ -37,7 +37,6 @@ const useColor = () => {
             return "white"
         }
     }
-
     // function all(shapeType) {
     //     console.log('shapeType', shapeType)
     //     const colorMap = {
@@ -62,15 +61,12 @@ const useColor = () => {
     //         return "white";
     //     }
     // }
-
     function all(type){
         if(type === 'circle' && state.startCondition==="start"){
             return "white"
         }
         return state.workCondition === 'work'?'pink':'blue'
     }
-
-
     useEffect(() => {
         setReset(resetColor[state.startCondition][state.workCondition])
         setRingColor(ring())

@@ -8,7 +8,7 @@ export default function Time({className}){
 
     const [state, dispatch]=useContext(CartContext);
 
-    const [time, setTime] = useState(2);
+    const [time, setTime] = useState(5);
     const minutes = Math.floor(time / 60);
     const remainderSeconds = time % 60;
 
@@ -20,7 +20,7 @@ export default function Time({className}){
             }, 1000);
 
         } else {
-            setTime(2)
+            setTime(5)
         }
         return () => {
             clearInterval(countdown);

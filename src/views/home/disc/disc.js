@@ -8,6 +8,7 @@ import Circle from '../../../components/circle';
 import Triangle from "../../../components/triangle";
 import ResetButton from "./reset-button";
 import Button from "./button";
+import PieRing from "./pie-ring";
 
 export default function Disc({className}){
 
@@ -28,6 +29,8 @@ export default function Disc({className}){
                 </Circle>
             </Circle>
             <ResetButton bg={reset}/>
+
+            <PieRing/>
         </div>
     )
 }
