@@ -2,7 +2,21 @@ import "./time.scss"
 import {useContext, useEffect, useState} from 'react';
 import {CartContext} from "../../../components/store";
 let countdown = null;
-export default function Time({className}){
+export default function Time({className,color}){
+
+    const newColor={
+        pink:{
+            color:'var(--pink)',
+        },
+        blue:{
+            color:'var(--blue)'
+        }
+    }
+
+    const newStyle={
+        ...newColor[color]
+    }
+
     const [state, dispatch]=useContext(CartContext);
     const [time, setTime] = useState(5);
     const minutes = Math.floor(time / 60);
@@ -47,7 +61,7 @@ export default function Time({className}){
         }
     }, [time])
     return(
-        <div className={`time${className ? ' ' + className : ''}`}>
+        <div className={`time${className ? ' ' + className : ''}`} style={newStyle}>
             <div>{`
                 ${minutes}:${remainderSeconds < 10
                 ? "0" + remainderSeconds

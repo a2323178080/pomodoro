@@ -41,8 +41,7 @@ const useColor = () => {
         if(type === 'circle' && state.startCondition==="start"){
             return "white"
         }
-
-        else if(type === 'triangle'||'iconCircle'){
+        else if(type === 'triangle'||'iconCircle'||'time'){
             return state.workCondition==="work"?'pink':'blue'
         }
         return state.workCondition === 'work'?'pink':'blue'
