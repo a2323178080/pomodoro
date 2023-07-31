@@ -1,17 +1,12 @@
 import "./time.scss"
 import {useContext, useEffect, useState} from 'react';
 import {CartContext} from "../../../components/store";
-
 let countdown = null;
-
 export default function Time({className}){
-
     const [state, dispatch]=useContext(CartContext);
-
     const [time, setTime] = useState(5);
     const minutes = Math.floor(time / 60);
     const remainderSeconds = time % 60;
-
     // 與Disc.js組件相關
     useEffect(() => {
         if (state.startCondition==='start') {
@@ -27,12 +22,7 @@ export default function Time({className}){
             countdown= setInterval(function() {
                 setTime((pre) => pre - 1)
             }, 1000);
-
-
-
         }
-
-
         return () => {
             clearInterval(countdown);
         }
@@ -56,9 +46,6 @@ export default function Time({className}){
 
         }
     }, [time])
-
-    console.log('time組件',state.workCondition);
-
     return(
         <div className={`time${className ? ' ' + className : ''}`}>
             <div>{`

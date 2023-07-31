@@ -1,7 +1,5 @@
-import "./start-icon.scss";
 import Circle from "../../../components/circle";
 import Triangle from "../../../components/triangle";
-
 import {useContext, useEffect} from 'react';
 import {CartContext} from "../../../components/store";
 import useColor from "../../../hook/useColor";
@@ -20,7 +18,6 @@ export default function StartIcon(){
             <Circle  size={96} bg="white">
                 <Triangle borderColor={all('triangle')}></Triangle>
             </Circle>
-
         </div>
     )
 }

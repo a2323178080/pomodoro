@@ -1,5 +1,4 @@
 .pieRing{
-
   position: absolute;
   top: 0px;
   left: 0px;
@@ -15,7 +14,6 @@
     overflow:hidden;
     //animation:a1 5s infinite linear;
     animation:a1 5s linear 0s infinite;
-
     &--work--hold {
       border-color:#FF4384;
       animation-play-state: paused;

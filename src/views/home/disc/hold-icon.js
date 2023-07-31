@@ -1,16 +1,11 @@
-import "./hold-icon.scss";
 import Circle from "../../../components/circle";
 import Rectangle from "../../../components/rectangle";
 import useColor from "../../../hook/useColor";
-
-
 import {useContext, useEffect} from 'react';
 import {CartContext} from "../../../components/store";
 export default function HoldIcon(){
-
     const [state,dispatch]=useContext(CartContext);
     const {all}=useColor();
-
 
     return(
         <div className="button" onClick={()=>{

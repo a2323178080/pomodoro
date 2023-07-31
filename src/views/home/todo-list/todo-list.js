@@ -1,11 +1,9 @@
-
 import {CartContext} from "../../../components/store";
 import { useContext} from "react";
 
 import "./todo-list.scss";
 export default function TodoList(){
     const [state, dispatch] = useContext(CartContext);
-
     // 與todoList組件有關
     const removeTodo = (id) => {
         dispatch({
@@ -15,7 +13,6 @@ export default function TodoList(){
             }
         })
     }
-
     const showTodo = (id,value) => {
         dispatch({
             type: 'SHOW_TODO',
@@ -24,8 +21,6 @@ export default function TodoList(){
             }
         })
     }
-
-
     console.log("asdasdasdasd",state.showTodoList)
 
     return(
@@ -52,7 +47,6 @@ export default function TodoList(){
         </div>
     )
 }
-
 
 //     {/* done註記 */
 //     }

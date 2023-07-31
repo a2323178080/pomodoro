@@ -1,15 +1,9 @@
-
 import "./reset-button.scss"
-
 import {useContext, useEffect, useState} from 'react';
 import {CartContext} from "../../../components/store";
 export default function ResetButton({bg}){
     const [state, dispatch]=useContext(CartContext);
-
-
-
     const initStyle = {}
-
     const bgColor = {
         pink: {
             backgroundColor: 'var(--pink)',
@@ -21,14 +15,11 @@ export default function ResetButton({bg}){
             backgroundColor: 'var(--blue)',
         },
     }
-
     const newStyle = {
         ...initStyle,
         ...bgColor[bg],
 
     }
-
-
     return(
         <div className="reset-button" style={newStyle}
              onClick={()=>{
@@ -37,7 +28,6 @@ export default function ResetButton({bg}){
                 payload: "hold"
             })
         }}>
-
         </div>
     )
 }
