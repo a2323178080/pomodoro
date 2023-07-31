@@ -56,6 +56,8 @@ function App() {
   })
 // const {home}=useColor();
 
+
+
   return (
       <CartContext.Provider value={cartReducer}>
     <div>
