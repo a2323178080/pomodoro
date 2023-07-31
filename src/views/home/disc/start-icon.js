@@ -1,3 +1,4 @@
+import "./start-icon.scss";
 import Circle from "../../../components/circle";
 import Triangle from "../../../components/triangle";
 import {useContext, useEffect} from 'react';
@@ -9,7 +10,7 @@ export default function StartIcon(){
 
     const {all}=useColor();
     return(
-        <div className="button" onClick={()=>{
+        <div className="startIcon" onClick={()=>{
             dispatch({
                 type:'START_AND_HOLD',
                 payload: state.startCondition==='hold'?'start':'hold'

@@ -1,0 +1,13 @@
+.iconGroup{
+  position: absolute;
+  top:0px;
+  right:85px;
+  color:white;
+  height:204px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  i{
+    cursor:pointer;
+  }
+}

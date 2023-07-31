@@ -1,11 +1,12 @@
 import Disc from './disc/disc'
 import "./home.scss"
 import useColor from "../../hook/useColor";
-
 import Input from "./input/input";
 import Task from "./task/task.js";
 import Time from "./time/time.js";
-import TodoList from "./todo-list/todo-list"
+import TodoList from "./todo-list/todo-list";
+import IconGroup from "./icon-group/icon-group";
+import Slogan from "../../components/slogan";
 
 export default function Home(){
     const {all}=useColor()
@@ -17,6 +18,8 @@ export default function Home(){
                 <Time className="position" color={all('time')}/>
                 <Disc className="position"/>
                 <TodoList/>
+                <IconGroup/>
+                <Slogan/>
             </div>
         </div>
     )

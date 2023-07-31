@@ -1,3 +1,4 @@
+import "./hold-icon.scss"
 import Circle from "../../../components/circle";
 import Rectangle from "../../../components/rectangle";
 import useColor from "../../../hook/useColor";
@@ -8,7 +9,7 @@ export default function HoldIcon(){
     const {all}=useColor();
 
     return(
-        <div className="button" onClick={()=>{
+        <div className="holdIcon" onClick={()=>{
             dispatch({
                 type:'START_AND_HOLD',
                 payload: state.startCondition==='hold'?'start':'hold'

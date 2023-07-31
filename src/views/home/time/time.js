@@ -12,7 +12,6 @@ export default function Time({className,color}){
             color:'var(--blue)'
         }
     }
-
     const newStyle={
         ...newColor[color]
     }
