@@ -7,12 +7,13 @@ import "./disc.scss";
 import Circle from '../../../components/circle';
 import Triangle from "../../../components/triangle";
 import ResetButton from "./reset-button";
-import Button from "./button";
+import StartIcon from "./start-icon";
+import HoldIcon from "./hold-icon";
 import PieRing from "./pie-ring";
 
 export default function Disc({className}){
 
-    // const [state,dispatch]=useContext(CartContext);
+    const [state,dispatch]=useContext(CartContext);
 
     const {ringColor,circleColor, reset,allColor, all} = useColor ()
 
@@ -24,7 +25,7 @@ export default function Disc({className}){
 
                     <Circle shape="circle" bg={all('circle')} size={520}
                             borderColor={all('ring')}>
-                        <Button/>
+                        {state.startCondition==="hold"? <StartIcon/>:<HoldIcon/>}
                     </Circle>
                 </Circle>
             </Circle>

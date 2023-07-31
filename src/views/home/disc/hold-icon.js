@@ -1,20 +1,17 @@
-import "./button.scss";
+import "./hold-icon.scss";
 import Circle from "../../../components/circle";
-import Triangle from "../../../components/triangle";
+import Rectangle from "../../../components/rectangle";
+import useColor from "../../../hook/useColor";
+
 
 import {useContext, useEffect} from 'react';
 import {CartContext} from "../../../components/store";
-export default function Button(){
+export default function HoldIcon(){
 
     const [state,dispatch]=useContext(CartContext);
+    const {all}=useColor();
 
-    const style={
 
-        triangle:{
-            borderColor: 'transparent transparent transparent red',
-            marginLeft:'25px',
-        }
-    }
     return(
         <div className="button" onClick={()=>{
             dispatch({
@@ -22,9 +19,10 @@ export default function Button(){
                 payload: state.startCondition==='hold'?'start':'hold'
             })
         }}>
-            <Circle  size={96} bg="white">
-                <Triangle customStyle={style.triangle}></Triangle>
+            <Circle  size={96} bg={all('iconCircle')}>
+                <Rectangle/>
             </Circle>
+
         </div>
     )
 }

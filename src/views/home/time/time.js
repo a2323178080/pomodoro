@@ -23,7 +23,6 @@ export default function Time({className}){
             // countdown=setInterval(instant,1000)
             // instant();
 
-
             // 有遲延
             countdown= setInterval(function() {
                 setTime((pre) => pre - 1)

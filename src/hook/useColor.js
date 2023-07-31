@@ -37,36 +37,18 @@ const useColor = () => {
             return "white"
         }
     }
-    // function all(shapeType) {
-    //     console.log('shapeType', shapeType)
-    //     const colorMap = {
-    //         'ring': state.workCondition === 'work' ? "pink" : "blue",
-    //         'circle': (state.workCondition === 'work' && state.startCondition === "hold") ? "pink"
-    //             : (state.workCondition === 'rest' && state.startCondition === "hold") ? "blue"
-    //                 : "white"
-    //     };
-    //     console.log('123456', colorMap[shapeType])
-    //     return colorMap[shapeType] || "Invalid shape type";
-    // }
-    // function all() {
-    //     if (state.startCondition === "hold") {
-    //         if (state.workCondition === "work") {
-    //             return "pink";
-    //         } else if (state.workCondition === "rest") {
-    //             return "blue";
-    //         } else {
-    //             return "white";
-    //         }
-    //     } else {
-    //         return "white";
-    //     }
-    // }
     function all(type){
         if(type === 'circle' && state.startCondition==="start"){
             return "white"
         }
+
+        else if(type === 'triangle'||'iconCircle'){
+            return state.workCondition==="work"?'pink':'blue'
+        }
         return state.workCondition === 'work'?'pink':'blue'
     }
+
+
     useEffect(() => {
         setReset(resetColor[state.startCondition][state.workCondition])
         setRingColor(ring())
