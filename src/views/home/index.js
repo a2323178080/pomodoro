@@ -9,13 +9,13 @@ import IconGroup from "./icon-group/icon-group";
 import Slogan from "../../components/slogan";
 
 export default function Home(){
-    const {all}=useColor()
+    const {circle}=useColor()
 
     return(
         <div className="home">
             <div className="layout">
                 <Input/>
-                <Time className="position" color={all('time')}/>
+                <Time className="position" color={circle}/>
                 <Disc className="position"/>
                 <TodoList/>
                 <IconGroup/>

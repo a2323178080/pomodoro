@@ -11,22 +11,20 @@ import HoldIcon from "./hold-icon";
 import PieRing from "./pie-ring";
 export default function Disc({className}){
     const [state]=useContext(CartContext);
-    const {reset, all} = useColor ()
+    const {circle,ring} = useColor ()
     return(
         <div className={`disc${className ? ' ' + className : ''}`} >
-            <Circle size={540} shape="circle" borderColor={all('ring')}  >
+            <Circle size={540}  borderColor={ring}  >
                 <Circle size={520}  >
-
-                    <Circle shape="circle" bg={all('circle')} size={520}
-                            borderColor={all('ring')}>
+                    <Circle  bg={circle} size={520}
+                            borderColor={ring}>
                         {state.startCondition==="hold"? <StartIcon/>:<HoldIcon/>}
                     </Circle>
                 </Circle>
             </Circle>
-            <ResetButton bg={reset}/>
+            <ResetButton bg={circle}/>
             <PieRing/>
         </div>
     )
 }
-
 

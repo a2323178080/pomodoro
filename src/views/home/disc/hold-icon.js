@@ -6,7 +6,7 @@ import {useContext, useEffect} from 'react';
 import {CartContext} from "../../../components/store";
 export default function HoldIcon(){
     const [state,dispatch]=useContext(CartContext);
-    const {all}=useColor();
+    const {circle}=useColor();
 
     return(
         <div className="holdIcon" onClick={()=>{
@@ -15,7 +15,7 @@ export default function HoldIcon(){
                 payload: state.startCondition==='hold'?'start':'hold'
             })
         }}>
-            <Circle  size={96} bg={all('iconCircle')}>
+            <Circle  size={96} bg="pink">
                 <Rectangle/>
             </Circle>
 

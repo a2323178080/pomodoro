@@ -8,7 +8,7 @@ export default function StartIcon(){
 
     const [state,dispatch]=useContext(CartContext);
 
-    const {all}=useColor();
+    const {circle}=useColor();
     return(
         <div className="startIcon" onClick={()=>{
             dispatch({
@@ -17,7 +17,7 @@ export default function StartIcon(){
             })
         }}>
             <Circle  size={96} bg="white">
-                <Triangle borderColor={all('triangle')}></Triangle>
+                <Triangle borderColor={circle}></Triangle>
             </Circle>
         </div>
     )
