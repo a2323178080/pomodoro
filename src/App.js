@@ -2,9 +2,9 @@
 import {useReducer} from "react";
 
 import Home from "./views/home/index"
-
 import {CartContext} from "./components/store";
 
+// import useColor from "./hook/useColor";
 function App() {
 
   const cartReducer=useReducer((state,action)=>{
@@ -54,12 +54,12 @@ function App() {
     todoList:[],
     showTodoList:"",
   })
-
+// const {home}=useColor();
 
   return (
       <CartContext.Provider value={cartReducer}>
     <div>
-    <Home></Home>
+    <Home bg="pink"></Home>
 
     </div>
       </CartContext.Provider>
