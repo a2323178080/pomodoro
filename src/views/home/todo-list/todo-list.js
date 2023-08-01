@@ -1,10 +1,8 @@
 import {CartContext} from "../../../components/store";
 import { useContext} from "react";
-
 import "./todo-list.scss";
 export default function TodoList(){
     const [state, dispatch] = useContext(CartContext);
-    // 與todoList組件有關
     const removeTodo = (id) => {
         dispatch({
             type: 'REMOVE_TODO',
@@ -20,8 +18,13 @@ export default function TodoList(){
                 value
             }
         })
+        dispatch({
+            type: 'REMOVE_TODO',
+            payload: {
+                id
+            }
+        })
     }
-    console.log("asdasdasdasd",state.showTodoList)
 
     return(
         <div className="todoList" >
@@ -36,7 +39,6 @@ export default function TodoList(){
                                     <span>{todo.do}</span>
                                     <span className="material-icons todoList--icon playIcon"
                                           onClick={() => showTodo(todo.id,todo.do)}>play_circle_outline
-                                        {/*onClick={() => selectTodo(todo.id)}>play_circle_outline*/}
                                     </span>
                                 </li>
                     </ul>)

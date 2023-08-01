@@ -6,7 +6,6 @@ import {PlusOutlined} from "@ant-design/icons";
 export default function Input({className,color}) {
     const [state, dispatch] = useContext(CartContext);
     const [value, setValue] = useState("");
-    // const [todoList, setTodoList] = useState([]);
     const handleChange = (e) => {
         setValue(e.target.value);
     };
@@ -29,7 +28,6 @@ export default function Input({className,color}) {
         }
     }
 
-
     const newColor={
         pink:{
             color:'var(--pink)'
@@ -38,17 +36,14 @@ export default function Input({className,color}) {
             color:'var(--blue)'
     }
     }
-
     const newStyle={
         ...newColor[color]
     }
-
     return (
         <div className={`input${className ? ' ' + className : ''}`}>
         <input type="text"
                value={value}
                placeholder="ADD A NEW MISSION..."
-
                className={`inputArea inputArea--${state.workCondition}`}
                onChange={handleChange}
                onKeyDown={handleKeyDown}
