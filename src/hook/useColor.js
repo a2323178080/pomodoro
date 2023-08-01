@@ -1,7 +1,6 @@
 import {useState, useEffect, useContext} from 'react';
 import {CartContext} from "../components/store";
 
-const workColor = ['ring', 'circle', 'triangle', 'time', 'home','input'];
 
 const useColor = () => {
     const [ state ]=useContext(CartContext);
@@ -19,13 +18,8 @@ const useColor = () => {
         if((type === 'circle' && state.startCondition==="start")||(type==="reset"&& state.startCondition==="hold")){
             return "white"
         }
-        else if ((type==="reset"||"iconCircle")&& state.startCondition==="start"){
-            return state.workCondition === 'work'?'pink':'blue'
-        }
+        return state.workCondition === 'work'?'pink':'blue'
 
-        else if (workColor.includes(type)){
-            return state.workCondition === 'work'?'pink':'blue'
-        }
     }
 
     useEffect(() => {
