@@ -8,8 +8,8 @@ import TodoList from "./todo-list/todo-list";
 import IconGroup from "./icon-group/icon-group";
 import Slogan from "../../components/slogan";
 
-export default function Home({bg}){
-    const {time}=useColor()
+export default function Home(){
+    const {time, home}=useColor()
 
     const bgColor = {
         pink: {
@@ -24,7 +24,7 @@ export default function Home({bg}){
     }
 
     const newStyle = {
-        ...bgColor[bg]
+        ...bgColor[home]
     }
 
     return(
