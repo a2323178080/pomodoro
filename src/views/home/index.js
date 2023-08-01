@@ -9,10 +9,10 @@ import IconGroup from "./icon-group/icon-group";
 import Slogan from "../../components/slogan";
 
 export default function Home(){
-    const {time, home,input}=useColor()
+    const {time, homeBackground,input}=useColor()
 
     return(
-            <div className={`home ${home}`}>
+            <div className={`home ${homeBackground}`}>
             <div className="layout">
                 <Input color={input}/>
                 <Time className="position" color={time}/>

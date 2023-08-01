@@ -11,7 +11,7 @@ const useColor = () => {
     const [triangle,setTriangle]=useState("");
     const [time,setTime]=useState("");
     const [iconCircle,setIconCircle]=useState("");
-    const [home,setHome]=useState("");
+    const [homeBackground,setHomeBackground]=useState("");
     const [input,setInput]=useState("");
 
     const handleColor=(type)=>{
@@ -29,9 +29,9 @@ const useColor = () => {
         setTriangle(handleColor('triangle'))
         setTime(handleColor('time'))
         setIconCircle(handleColor('iconCircle'))
-        setHome(handleColor('home'))
+        setHomeBackground(handleColor('homeBackground'))
         setInput(handleColor('input'))
     }, [state])
-    return {circle,ring,reset,triangle,time,iconCircle,home,input}
+    return {circle,ring,reset,triangle,time,iconCircle,homeBackground,input}
 }
 export default useColor;
