@@ -1,6 +1,6 @@
 import "./reset-button.scss"
 import {useContext, useEffect, useState} from 'react';
-import {CartContext} from "../../../components/store";
+import {CartContext} from "../../../store/store";
 export default function ResetButton({bg}){
     const [state, dispatch]=useContext(CartContext);
     const initStyle = {}

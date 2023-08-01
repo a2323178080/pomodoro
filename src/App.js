@@ -2,7 +2,7 @@
 import {useEffect, useReducer} from "react";
 
 import Home from "./views/home/index"
-import {CartContext} from "./components/store";
+import {CartContext} from "./store/store";
 
 function App() {
 

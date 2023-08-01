@@ -1,6 +1,6 @@
 import "./progress-bar.scss"
 import {useContext, useEffect} from 'react';
-import {CartContext} from "../../../components/store";
+import {CartContext} from "../../../store/store";
 export default function ProgressBar() {
     const [state] = useContext(CartContext);
     console.log("sdaasdfdsgdfg",state.times);

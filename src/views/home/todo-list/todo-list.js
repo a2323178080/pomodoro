@@ -1,4 +1,4 @@
-import {CartContext} from "../../../components/store";
+import {CartContext} from "../../../store/store";
 import { useContext} from "react";
 import "./todo-list.scss";
 export default function TodoList(){

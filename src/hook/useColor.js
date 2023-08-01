@@ -1,5 +1,5 @@
 import {useState, useEffect, useContext} from 'react';
-import {CartContext} from "../components/store";
+import {CartContext} from "../store/store";
 
 
 const useColor = () => {

@@ -1,6 +1,6 @@
 
 import {useContext} from 'react';
-import {CartContext} from "../../../components/store";
+import {CartContext} from "../../../store/store";
 import useColor from "../../../hook/useColor"
 import "./disc.scss";
 import Circle from '../../../components/circle';
