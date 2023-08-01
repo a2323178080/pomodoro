@@ -1,7 +1,7 @@
 import {useState, useEffect, useContext} from 'react';
 import {CartContext} from "../components/store";
 
-const Bg = ['ring', 'circle', 'triangle', 'time', 'home'];
+const workColor = ['ring', 'circle', 'triangle', 'time', 'home'];
 
 const useColor = () => {
     const [ state ]=useContext(CartContext);
@@ -24,7 +24,7 @@ const useColor = () => {
             return state.workCondition === 'work'?'pink':'blue'
         }
 
-        else if (Bg.includes(type)){
+        else if (workColor.includes(type)){
             return state.workCondition === 'work'?'pink':'blue'
         }
     }

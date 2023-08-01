@@ -3,7 +3,7 @@ import {useState, useContext} from "react";
 import "./input.scss";
 import {PlusOutlined} from "@ant-design/icons";
 
-export default function Input({className}) {
+export default function Input({className,color}) {
     const [state, dispatch] = useContext(CartContext);
     const [value, setValue] = useState("");
     // const [todoList, setTodoList] = useState([]);
@@ -28,15 +28,36 @@ export default function Input({className}) {
             addTodo()
         }
     }
-    return (<div className={`input${className ? ' ' + className : ''}`}>
+
+
+    const newColor={
+        pink:{
+            color:'pink'
+        },
+        blue:{
+            color:"blue"
+    }
+    }
+
+    const newStyle={
+        ...newColor[color]
+    }
+
+    return (<div className={`input${className ? ' ' + className : ''}`}
+
+    >
         <input type="text"
                value={value}
                placeholder="ADD A NEW MISSION..."
                className="inputArea"
                onChange={handleChange}
                onKeyDown={handleKeyDown}
+               style={newStyle}
+
         />
         <PlusOutlined className="inputArea__plusIcon"
-                      onClick={addTodo}/>
+                      onClick={addTodo}
+                      style={newStyle}
+        />
     </div>)
 }
