@@ -8,7 +8,7 @@ import Triangle from "../../../components/triangle";
 import ResetButton from "./reset-button";
 import StartIcon from "./start-icon";
 import HoldIcon from "./hold-icon";
-import PieRing from "./pie-ring";
+import ProgressBar from "./progress-bar";
 export default function Disc({className}){
     const [state]=useContext(CartContext);
     const {circle,ring,reset} = useColor ()
@@ -23,7 +23,7 @@ export default function Disc({className}){
                 </Circle>
             </Circle>
             <ResetButton bg={reset}/>
-            <PieRing/>
+            <ProgressBar/>
         </div>
     )
 }
