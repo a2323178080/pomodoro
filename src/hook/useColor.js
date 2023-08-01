@@ -1,7 +1,7 @@
 import {useState, useEffect, useContext} from 'react';
 import {CartContext} from "../components/store";
 
-const workColor = ['ring', 'circle', 'triangle', 'time', 'home'];
+const workColor = ['ring', 'circle', 'triangle', 'time', 'home','input'];
 
 const useColor = () => {
     const [ state ]=useContext(CartContext);
@@ -13,10 +13,9 @@ const useColor = () => {
     const [time,setTime]=useState("");
     const [iconCircle,setIconCircle]=useState("");
     const [home,setHome]=useState("");
+    const [input,setInput]=useState("");
 
-
-
-    function color(type){
+    const handleColor=(type)=>{
         if((type === 'circle' && state.startCondition==="start")||(type==="reset"&& state.startCondition==="hold")){
             return "white"
         }
@@ -30,14 +29,15 @@ const useColor = () => {
     }
 
     useEffect(() => {
-        setCircle(color('circle'))
-        setRing(color('ring'))
-        setReset(color('reset'))
-        setTriangle(color('triangle'))
-        setTime(color('time'))
-        setIconCircle(color('iconCircle'))
-        setHome(color('home'))
+        setCircle(handleColor('circle'))
+        setRing(handleColor('ring'))
+        setReset(handleColor('reset'))
+        setTriangle(handleColor('triangle'))
+        setTime(handleColor('time'))
+        setIconCircle(handleColor('iconCircle'))
+        setHome(handleColor('home'))
+        setInput(handleColor('input'))
     }, [state])
-    return {circle,ring,reset,triangle,time,iconCircle,home}
+    return {circle,ring,reset,triangle,time,iconCircle,home,input}
 }
 export default useColor;

@@ -35,7 +35,7 @@ export default function Input({className,color}) {
             color:'var(--pink)'
         },
         blue:{
-            color:"blue"
+            color:'var(--blue)'
     }
     }
 
