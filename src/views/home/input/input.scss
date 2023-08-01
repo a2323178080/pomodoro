@@ -12,14 +12,27 @@
       top: 16px;
       //color: var(--pink);
     }
-    &::placeholder {
-      white-space: nowrap;
-      font: italic normal bold 16px/19px Roboto;
-      letter-spacing: 0px;
-      text-transform: uppercase;
-      color: var(--pink);
-    }
 
+&--work{
+  &::placeholder {
+    white-space: nowrap;
+    font: italic normal bold 16px/19px Roboto;
+    letter-spacing: 0px;
+    text-transform: uppercase;
+    color: var(--pink);
 
   }
 }
+    &--rest{
+      &::placeholder {
+        white-space: nowrap;
+        font: italic normal bold 16px/19px Roboto;
+        letter-spacing: 0px;
+        text-transform: uppercase;
+        color: var(--blue);
+      }
+    }
+
+  }
+}
+

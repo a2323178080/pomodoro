@@ -30,7 +30,7 @@ export default function Home(){
     return(
         <div className="home" style={newStyle}>
             <div className="layout">
-                <Input color="blue"/>
+                <Input color="pink"/>
                 <Time className="position" color={time}/>
                 <Disc className="position"/>
                 <TodoList/>

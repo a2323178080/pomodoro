@@ -32,7 +32,7 @@ export default function Input({className,color}) {
 
     const newColor={
         pink:{
-            color:'pink'
+            color:'var(--pink)'
         },
         blue:{
             color:"blue"
@@ -43,13 +43,13 @@ export default function Input({className,color}) {
         ...newColor[color]
     }
 
-    return (<div className={`input${className ? ' ' + className : ''}`}
-
-    >
+    return (
+        <div className={`input${className ? ' ' + className : ''}`}>
         <input type="text"
                value={value}
                placeholder="ADD A NEW MISSION..."
-               className="inputArea"
+
+               className={`inputArea inputArea--${state.workCondition}`}
                onChange={handleChange}
                onKeyDown={handleKeyDown}
                style={newStyle}
@@ -59,5 +59,6 @@ export default function Input({className,color}) {
                       onClick={addTodo}
                       style={newStyle}
         />
-    </div>)
+    </div>
+    )
 }
