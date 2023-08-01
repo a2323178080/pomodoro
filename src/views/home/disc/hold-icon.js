@@ -3,7 +3,7 @@ import Circle from "../../../components/circle";
 import Rectangle from "../../../components/rectangle";
 import useColor from "../../../hook/useColor";
 import {useContext, useEffect} from 'react';
-import {CartContext} from "../../../components/store";
+import {CartContext} from "../../../store/store";
 export default function HoldIcon(){
     const [state,dispatch]=useContext(CartContext);
     const {iconCircle}=useColor();

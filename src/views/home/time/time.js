@@ -1,6 +1,6 @@
 import "./time.scss"
 import {useContext, useEffect, useState} from 'react';
-import {CartContext} from "../../../components/store";
+import {CartContext} from "../../../store/store";
 let countdown = null;
 export default function Time({className,color}){
     const newColor={

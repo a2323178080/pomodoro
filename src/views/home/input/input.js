@@ -1,4 +1,4 @@
-import {CartContext} from "../../../components/store";
+import {CartContext} from "../../../store/store";
 import {useState, useContext} from "react";
 import "./input.scss";
 import {PlusOutlined} from "@ant-design/icons";

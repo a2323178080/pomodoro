@@ -2,7 +2,7 @@ import "./start-icon.scss";
 import Circle from "../../../components/circle";
 import Triangle from "../../../components/triangle";
 import {useContext, useEffect} from 'react';
-import {CartContext} from "../../../components/store";
+import {CartContext} from "../../../store/store";
 import useColor from "../../../hook/useColor";
 export default function StartIcon(){
 
