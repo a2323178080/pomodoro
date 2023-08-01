@@ -20,6 +20,12 @@ function App() {
           workCondition: action.payload
         }
 
+      case 'TIME':
+        return {
+          ...state,
+          times: action.payload
+        }
+
       case 'ADD_TODO':
         const newTodo = {
           do: action.payload.value,
@@ -53,6 +59,7 @@ function App() {
     workCondition:'work',
     todoList:[],
     showTodoList:"",
+    times:5,
   })
 // const {home}=useColor();
 

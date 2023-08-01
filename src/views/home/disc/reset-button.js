@@ -27,6 +27,10 @@ export default function ResetButton({bg}){
                 type:'START_AND_HOLD',
                 payload: "hold"
             })
+                 dispatch({
+                     type:'TIME',
+                     payload: 5
+                 })
         }}>
         </div>
     )

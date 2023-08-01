@@ -17,11 +17,10 @@ export default function Time({className,color}){
     }
 
     const [state, dispatch]=useContext(CartContext);
-    const [time, setTime] = useState(5);
-    const minutes = Math.floor(time / 60);
-    const remainderSeconds = time % 60;
+
     // 與Disc.js組件相關
-    useEffect(() => {
+    useEffect(
+        () => {
         if (state.startCondition==='start') {
 
             // 沒有延遲
@@ -30,35 +29,49 @@ export default function Time({className,color}){
             //     }
             // countdown=setInterval(instant,1000)
             // instant();
-
             // 有遲延
+            // times=5;
+
+
             countdown= setInterval(function() {
-                setTime((pre) => pre - 1)
+                state.times=state.times-1;
+                dispatch({
+                    type:'TIME',
+                    payload:state.times,
+                })
             }, 1000);
         }
+
         return () => {
             clearInterval(countdown);
         }
     }, [state.startCondition])
 
     useEffect(() => {
-        if(time === 0) {
-            setTime(5);
+        console.log('123456', state.times)
+        if(state.times === 0) {
+            console.log('123456')
             // clearInterval(countdown);
 
-            (function(){
-                dispatch({
-                    type:'WORK_AND_REST',
-                    payload:state.workCondition==='work'?'rest':'work'
-                })
-                dispatch({
-                    type:'START_AND_HOLD',
-                    payload: 'hold'
-                })
-            })();
+            dispatch({
+                type:'WORK_AND_REST',
+                payload:state.workCondition==='work'?'rest':'work'
+            })
+            dispatch({
+                type:'START_AND_HOLD',
+                payload: 'hold'
+            })
+            dispatch({
+                type:'TIME',
+                payload: 5
+            })
 
         }
-    }, [time])
+    }, [state.times])
+
+    const minutes = Math.floor(state.times / 60);
+    const remainderSeconds = state.times % 60;
+
     return(
         <div className={`time${className ? ' ' + className : ''}`} style={newStyle}>
             <div>{`
