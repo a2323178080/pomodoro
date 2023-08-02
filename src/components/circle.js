@@ -1,8 +1,11 @@
 // import {useContext} from 'react';
 // import {CartContext} from "../../../components/store";
+import useColor from "../hook/useColor";
 
 import "./circle.scss"
 export default function Circle({children, startAndStop, size, bg,borderColor}){
+
+    const {ring,circle} = useColor ()
 
     // const [state,dispatch]=useContext(CartContext);
 
@@ -11,39 +14,30 @@ export default function Circle({children, startAndStop, size, bg,borderColor}){
         height: size,
     }
 
-
     const bgColor = {
-        pink: {
-            backgroundColor: 'var(--pink)',
+        transparent: {
+            backgroundColor: 'transparent',
         },
-        white: {
-            backgroundColor: 'var(--white)',
+        pink:{
+            backgroundColor:'var(--pink)',
         },
-        blue: {
-            backgroundColor: 'var(--blue)',
+        blue:{
+            backgroundColor:'var(--blue)'
         },
-
-    }
-
-    const newBorderColor = {
-        pink: {
-            border: '3px solid var(--pink)',
-        },
-        white: {
-            border: '3px solid var(--white)',
-        },
-
-        blue: {
-            border: '3px solid var(--blue)',
-        },
-
+        white:{
+            backgroundColor:'var(--white)'
+        }
     }
 
     const newStyle = {
         ...initStyle,
+        backgroundColor: `var(--${circle})`,
+        border: `3px solid var(--${ring})`,
         ...bgColor[bg],
-        ...newBorderColor[borderColor]
+
     }
+
+
 
     return(
         <div className="circle" style={newStyle} onClick={startAndStop}>

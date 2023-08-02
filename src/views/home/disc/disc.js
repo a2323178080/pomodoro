@@ -14,13 +14,11 @@ export default function Disc({className}){
     const {circle,ring,reset} = useColor ()
     return(
         <div className={state.handlePosition('disc', className)}  >
-            <Circle size={540}  borderColor={ring}  >
-                <Circle size={520}  >
-                    <Circle  bg={circle} size={520}
-                            borderColor={ring}>
+            <Circle size={540}  bg="transparent">
+                    <Circle   size={520}>
                         {state.startCondition==="stop"? <StartIcon/>:<StopIcon/>}
                     </Circle>
-                </Circle>
+
             </Circle>
             <ResetButton bg={reset}/>
             <ProgressBar/>
