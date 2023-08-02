@@ -1,4 +1,4 @@
-import {context} from "./store/context";
+import {context} from "./store/store";
 
 import { useReducer} from "react";
 
