@@ -1,19 +1,11 @@
 import "./time.scss"
 import {useContext, useEffect, useState} from 'react';
 import {CartContext} from "../../../store/store";
+import useColor from "../../../hook/useColor";
 let countdown = null;
-export default function Time({className,color}){
-    const newColor={
-        pink:{
-            color:'var(--pink)',
-        },
-        blue:{
-            color:'var(--blue)'
-        }
-    }
-    const newStyle={
-        ...newColor[color]
-    }
+export default function Time({className}){
+    const {time}=useColor()
+
     const [state, dispatch]=useContext(CartContext);
     useEffect(
         () => {
@@ -54,7 +46,7 @@ export default function Time({className,color}){
     const remainderSeconds = state.times % 60;
 
     return(
-        <div className={`time${className ? ' ' + className : ''}`} style={newStyle}>
+        <div className={`time${className ? ' ' + className : ''}`} style={{color:`var(--${time})`}}>
             <div>{`
                 ${minutes}:${remainderSeconds < 10
                 ? "0" + remainderSeconds
