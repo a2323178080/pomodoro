@@ -11,9 +11,13 @@ export default function ProgressBar() {
 
     return (
         <div className="pieRing">
-            <div className={`element1 element1--${state.workCondition}--${state.startCondition}`}>
-                <div className={`element2 element2--${state.workCondition}--${state.startCondition}`}></div>
-                <div className={`element3 element3--${state.workCondition}--${state.startCondition}`}></div>
+            <div className={`element1 element1--${state.startCondition}`}
+            style={{borderColor:`var(--${progressBar})`}}
+            >
+                <div className={`element2 element2--${state.startCondition}`}
+                     style={{borderColor:`var(--${progressBar})`}}></div>
+                <div className={`element3 element3--${state.startCondition}`}
+                     style={{borderColor:`var(--${progressBar})`}}></div>
             </div>
         </div>
     )

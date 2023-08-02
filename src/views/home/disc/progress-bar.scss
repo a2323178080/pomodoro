@@ -14,19 +14,8 @@
     overflow:hidden;
     //animation:a1 5s infinite linear;
     animation:a1 5s linear 0s infinite;
-    &--work--stop {
-      border-color:#FF4384;
+    &--stop {
       animation-play-state: paused;
-    }
-    &--work--start {
-      border-color:#FF4384;
-    }
-    &--rest--stop {
-      border-color:#00A7FF;
-      animation-play-state: paused;
-    }
-    &--rest--start {
-      border-color:#00A7FF;
     }
   }
   .element2{
@@ -50,21 +39,8 @@
 
 
 
-    &--work--stop {
-      border-color:#FF4384;
+    &--stop {
       animation-play-state: paused;
-    }
-    &--work--start {
-      border-color:#FF4384;
-
-    }
-    &--rest--stop {
-      border-color:#00A7FF;
-      animation-play-state: paused;
-    }
-
-    &--rest--start {
-      border-color:#00A7FF;
     }
   }
   .element3{
@@ -86,22 +62,8 @@
 
 
 
-    &--work--stop {
-      border-color:#FF4384;
+    &--stop {
       animation-play-state: paused;
-    }
-    &--work--start {
-      border-color:#FF4384;
-
-    }
-
-    &--rest--stop {
-      border-color:#00A7FF;
-      animation-play-state: paused;
-    }
-
-    &--rest--start {
-      border-color:#00A7FF;
     }
   }
   @keyframes a1{
