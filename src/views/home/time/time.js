@@ -3,6 +3,8 @@ import {useContext, useEffect, useState} from 'react';
 import {CartContext} from "../../../store/store";
 import useColor from "../../../hook/useColor";
 let countdown = null;
+
+const handlePosition =(type, className)=>type + (className ? ' ' + className : '')
 export default function Time({className}){
     const {time}=useColor()
 
@@ -43,14 +45,14 @@ export default function Time({className}){
         }
     }, [state.times])
     const minutes = Math.floor(state.times / 60);
-    const remainderSeconds = state.times % 60;
+    const seconds = state.times % 60;
 
     return(
-        <div className={`time${className ? ' ' + className : ''}`} style={{color:`var(--${time})`}}>
+        <div className={handlePosition('time', className)} style={{color:`var(--${time})`}}>
             <div>{`
-                ${minutes}:${remainderSeconds < 10
-                ? "0" + remainderSeconds
-                : remainderSeconds}`}
+                ${minutes}:${seconds < 10
+                ? "0" + seconds
+                : seconds}`}
             </div>
         </div>
     )
