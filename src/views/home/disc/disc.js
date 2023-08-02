@@ -13,7 +13,7 @@ export default function Disc({className}){
     const [state]=useContext(CartContext);
     const {circle,ring,reset} = useColor ()
     return(
-        <div className={`disc${className ? ' ' + className : ''}`} >
+        <div className={state.handlePosition('disc', className)}  >
             <Circle size={540}  borderColor={ring}  >
                 <Circle size={520}  >
                     <Circle  bg={circle} size={520}

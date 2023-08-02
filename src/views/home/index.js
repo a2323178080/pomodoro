@@ -16,7 +16,7 @@ export default function Home(){
             <div className="layout">
                 <Input color={input}/>
                 <Time className="middleLeft" />
-                <Disc className="position"/>
+                <Disc className="middleRight"/>
                 <TodoList/>
                 <IconGroup/>
                 <Slogan/>
