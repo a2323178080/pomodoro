@@ -46,6 +46,12 @@ export function context(state,action){
                 ...state,
                 showTodoList: action.payload.value
             }
+
+        case 'HANDLE_POSITION':
+            return {
+                ...state,
+                handlePosition: action.payload
+            }
         default:
             return state
     }

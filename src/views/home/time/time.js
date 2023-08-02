@@ -4,8 +4,21 @@ import {CartContext} from "../../../store/store";
 import useColor from "../../../hook/useColor";
 let countdown = null;
 
-const handlePosition =(type, className)=>type + (className ? ' ' + className : '')
+
+
+
+
 export default function Time({className}){
+    const handlePosition =(type, className)=>type + (className ? ' ' + className : '');
+
+    useEffect(()=>{
+        dispatch({
+            type:'HANDLE_POSITION',
+            payload:handlePosition
+        })
+
+    },[])
+
     const {time}=useColor()
 
     const [state, dispatch]=useContext(CartContext);
@@ -48,7 +61,7 @@ export default function Time({className}){
     const seconds = state.times % 60;
 
     return(
-        <div className={handlePosition('time', className)} style={{color:`var(--${time})`}}>
+        <div className={state.handlePosition('time', className)} style={{color:`var(--${time})`}}>
             <div>{`
                 ${minutes}:${seconds < 10
                 ? "0" + seconds
