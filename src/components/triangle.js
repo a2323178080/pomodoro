@@ -1,28 +1,19 @@
 import "./triangle.scss";
+import useColor from "../hook/useColor";
 
 export default function Triangle({borderColor}){
-    const initStyle = {
-        width: '0px',
-        height: '0px',
-    }
+
+    const {triangle}=useColor();
+
 
     const newColor= {
-        pink: {
-            borderColor: 'transparent transparent transparent var(--pink)'
-        },
-        blue: {
-            borderColor: 'transparent transparent transparent var(--blue)'
-        },
+        borderColor: `transparent transparent transparent var(--${triangle})`
     }
 
-    const newStyle = {
-        ...initStyle,
-        ...newColor[borderColor]
-    }
 
 
     return(
-        <div className="triangle" style={newStyle} >
+        <div className="triangle" style={newColor} >
 
         </div>
     )

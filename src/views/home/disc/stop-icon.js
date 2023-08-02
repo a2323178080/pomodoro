@@ -9,16 +9,14 @@ export default function StopIcon(){
     const {iconCircle}=useColor();
 
     return(
-        <div className="stopIcon" onClick={()=>{
+        <div className="stopIcon"  style={{backgroundColor:`var(--${iconCircle})`}}
+             onClick={()=>{
             dispatch({
                 type:'START_AND_STOP',
                 payload: state.startCondition==='stop'?'start':'stop'
             })
         }}>
-            <Circle  size={96} bg={iconCircle}>
                 <Rectangle/>
-            </Circle>
-
         </div>
     )
 }

@@ -13,13 +13,13 @@ const useColor = () => {
     const [iconCircle,setIconCircle]=useState("");
     const [homeBackground,setHomeBackground]=useState("");
     const [input,setInput]=useState("");
+    const [progressBar,setProgressBar]=useState("");
 
     const handleColor=(type)=>{
         if((type === 'circle' && state.startCondition==="start")||(type==="reset"&& state.startCondition==="stop")){
             return "white"
         }
         return state.workCondition === 'work'?'pink':'blue'
-
     }
 
     useEffect(() => {
@@ -31,7 +31,8 @@ const useColor = () => {
         setIconCircle(handleColor('iconCircle'))
         setHomeBackground(handleColor('homeBackground'))
         setInput(handleColor('input'))
+        setProgressBar(handleColor('progressBar'))
     }, [state])
-    return {circle,ring,reset,triangle,time,iconCircle,homeBackground,input}
+    return {circle,ring,reset,triangle,time,iconCircle,homeBackground,input,progressBar}
 }
 export default useColor;

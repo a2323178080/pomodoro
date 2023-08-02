@@ -1,9 +1,14 @@
 import "./progress-bar.scss"
 import {useContext, useEffect} from 'react';
 import {CartContext} from "../../../store/store";
+import useColor from "../../../hook/useColor";
 export default function ProgressBar() {
+    const {progressBar} = useColor ()
     const [state] = useContext(CartContext);
-    console.log("sdaasdfdsgdfg",state.times);
+
+
+
+
     return (
         <div className="pieRing">
             <div className={`element1 element1--${state.workCondition}--${state.startCondition}`}>

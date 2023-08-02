@@ -18,15 +18,6 @@ export default function Circle({children, startAndStop, size, bg,borderColor}){
         transparent: {
             backgroundColor: 'transparent',
         },
-        pink:{
-            backgroundColor:'var(--pink)',
-        },
-        blue:{
-            backgroundColor:'var(--blue)'
-        },
-        white:{
-            backgroundColor:'var(--white)'
-        }
     }
 
     const newStyle = {

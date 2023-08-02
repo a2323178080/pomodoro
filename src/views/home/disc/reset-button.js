@@ -1,27 +1,16 @@
 import "./reset-button.scss"
 import {useContext, useEffect, useState} from 'react';
 import {CartContext} from "../../../store/store";
+import useColor from "../../../hook/useColor";
 export default function ResetButton({bg}){
+    const {reset}=useColor();
     const [state, dispatch]=useContext(CartContext);
-    const initStyle = {}
-    const bgColor = {
-        pink: {
-            backgroundColor: 'var(--pink)',
-        },
-        white: {
-            backgroundColor: 'var(--white)',
-        },
-        blue: {
-            backgroundColor: 'var(--blue)',
-        },
-    }
-    const newStyle = {
-        ...initStyle,
-        ...bgColor[bg],
 
+    const newColor= {
+        backgroundColor: `var(--${reset})`
     }
     return(
-        <div className="reset-button" style={newStyle}
+        <div className="reset-button" style={newColor}
              onClick={()=>{
             dispatch({
                 type:'START_AND_STOP',

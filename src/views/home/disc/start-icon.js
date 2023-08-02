@@ -16,9 +16,7 @@ export default function StartIcon(){
                 payload: state.startCondition==='stop'?'start':'stop'
             })
         }}>
-            <Circle  size={96} bg="white">
                 <Triangle borderColor={triangle}></Triangle>
-            </Circle>
         </div>
     )
 }
