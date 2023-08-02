@@ -11,8 +11,19 @@ import Slogan from "../../components/slogan";
 export default function Home(){
     const {homeBackground,input}=useColor()
 
+    const newBackground={
+        background:` linear-gradient(to right,
+        var(--light${homeBackground}) 0%,
+        var(--light${homeBackground}) 830px,
+        #003164 0%,
+        #003164 450px)`
+
+    }
+
     return(
-            <div className={`home ${homeBackground}`}>
+            <div className="home"
+                style={newBackground}
+            >
             <div className="layout">
                 <Input color={input}/>
                 <Time className="middleLeft" />

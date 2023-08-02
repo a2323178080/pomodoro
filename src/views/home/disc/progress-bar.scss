@@ -35,10 +35,6 @@
     transform:rotate(-90deg);
     z-index:1;
     animation:a2 5s infinite linear;
-
-
-
-
     &--stop {
       animation-play-state: paused;
     }
