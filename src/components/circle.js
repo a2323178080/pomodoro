@@ -2,7 +2,7 @@
 // import {CartContext} from "../../../components/store";
 
 import "./circle.scss"
-export default function Circle({children, startAndHold, size, bg,borderColor}){
+export default function Circle({children, startAndStop, size, bg,borderColor}){
 
     // const [state,dispatch]=useContext(CartContext);
 
@@ -46,7 +46,7 @@ export default function Circle({children, startAndHold, size, bg,borderColor}){
     }
 
     return(
-        <div className="circle" style={newStyle} onClick={startAndHold}>
+        <div className="circle" style={newStyle} onClick={startAndStop}>
             {children}
         </div>
     )

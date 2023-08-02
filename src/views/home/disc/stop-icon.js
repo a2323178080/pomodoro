@@ -1,18 +1,18 @@
-import "./hold-icon.scss"
+import "./stop-icon.scss"
 import Circle from "../../../components/circle";
 import Rectangle from "../../../components/rectangle";
 import useColor from "../../../hook/useColor";
 import {useContext, useEffect} from 'react';
 import {CartContext} from "../../../store/store";
-export default function HoldIcon(){
+export default function StopIcon(){
     const [state,dispatch]=useContext(CartContext);
     const {iconCircle}=useColor();
 
     return(
-        <div className="holdIcon" onClick={()=>{
+        <div className="stopIcon" onClick={()=>{
             dispatch({
-                type:'START_AND_HOLD',
-                payload: state.startCondition==='hold'?'start':'hold'
+                type:'START_AND_STOP',
+                payload: state.startCondition==='stop'?'start':'stop'
             })
         }}>
             <Circle  size={96} bg={iconCircle}>

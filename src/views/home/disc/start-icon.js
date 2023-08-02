@@ -12,8 +12,8 @@ export default function StartIcon(){
     return(
         <div className="startIcon" onClick={()=>{
             dispatch({
-                type:'START_AND_HOLD',
-                payload: state.startCondition==='hold'?'start':'hold'
+                type:'START_AND_STOP',
+                payload: state.startCondition==='stop'?'start':'stop'
             })
         }}>
             <Circle  size={96} bg="white">

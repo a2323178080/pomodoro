@@ -48,8 +48,8 @@ export default function Time({className}){
                 payload:state.workCondition==='work'?'rest':'work'
             })
             dispatch({
-                type:'START_AND_HOLD',
-                payload: 'hold'
+                type:'START_AND_STOP',
+                payload: 'stop'
             })
             dispatch({
                 type:'TIME',

@@ -15,7 +15,7 @@ const useColor = () => {
     const [input,setInput]=useState("");
 
     const handleColor=(type)=>{
-        if((type === 'circle' && state.startCondition==="start")||(type==="reset"&& state.startCondition==="hold")){
+        if((type === 'circle' && state.startCondition==="start")||(type==="reset"&& state.startCondition==="stop")){
             return "white"
         }
         return state.workCondition === 'work'?'pink':'blue'

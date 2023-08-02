@@ -4,7 +4,7 @@ export const CartContext=createContext({});
 
 export function context(state,action){
     switch(action.type){
-        case 'START_AND_HOLD':
+        case 'START_AND_STOP':
             return {
                 ...state,
                 startCondition: action.payload

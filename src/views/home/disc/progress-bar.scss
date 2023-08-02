@@ -14,14 +14,14 @@
     overflow:hidden;
     //animation:a1 5s infinite linear;
     animation:a1 5s linear 0s infinite;
-    &--work--hold {
+    &--work--stop {
       border-color:#FF4384;
       animation-play-state: paused;
     }
     &--work--start {
       border-color:#FF4384;
     }
-    &--rest--hold {
+    &--rest--stop {
       border-color:#00A7FF;
       animation-play-state: paused;
     }
@@ -50,7 +50,7 @@
 
 
 
-    &--work--hold {
+    &--work--stop {
       border-color:#FF4384;
       animation-play-state: paused;
     }
@@ -58,7 +58,7 @@
       border-color:#FF4384;
 
     }
-    &--rest--hold {
+    &--rest--stop {
       border-color:#00A7FF;
       animation-play-state: paused;
     }
@@ -86,7 +86,7 @@
 
 
 
-    &--work--hold {
+    &--work--stop {
       border-color:#FF4384;
       animation-play-state: paused;
     }
@@ -95,7 +95,7 @@
 
     }
 
-    &--rest--hold {
+    &--rest--stop {
       border-color:#00A7FF;
       animation-play-state: paused;
     }

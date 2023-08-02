@@ -24,8 +24,8 @@ export default function ResetButton({bg}){
         <div className="reset-button" style={newStyle}
              onClick={()=>{
             dispatch({
-                type:'START_AND_HOLD',
-                payload: "hold"
+                type:'START_AND_STOP',
+                payload: "stop"
             })
                  dispatch({
                      type:'TIME',

@@ -7,7 +7,7 @@ import Circle from '../../../components/circle';
 import Triangle from "../../../components/triangle";
 import ResetButton from "./reset-button";
 import StartIcon from "./start-icon";
-import HoldIcon from "./hold-icon";
+import StopIcon from "./stop-icon";
 import ProgressBar from "./progress-bar";
 export default function Disc({className}){
     const [state]=useContext(CartContext);
@@ -18,7 +18,7 @@ export default function Disc({className}){
                 <Circle size={520}  >
                     <Circle  bg={circle} size={520}
                             borderColor={ring}>
-                        {state.startCondition==="hold"? <StartIcon/>:<HoldIcon/>}
+                        {state.startCondition==="stop"? <StartIcon/>:<StopIcon/>}
                     </Circle>
                 </Circle>
             </Circle>

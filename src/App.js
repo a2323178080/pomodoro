@@ -10,7 +10,7 @@ function App() {
 
   const cartReducer=useReducer(context
       ,{
-        startCondition: 'hold',
+        startCondition: 'stop',
         workCondition:'work',
         todoList:[],
         showTodoList:"",
