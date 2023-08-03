@@ -7,6 +7,7 @@ import Time from "./time/time.js";
 import TodoList from "./todo-list/todo-list";
 import IconGroup from "./icon-group/icon-group";
 import Slogan from "../../components/slogan";
+import ProgressChart from "./task/progress-chart";
 
 export default function Home(){
     const {homeBackground,input}=useColor()
@@ -32,6 +33,7 @@ export default function Home(){
                 <Disc className="middleRight"/>
                 <IconGroup/>
                 <Slogan/>
+                <ProgressChart/>
             </div>
         </div>
     )

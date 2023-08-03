@@ -33,9 +33,6 @@ export default function Input({className,color}) {
 
     localStorage.setItem("key", JSON.stringify(state.todoList));
 
-
-    console.log('測試',state.todoList);
-
     return (
         <div className={`input${className ? ' ' + className : ''}`}>
         <input type="text"
@@ -46,7 +43,7 @@ export default function Input({className,color}) {
                onKeyDown={handleKeyDown}
                style={{color:`var(--${input})`}}
         />
-        <PlusOutlined className="inputArea__plusIcon"
+        <PlusOutlined className="inputArea--plusIcon"
                       onClick={addTodo}
                       style={{color:`var(--${input})`}}
         />

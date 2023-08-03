@@ -1,4 +1,5 @@
 .input {
+
   .inputArea {
     width: 445px;
     height: 56px;
@@ -6,11 +7,13 @@
     background: #FFFFFF 0% 0% no-repeat padding-box;
     opacity: 1;
     border: 0px;
-    &__plusIcon {
+    outline: none;
+    &--plusIcon {
       position: absolute;
       left: 405px;
       top: 16px;
-      //color: var(--pink);
+
+
     }
 
 &--work{

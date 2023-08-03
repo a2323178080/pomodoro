@@ -2,6 +2,7 @@ import "./task.scss"
 import {useContext, useEffect} from "react";
 import {CartContext, cartContext} from "../../../store/store";
 import Circle from "../../../components/circle"
+import ProgressChart from "./progress-chart";
 export default function Task(){
     const [state,dispatch]=useContext(CartContext);
     useEffect(()=>{
@@ -18,6 +19,7 @@ export default function Task(){
                 <li>
                     <div>{state.showTodoList!==""&&<Circle size={48} bg="transparent" borderStyle="darkBlue"/>}</div>
                     <div >
+
                         <div className="task--font">{state.showTodoList}</div>
                         <div className="task--cycleIcon">
                             {state.cycles.map(()=>{
