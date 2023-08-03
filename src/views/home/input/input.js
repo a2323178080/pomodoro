@@ -2,8 +2,10 @@ import {CartContext} from "../../../store/store";
 import {useState, useContext} from "react";
 import "./input.scss";
 import {PlusOutlined} from "@ant-design/icons";
+import useColor from "../../../hook/useColor";
 
 export default function Input({className,color}) {
+    const {input}=useColor();
     const [state, dispatch] = useContext(CartContext);
     const [value, setValue] = useState("");
     const handleChange = (e) => {
@@ -28,17 +30,6 @@ export default function Input({className,color}) {
         }
     }
 
-    const newColor={
-        pink:{
-            color:'var(--pink)'
-        },
-        blue:{
-            color:'var(--blue)'
-    }
-    }
-    const newStyle={
-        ...newColor[color]
-    }
     return (
         <div className={`input${className ? ' ' + className : ''}`}>
         <input type="text"
@@ -47,12 +38,12 @@ export default function Input({className,color}) {
                className={`inputArea inputArea--${state.workCondition}`}
                onChange={handleChange}
                onKeyDown={handleKeyDown}
-               style={newStyle}
+               style={{color:`var(--${input})`}}
 
         />
         <PlusOutlined className="inputArea__plusIcon"
                       onClick={addTodo}
-                      style={newStyle}
+                      style={{color:`var(--${input})`}}
         />
     </div>
     )

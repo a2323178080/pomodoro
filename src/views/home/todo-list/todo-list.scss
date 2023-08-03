@@ -4,11 +4,11 @@
   position: absolute;
   top:610px;
   &--font{
-    font: normal normal bold 24px/28px Roboto;
+    font: normal normal bold 16px/24px Roboto;
     color: #003164;
     text-transform: uppercase;
     opacity: 1;
-    margin-left: 0px;
+    margin-left: 0;
     border-bottom: 2px solid silver;
     margin-bottom: 9px;
   }
@@ -25,8 +25,7 @@
   .more{
     text-align: right;
     font: normal normal bold 16px/19px Roboto;
-    letter-spacing: 0px;
+    letter-spacing: 0;
     cursor:pointer;
-
   }
 }
