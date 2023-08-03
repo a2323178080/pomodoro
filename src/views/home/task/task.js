@@ -4,9 +4,6 @@ import {CartContext, cartContext} from "../../../store/store";
 import Circle from "../../../components/circle"
 export default function Task(){
     const [state,dispatch]=useContext(CartContext);
-
-
-
     useEffect(()=>{
     if(state.times<1){
         dispatch({
@@ -15,13 +12,11 @@ export default function Task(){
         })
     }
     },[state.times])
-
-
     return(
         <div className="task">
             <ul>
                 <li>
-                    <div><Circle size={48} bg="transparent" borderStyle="darkBlue"/></div>
+                    <div>{state.showTodoList!==""&&<Circle size={48} bg="transparent" borderStyle="darkBlue"/>}</div>
                     <div >
                         <div className="task--font">{state.showTodoList}</div>
                         <div className="task--cycleIcon">

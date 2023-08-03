@@ -64,8 +64,6 @@ export function context(state,action){
                     newCycles
                 ]
             }
-
-
         default:
             return state
     }
