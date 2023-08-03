@@ -1,7 +1,9 @@
 import {CartContext} from "../../../store/store";
 import { useContext} from "react";
 import "./todo-list.scss";
+import useColor from "../../../hook/useColor";
 export default function TodoList(){
+    const {word}=useColor();
     const [state, dispatch] = useContext(CartContext);
     const removeTodo = (id) => {
         dispatch({
@@ -44,29 +46,9 @@ export default function TodoList(){
                     </ul>)
                 }
             })}
-            {state.todoList.length>3?<div className={`more more--${state.workCondition}`}>MORE</div>:<div></div>}
+            {state.todoList.length>3?<div className="more" style={{color:`var(--${word})`}}>MORE</div>:<div></div>}
             <div>{state.showTodoList}</div>
         </div>
     )
 }
 
-//     {/* done註記 */
-//     }
-//     const newDoneTodoList = todoList.filter((item) => {
-//         return item.id == id;
-//     });
-//     setDoneTodoList(
-//         [...doneTodoList, ...newDoneTodoList]
-//     )
-// };
-//
-//
-// // 與todoList組件有關
-// const [selectValue, setSelectValue] = useState("");
-// const showValue = (id) => {
-//     const selectArray = todoList.filter((item) => {
-//         return item.id == id;
-//     });
-//     setSelectValue(selectArray[0].do);
-// };
-//

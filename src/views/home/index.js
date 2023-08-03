@@ -27,8 +27,9 @@ export default function Home(){
             <div className="layout">
                 <Input color={input}/>
                 <Time className="middleLeft" />
-                <Disc className="middleRight"/>
+                <Task/>
                 <TodoList/>
+                <Disc className="middleRight"/>
                 <IconGroup/>
                 <Slogan/>
             </div>

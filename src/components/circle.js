@@ -3,7 +3,7 @@
 import useColor from "../hook/useColor";
 
 import "./circle.scss"
-export default function Circle({children, startAndStop, size, bg,borderColor}){
+export default function Circle({children, startAndStop, size,borderStyle, bg,borderColor}){
 
     const {ring,circle} = useColor ()
 
@@ -20,11 +20,20 @@ export default function Circle({children, startAndStop, size, bg,borderColor}){
         },
     }
 
+
+    const newBorder={
+        border:{
+            border:'2px solid #003164'
+        }
+    }
+
     const newStyle = {
-        ...initStyle,
         backgroundColor: `var(--${circle})`,
         border: `3px solid var(--${ring})`,
+        ...initStyle,
         ...bgColor[bg],
+        ...newBorder[borderStyle]
+
 
     }
 

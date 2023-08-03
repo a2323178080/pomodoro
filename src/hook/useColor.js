@@ -14,6 +14,7 @@ const useColor = () => {
     const [homeBackground,setHomeBackground]=useState("");
     const [input,setInput]=useState("");
     const [progressBar,setProgressBar]=useState("");
+    const [word,setWord]=useState("");
 
     const handleColor=(type)=>{
         if((type === 'circle' && state.startCondition==="start")||(type==="reset"&& state.startCondition==="stop")){
@@ -32,7 +33,8 @@ const useColor = () => {
         setHomeBackground(handleColor('homeBackground'))
         setInput(handleColor('input'))
         setProgressBar(handleColor('progressBar'))
+        setWord(handleColor('word'))
     }, [state])
-    return {circle,ring,reset,triangle,time,iconCircle,homeBackground,input,progressBar}
+    return {circle,ring,reset,triangle,time,iconCircle,homeBackground,input,progressBar,word}
 }
 export default useColor;
