@@ -3,7 +3,7 @@
 import useColor from "../hook/useColor";
 
 import "./circle.scss"
-export default function Circle({children, startAndStop, size,borderStyle, bg,borderColor}){
+export default function Circle({children, startAndStop, size,borderStyle, bg,marginLeft,borderColor}){
 
     const {ring,circle} = useColor ()
 
@@ -14,26 +14,36 @@ export default function Circle({children, startAndStop, size,borderStyle, bg,bor
         height: size,
     }
 
-    const bgColor = {
+    const newBackgroundColor = {
         transparent: {
             backgroundColor: 'transparent',
         },
+        darkBlue:{
+            backgroundColor: '#003164',
+        }
     }
 
-
     const newBorder={
-        border:{
+        darkBlue:{
             border:'2px solid #003164'
         }
     }
+
+    const newMarginLeft={
+        eight:{
+            marginLeft:'8px'
+        }
+    }
+
+
 
     const newStyle = {
         backgroundColor: `var(--${circle})`,
         border: `3px solid var(--${ring})`,
         ...initStyle,
-        ...bgColor[bg],
-        ...newBorder[borderStyle]
-
+        ...newBackgroundColor[bg],
+        ...newBorder[borderStyle],
+        ...newMarginLeft[marginLeft],
 
     }
 

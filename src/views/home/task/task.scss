@@ -3,15 +3,14 @@
   top:201px;
   width:412px;
   height: 48px;
-  background-color: red;
 
   li{
     display: flex;
   }
 
-  &--icon{
-    font-size: 48px;
-    font-weight:100;
+  &--cycleIcon{
+    display:flex;
+    margin-left:8px;
   }
 
   &--font{
@@ -22,5 +21,6 @@
     text-transform: uppercase;
     opacity: 1;
     margin-left:16px;
+    margin-bottom: 8px;
   }
 }

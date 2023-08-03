@@ -52,6 +52,20 @@ export function context(state,action){
                 ...state,
                 handlePosition: action.payload
             }
+
+        case 'ADD_CYCLES':
+            const newCycles = {
+                id: Date.now()
+            }
+            return {
+                ...state,
+                cycles: [
+                    ...state.cycles,
+                    newCycles
+                ]
+            }
+
+
         default:
             return state
     }
