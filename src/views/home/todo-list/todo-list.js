@@ -1,5 +1,5 @@
 import {CartContext} from "../../../store/store";
-import { useContext} from "react";
+import {useContext, useEffect} from "react";
 import "./todo-list.scss";
 import useColor from "../../../hook/useColor";
 export default function TodoList(){
@@ -28,9 +28,10 @@ export default function TodoList(){
         })
     }
 
+    const localTodoList=JSON.parse(localStorage.getItem("key"||"[]"));
     return(
         <div className="todoList" >
-            {state.todoList.map((todo,index)=>{
+            {localTodoList.map((todo,index)=>{
                 if(index<3){
                     return(
                         <ul key={todo.id} className="todoList--font">
@@ -46,7 +47,7 @@ export default function TodoList(){
                     </ul>)
                 }
             })}
-            {state.todoList.length>3?<div className="more" style={{color:`var(--${word})`}}>MORE</div>:<div></div>}
+            {localTodoList.length>3?<div className="more" style={{color:`var(--${word})`}}>MORE</div>:<div></div>}
         </div>
     )
 }
