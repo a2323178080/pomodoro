@@ -47,7 +47,6 @@ export default function TodoList(){
                 }
             })}
             {state.todoList.length>3?<div className="more" style={{color:`var(--${word})`}}>MORE</div>:<div></div>}
-            <div>{state.showTodoList}</div>
         </div>
     )
 }
