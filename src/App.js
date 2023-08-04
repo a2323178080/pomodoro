@@ -19,7 +19,6 @@ function App() {
           cycles:[]
       })
 
-
   return (
       <CartContext.Provider value={cartReducer}>
         <div>

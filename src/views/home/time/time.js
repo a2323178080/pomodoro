@@ -42,7 +42,6 @@ export default function Time({className}){
     useEffect(() => {
 
         if(state.times === 0) {
-            console.log('123456')
             dispatch({
                 type:'WORK_AND_REST',
                 payload:state.workCondition==='work'?'rest':'work'

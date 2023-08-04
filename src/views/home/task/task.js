@@ -24,7 +24,7 @@ export default function Task(){
                             {state.cycles.map(()=>{
                             return <div><Circle size={12} bg="darkBlue" borderStyle="darkBlue" marginLeft="eight"/>
                             </div>
-                        })}
+                             })}
                             <ProgressChart/>
                         </div>
                     </div>
