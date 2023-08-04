@@ -16,7 +16,8 @@ function App() {
         showTodoList:"",
         times:5,
         handlePosition:()=>{},
-          cycles:[]
+          cycles:[],
+          resetCondition:false
       })
 
   return (

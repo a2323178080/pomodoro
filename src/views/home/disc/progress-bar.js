@@ -12,7 +12,16 @@ export default function ProgressBar() {
             style={{borderColor:`var(--${progressBar})`}}
             >
                 <div className={`element2 element2--${state.startCondition}`}
-                     style={{borderColor:`var(--${progressBar})`}}></div>
+                     style={
+
+
+                    {borderColor:`var(--${progressBar})`}
+
+
+
+
+
+                }></div>
                 <div className={`element3 element3--${state.startCondition}`}
                      style={{borderColor:`var(--${progressBar})`}}></div>
             </div>

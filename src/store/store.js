@@ -76,6 +76,12 @@ export function context(state,action){
                 ...state,
                  cycles:[]
             }
+
+        case 'RESET_CONDITION':
+            return {
+                ...state,
+                resetCondition:action.payload
+            }
         default:
             return state
     }

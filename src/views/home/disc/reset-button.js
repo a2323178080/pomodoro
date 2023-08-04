@@ -12,13 +12,18 @@ export default function ResetButton({bg}){
     return(
         <div className="reset-button" style={newColor}
              onClick={()=>{
-            dispatch({
-                type:'START_AND_STOP',
-                payload: "stop"
-            })
+                dispatch({
+                    type:'START_AND_STOP',
+                    payload: "stop"
+                })
                  dispatch({
                      type:'TIME',
                      payload: 5
+                 })
+
+                 dispatch({
+                     type:'RESET_CONDITION',
+                     payload: true
                  })
         }}>
         </div>
