@@ -106,4 +106,25 @@
 
 
 
+@keyframes reset-a1{
+  0%{
+    margin-left:270px;
+    width:270px;
+    border-radius:0 270px 270px 0;
+  }
+
+}
+@keyframes reset-a2{
+  0%{
+    transform:rotate(-90deg);
+  }
+}
+@keyframes reset-a3{
+  0%{
+    opacity:0;
+  }
+}
+
+
+
 
