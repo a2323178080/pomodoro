@@ -1,16 +1,14 @@
 .progressChart{
   margin-left: 8px;
   .element1{
-
     margin-left:50px;
-    top:0px;
-    left:0px;
+    top:0;
+    left:0;
     position:relative;
     width:6px;
     height:12px;
-    border-radius:0px 12px 12px 0px;
+    border-radius:0 12px 12px 0;
     overflow:hidden;
-    //animation:a1 5s infinite linear;
     animation:b1 5s linear 0s infinite;
     &--stop {
       animation-play-state: paused;
@@ -20,8 +18,8 @@
     content:"";
     box-sizing:border-box;
     position:absolute;
-    top:0px;
-    right: 0px;
+    top:0;
+    right: 0;
     width:12px;
     height:6px;
     background-color: red;
@@ -40,8 +38,8 @@
   .element3{
     box-sizing:border-box;
     position:absolute;
-    top:0px;
-    right: 0px;
+    top:0;
+    right: 0;
     width:12px;
     height:6px;
     background:red;
@@ -53,9 +51,6 @@
     transform:rotate(90deg);
     z-index:2;
     animation:b3 5s infinite linear;
-
-
-
     &--stop {
       animation-play-state: paused;
     }
@@ -104,5 +99,4 @@
       opacity:1;
     }
   }
-
 }

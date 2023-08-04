@@ -1,18 +1,17 @@
 .progressBar{
   position: absolute;
-  top: 0px;
-  left: 0px;
+  top: 0;
+  left: 0;
   z-index: -1;
   .element1{
     margin-left:50px;
-    top:0px;
-    left:0px;
+    top:0;
+    left:0;
     position:relative;
     width:270px;
     height:540px;
     border-radius:0px 270px 270px 0px;
     overflow:hidden;
-    //animation:a1 5s infinite linear;
     animation:a1 5s linear 0s infinite;
     &--stop {
       animation-play-state: paused;
@@ -22,8 +21,8 @@
     content:"";
     box-sizing:border-box;
     position:absolute;
-    top:0px;
-    right: 0px;
+    top:0;
+    right: 0;
     width:540px;
     height:270px;
     background:yellow;
@@ -42,8 +41,8 @@
   .element3{
     box-sizing:border-box;
     position:absolute;
-    top:0px;
-    right: 0px;
+    top:0;
+    right: 0;
     width:540px;
     height:270px;
     background:yellow;
@@ -55,9 +54,6 @@
     transform:rotate(90deg);
     z-index:2;
     animation:a3 5s infinite linear;
-
-
-
     &--stop {
       animation-play-state: paused;
     }

@@ -1,13 +1,10 @@
 import "./progress-bar.scss"
-import {useContext, useEffect} from 'react';
+import {useContext} from 'react';
 import {CartContext} from "../../../store/store";
 import useColor from "../../../hook/useColor";
 export default function ProgressBar() {
     const {progressBar} = useColor ()
     const [state] = useContext(CartContext);
-
-
-
 
     return (
         <div className="progressBar">
