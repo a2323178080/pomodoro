@@ -25,10 +25,9 @@ export default function Task(){
 
     return(
         <div className="task">
-            <ul>
-                <li>
-                    <div>{state.showTodoList!==""&&<Circle size={48} bg="transparent" borderStyle="darkBlue" cursor="pointer" onClick={removeShowTodoList}/>}
-                    </div>
+                <div className="flex">
+                    {state.showTodoList!==""&&<Circle size={48} bg="transparent" borderStyle="darkBlue" cursor="pointer" onClick={removeShowTodoList}/>}
+
                     <div >
                         <div className="task--font">{state.showTodoList}</div>
                         <div className="task--cycleIcon">
@@ -39,8 +38,8 @@ export default function Task(){
                             {state.showTodoList!==""&&<ProgressChart/>}
                         </div>
                     </div>
-                </li>
-            </ul>
+                </div>
+
        </div>
     )
 }
