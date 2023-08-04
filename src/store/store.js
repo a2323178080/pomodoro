@@ -70,6 +70,12 @@ export function context(state,action){
                     newCycles
                 ]
             }
+
+        case 'REMOVE_CYCLES':
+            return {
+                ...state,
+                 cycles:[]
+            }
         default:
             return state
     }

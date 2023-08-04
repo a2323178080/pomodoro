@@ -26,6 +26,10 @@ export default function TodoList(){
                 id
             }
         })
+        dispatch({
+            type:'REMOVE_CYCLES',
+            payload:{}
+        })
     }
 
     const localTodoList=JSON.parse(localStorage.getItem("key"||"[]"));
