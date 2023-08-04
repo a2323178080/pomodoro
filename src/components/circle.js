@@ -3,10 +3,8 @@
 import useColor from "../hook/useColor";
 
 import "./circle.scss"
-export default function Circle({children, size,borderStyle, bg,marginLeft,onClick,cursor,borderColor}){
-
+export default function Circle({children, size,border, bg,marginLeft,onClick,cursor}){
     const {ring,circle} = useColor ()
-
     // const [state,dispatch]=useContext(CartContext);
 
     const initStyle = {
@@ -14,20 +12,6 @@ export default function Circle({children, size,borderStyle, bg,marginLeft,onClic
         height: size,
     }
 
-    const newBackgroundColor = {
-        transparent: {
-            backgroundColor: 'transparent',
-        },
-        darkBlue:{
-            backgroundColor: '#003164',
-        }
-    }
-
-    const newBorder={
-        darkBlue:{
-            border:'2px solid #003164'
-        }
-    }
 
     const newMarginLeft={
         eight:{
@@ -42,13 +26,10 @@ export default function Circle({children, size,borderStyle, bg,marginLeft,onClic
     }
 
 
-
     const newStyle = {
-        backgroundColor: `var(--${circle})`,
-        border: `3px solid var(--${ring})`,
+        backgroundColor: bg? `var(--${bg})` : `var(--${circle})`,
+        border: border?border:`3px solid var(--${ring})`,
         ...initStyle,
-        ...newBackgroundColor[bg],
-        ...newBorder[borderStyle],
         ...newMarginLeft[marginLeft],
         ...newCusor[cursor]
 
