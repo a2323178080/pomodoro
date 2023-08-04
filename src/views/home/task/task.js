@@ -36,7 +36,7 @@ export default function Task(){
                             return <div><Circle size={12} bg="darkBlue" borderStyle="darkBlue" marginLeft="eight"/>
                             </div>
                              })}
-                            <ProgressChart/>
+                            {state.showTodoList!==""&&<ProgressChart/>}
                         </div>
                     </div>
                 </li>
