@@ -1,18 +1,19 @@
 .progressChart{
   position: absolute;
-  top: 5px0px;
-  left: 50px;
+  top: 60px;
+  left: 10px;
   .element1{
+
     margin-left:50px;
     top:0px;
     left:0px;
     position:relative;
-    width:270px;
-    height:540px;
-    border-radius:0px 270px 270px 0px;
+    width:6px;
+    height:12px;
+    border-radius:0px 12px 12px 0px;
     overflow:hidden;
     //animation:a1 5s infinite linear;
-    animation:a1 5s linear 0s infinite;
+    animation:b1 5s linear 0s infinite;
     &--stop {
       animation-play-state: paused;
     }
@@ -23,17 +24,17 @@
     position:absolute;
     top:0px;
     right: 0px;
-    width:540px;
-    height:270px;
-    background:yellow;
+    width:12px;
+    height:6px;
+    background-color: #FF4384;
     border-style:solid;
     border-color:#FF4384;
-    border-width:15px 15px 0;
-    border-radius:270px 270px 0 0;
-    transform-origin:270px 270px;
+    border-width:1px 1px 0;
+    border-radius:6px 6px 0 0;
+    transform-origin:6px 6px;
     transform:rotate(-90deg);
     z-index:1;
-    animation:a2 5s infinite linear;
+    animation:b2 5s infinite linear;
     &--stop {
       animation-play-state: paused;
     }
@@ -43,17 +44,17 @@
     position:absolute;
     top:0px;
     right: 0px;
-    width:540px;
-    height:270px;
-    background:yellow;
+    width:12px;
+    height:6px;
+    background:#FF4384;
     border-style:solid;
     border-color:#FF4384;
-    border-width:15px 15px 0;
-    border-radius:270px 270px 0 0;
-    transform-origin:270px 270px;
+    border-width:1px 1px 0;
+    border-radius:6px 6px 0 0;
+    transform-origin:6px 6px;
     transform:rotate(90deg);
     z-index:2;
-    animation:a3 5s infinite linear;
+    animation:b3 5s infinite linear;
 
 
 
@@ -61,29 +62,29 @@
       animation-play-state: paused;
     }
   }
-  @keyframes a1{
+  @keyframes b1{
     0%{
-      margin-left:270px;
-      width:270px;
-      border-radius:0 270px 270px 0;
+      margin-left:6px;
+      width:6px;
+      border-radius:0 6px 6px 0;
     }
     49.99%{
-      margin-left:270px;
-      width:270px;
-      border-radius:0 270px 270px 0;
+      margin-left:6px;
+      width:6px;
+      border-radius:0 6px 6px 0;
     }
     50%{
       margin-left:0;
-      width:540px;
+      width:12px;
       border-radius:0;
     }
     100%{
       margin-left:0;
-      width:540px;
+      width:12px;
       border-radius:0;
     }
   }
-  @keyframes a2{
+  @keyframes b2{
     0%{
       transform:rotate(-90deg);
     }
@@ -91,7 +92,7 @@
       transform:rotate(270deg);
     }
   }
-  @keyframes a3{
+  @keyframes b3{
     0%{
       opacity:0;
     }
