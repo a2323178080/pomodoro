@@ -3,7 +3,7 @@
 import useColor from "../hook/useColor";
 
 import "./circle.scss"
-export default function Circle({children, size,borderStyle, bg,marginLeft,borderColor}){
+export default function Circle({children, size,borderStyle, bg,marginLeft,onClick,cursor,borderColor}){
 
     const {ring,circle} = useColor ()
 
@@ -35,6 +35,12 @@ export default function Circle({children, size,borderStyle, bg,marginLeft,border
         }
     }
 
+    const newCusor={
+        pointer:{
+            cursor:'pointer'
+        }
+    }
+
 
 
     const newStyle = {
@@ -44,13 +50,14 @@ export default function Circle({children, size,borderStyle, bg,marginLeft,border
         ...newBackgroundColor[bg],
         ...newBorder[borderStyle],
         ...newMarginLeft[marginLeft],
+        ...newCusor[cursor]
 
     }
 
 
 
     return(
-        <div className="circle" style={newStyle} >
+        <div className="circle" style={newStyle} onClick={onClick}>
             {children}
         </div>
     )

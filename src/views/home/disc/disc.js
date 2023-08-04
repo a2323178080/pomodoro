@@ -18,7 +18,6 @@ export default function Disc({className}){
                     <Circle   size={520}>
                         {state.startCondition==="stop"? <StartIcon/>:<StopIcon/>}
                     </Circle>
-
             </Circle>
             <ResetButton bg={reset}/>
             <ProgressBar/>

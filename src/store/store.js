@@ -47,6 +47,12 @@ export function context(state,action){
                 showTodoList: action.payload.value
             }
 
+        case 'REMOVE_SHOW_TODO':
+            return {
+                ...state,
+                showTodoList: action.payload
+            }
+
         case 'HANDLE_POSITION':
             return {
                 ...state,
