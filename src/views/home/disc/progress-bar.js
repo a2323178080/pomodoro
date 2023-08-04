@@ -10,7 +10,7 @@ export default function ProgressBar() {
 
 
     return (
-        <div className="pieRing">
+        <div className="progressBar">
             <div className={`element1 element1--${state.startCondition}`}
             style={{borderColor:`var(--${progressBar})`}}
             >

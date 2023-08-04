@@ -1,7 +1,5 @@
 .progressChart{
-  position: absolute;
-  top: 60px;
-  left: 10px;
+  margin-left: 8px;
   .element1{
 
     margin-left:50px;
@@ -26,7 +24,7 @@
     right: 0px;
     width:12px;
     height:6px;
-    background-color: #FF4384;
+    background-color: red;
     border-style:solid;
     border-color:#FF4384;
     border-width:1px 1px 0;
@@ -46,7 +44,7 @@
     right: 0px;
     width:12px;
     height:6px;
-    background:#FF4384;
+    background:red;
     border-style:solid;
     border-color:#FF4384;
     border-width:1px 1px 0;

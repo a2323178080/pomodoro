@@ -19,12 +19,13 @@ export default function Task(){
                 <li>
                     <div>{state.showTodoList!==""&&<Circle size={48} bg="transparent" borderStyle="darkBlue"/>}</div>
                     <div >
-
                         <div className="task--font">{state.showTodoList}</div>
                         <div className="task--cycleIcon">
                             {state.cycles.map(()=>{
-                            return <div><Circle size={12} bg="darkBlue" borderStyle="darkBlue" marginLeft="eight"/></div>
+                            return <div><Circle size={12} bg="darkBlue" borderStyle="darkBlue" marginLeft="eight"/>
+                            </div>
                         })}
+                            <ProgressChart/>
                         </div>
                     </div>
                 </li>
