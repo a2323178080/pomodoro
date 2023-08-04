@@ -11,10 +11,13 @@ export default function StartIcon(){
     const {triangle}=useColor();
     return(
         <div className="startIcon" onClick={()=>{
-            dispatch({
-                type:'START_AND_STOP',
-                payload: state.startCondition==='stop'?'start':'stop'
-            })
+            
+            if(state.showTodoList!==""){
+                dispatch({
+                    type:'START_AND_STOP',
+                    payload: state.startCondition==='stop'?'start':'stop'
+                })
+            }
         }}>
                 <Triangle borderColor={triangle}></Triangle>
         </div>

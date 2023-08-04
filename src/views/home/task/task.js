@@ -17,7 +17,8 @@ export default function Task(){
         <div className="task">
             <ul>
                 <li>
-                    <div>{state.showTodoList!==""&&<Circle size={48} bg="transparent" borderStyle="darkBlue"/>}</div>
+                    <div>{state.showTodoList!==""&&<Circle size={48} bg="transparent" borderStyle="darkBlue"/>}
+                    </div>
                     <div >
                         <div className="task--font">{state.showTodoList}</div>
                         <div className="task--cycleIcon">
