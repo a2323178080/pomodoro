@@ -14,7 +14,7 @@ function App() {
         workCondition:'work',
         todoList:localTodoList,
           doneTodo:[],
-        showTodoList:"",
+        showTodoList:[],
         times:5,
         handlePosition:()=>{},
           cycles:[],

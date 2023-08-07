@@ -58,9 +58,12 @@ export function context(state,action){
 
 
         case 'SHOW_TODO':
+            const newShowTodo = [...state.todoList].filter((item) => {
+                return item.id === action.payload.id;
+            });
             return {
                 ...state,
-                showTodoList: action.payload.value
+                showTodoList: newShowTodo
             }
 
         case 'REMOVE_SHOW_TODO':

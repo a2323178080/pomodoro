@@ -20,8 +20,9 @@ export default function Task(){
             payload:""
         })
 
-
     }
+
+    console.log('dfsdgdfgdfg',state.showTodoList);
 
     return(
         <div className="task">
@@ -29,7 +30,9 @@ export default function Task(){
                     {state.showTodoList!==""&&<Circle size={48} bg="transparent" border="2px solid #003164" cursor="pointer" onClick={removeShowTodoList}/>}
 
                     <div >
-                        <div className="task--font">{state.showTodoList}</div>
+                        <div className="task--font">{state.showTodoList.map((todo)=>{
+                            return <div>{todo.do}</div>
+                        })}</div>
                         <div className="task--cycleIcon">
                             {state.showTodoList!==""&&state.cycles.map(()=>{
                             return <div><Circle size={12} bg="darkBlue" border="2px solid #003164" marginLeft="eight"/>

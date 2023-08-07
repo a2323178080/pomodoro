@@ -27,9 +27,11 @@ export default function TodoList({position,page,color}){
         dispatch({
             type: 'SHOW_TODO',
             payload: {
-                value
+                id
             }
         })
+
+
         dispatch({
             type: 'REMOVE_TODO',
             payload: {
