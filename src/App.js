@@ -1,8 +1,8 @@
+import {Routes,Route} from 'react-router-dom';
 import {context} from "./store/store";
-
 import { useReducer} from "react";
-
-import Home from "./views/home/index"
+import Home from "./views/home/index";
+import TodoListPage from "./views/todo-list-page/todo-list-page";
 import {CartContext} from "./store/store";
 
 function App() {
@@ -23,7 +23,10 @@ function App() {
   return (
       <CartContext.Provider value={cartReducer}>
         <div>
-          <Home></Home>
+            <Routes>
+                <Route path='/' element={<Home/>}></Route>
+                <Route path='/todoListPage' element={<TodoListPage/>}></Route>
+            </Routes>
         </div>
       </CartContext.Provider>
   );
