@@ -19,7 +19,7 @@ export default function TodoArea({position}){
     return(
         <div className="todoArea" style={newStyle}>
             <div className="todoBar">TO-DO</div>
-            <TodoList/>
+            <TodoList />
 
 
 
