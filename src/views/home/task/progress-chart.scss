@@ -1,5 +1,11 @@
 .progressChart{
   margin-left: 8px;
+
+  .borderCircle{
+    width: 13px;
+    height: 13px;
+    border-radius: 50%/50%;
+  }
   .element1{
     margin-left:50px;
     top:0;
