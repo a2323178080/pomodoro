@@ -1,0 +1,21 @@
+.todoArea{
+  position: absolute;
+  width:445px;
+  height: 346px;
+  background-color: green;
+
+
+
+  .todoBar{
+    width: 445px;
+    height: 44px;
+    background: #FFFFFF33 0% 0% no-repeat padding-box;
+    opacity: 1;
+    text-align: left;
+    font: normal normal bold 24px/36px Roboto;
+    letter-spacing: 0px;
+    color: #FFFFFF;
+    text-transform: uppercase;
+
+  }
+}
