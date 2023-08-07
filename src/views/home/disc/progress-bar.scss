@@ -16,6 +16,9 @@
     &--stop {
       animation-play-state: paused;
     }
+    &--reset {
+      animation:reset-a1 5s linear 0s infinite;
+    }
   }
   .element2{
     content:"";
@@ -37,6 +40,9 @@
     &--stop {
       animation-play-state: paused;
     }
+    &--reset {
+      animation:reset-a2 5s linear 0s infinite;
+    }
   }
   .element3{
     box-sizing:border-box;
@@ -56,6 +62,9 @@
     animation:a3 5s infinite linear;
     &--stop {
       animation-play-state: paused;
+    }
+    &--reset {
+      animation:reset-a3 5s linear 0s infinite;
     }
   }
   @keyframes a1{
@@ -112,15 +121,26 @@
     width:270px;
     border-radius:0 270px 270px 0;
   }
+  100%{
+    margin-left:270px;
+    width:270px;
+    border-radius:0 270px 270px 0;
+  }
 
 }
 @keyframes reset-a2{
   0%{
     transform:rotate(-90deg);
   }
+  100%{
+    transform:rotate(-90deg);
+  }
 }
 @keyframes reset-a3{
   0%{
+    opacity:0;
+  }
+  100%{
     opacity:0;
   }
 }

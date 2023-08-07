@@ -17,6 +17,11 @@ export default function StartIcon(){
                     payload: state.startCondition==='stop'?'start':'stop'
                 })
 
+                dispatch({
+                    type:'RESET_CONDITION',
+                    payload: false
+                })
+
         }}>
                 <Triangle borderColor={triangle}></Triangle>
         </div>
