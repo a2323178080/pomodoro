@@ -6,12 +6,6 @@ export default function TodoList({position,page,color}){
     const {word}=useColor();
     const [state, dispatch] = useContext(CartContext);
     const removeTodo = (id) => {
-        dispatch({
-            type: 'REMOVE_TODO',
-            payload: {
-                id
-            }
-        })
 
         dispatch({
             type: 'DONE_TODO',
@@ -19,6 +13,14 @@ export default function TodoList({position,page,color}){
                 id
             }
         })
+        dispatch({
+            type: 'REMOVE_TODO',
+            payload: {
+                id
+            }
+        })
+
+
 
     }
     const showTodo = (id,value) => {

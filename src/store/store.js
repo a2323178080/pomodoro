@@ -52,7 +52,7 @@ export function context(state,action){
                 ...state,
                 doneTodo: [
                     ...state.doneTodo,
-                    newDoneTodo
+                    ...newDoneTodo
                 ]
             }
 
