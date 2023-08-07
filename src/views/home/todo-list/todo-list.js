@@ -12,6 +12,14 @@ export default function TodoList({position,page,color}){
                 id
             }
         })
+
+        dispatch({
+            type: 'DONE_TODO',
+            payload: {
+                id
+            }
+        })
+
     }
     const showTodo = (id,value) => {
         dispatch({

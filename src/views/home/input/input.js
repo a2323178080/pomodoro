@@ -14,7 +14,6 @@ export default function Input({className,color,position}) {
     };
     const addTodo = () => {
         if (value.trim() !== "") {
-
             dispatch({
                 type: 'ADD_TODO',
                 payload: {

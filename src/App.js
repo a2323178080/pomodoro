@@ -13,6 +13,7 @@ function App() {
         startCondition: 'stop',
         workCondition:'work',
         todoList:localTodoList,
+          doneTodo:[],
         showTodoList:"",
         times:5,
         handlePosition:()=>{},

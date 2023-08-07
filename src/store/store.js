@@ -41,6 +41,22 @@ export function context(state,action){
                 ...state,
                 todoList: afterRemoveTodo
             }
+
+
+
+        case 'DONE_TODO':
+            const newDoneTodo = [...state.todoList].filter((item) => {
+                return item.id === action.payload.id;
+            });
+            return {
+                ...state,
+                doneTodo: [
+                    ...state.doneTodo,
+                    newDoneTodo
+                ]
+            }
+
+
         case 'SHOW_TODO':
             return {
                 ...state,
