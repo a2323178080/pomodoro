@@ -1,8 +1,10 @@
-import "./todo-list-page.scss"
+import "./todo-list-page.scss";
+import Input from "../home/input/input";
 export default function TodoListPage(){
     return(
         <div className="todoListPage">
-            <div>todoListPage葉面</div>
+            <div>todoListPage頁面</div>
+            <Input position="upperMiddle"/>
         </div>
     )
 }
