@@ -2,7 +2,7 @@ import {CartContext} from "../../../store/store";
 import {useContext, useEffect} from "react";
 import "./todo-list.scss";
 import useColor from "../../../hook/useColor";
-export default function TodoList({position,page}){
+export default function TodoList({position,page,color}){
     const {word}=useColor();
     const [state, dispatch] = useContext(CartContext);
     const removeTodo = (id) => {
@@ -39,10 +39,16 @@ export default function TodoList({position,page}){
         }
     }
 
-    const newStyle={
-        ...newPosition[position]
+    const newColor={
+        white:{
+            color:'var(--white)'
+        }
     }
 
+    const newStyle={
+        ...newPosition[position],
+        ...newColor[color]
+    }
 
 
     return(
@@ -50,12 +56,12 @@ export default function TodoList({position,page}){
             {page==="home"?localTodoList.map((todo,index)=>{
                 if(index<3){
                     return(
-                        <ul key={todo.id} className="todoList--font">
+                        <ul key={todo.id} className="todoList--font" >
                                 <li className="todoList--li">
                                     <span className="material-icons todoList--icon"
                                     onClick={() => removeTodo(todo.id)}
                                     >radio_button_unchecked</span>
-                                    <span>{todo.do}</span>
+                                    <span style={newStyle}>{todo.do}</span>
                                     <span className="material-icons todoList--icon playIcon"
                                           onClick={() => showTodo(todo.id,todo.do)}>play_circle_outline
                                     </span>
@@ -65,12 +71,12 @@ export default function TodoList({position,page}){
             }):
                 localTodoList.map((todo,index)=>{
                         return(
-                            <ul key={todo.id} className="todoList--font">
+                            <ul key={todo.id} className="todoList--font" style={newStyle}>
                                 <li className="todoList--li">
                                     <span className="material-icons todoList--icon"
                                           onClick={() => removeTodo(todo.id)}
                                     >radio_button_unchecked</span>
-                                    <span>{todo.do}</span>
+                                    <span >{todo.do}</span>
                                     <span className="material-icons todoList--icon playIcon"
                                           onClick={() => showTodo(todo.id,todo.do)}>play_circle_outline
                                     </span>

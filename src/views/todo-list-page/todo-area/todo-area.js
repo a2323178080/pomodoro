@@ -14,12 +14,15 @@ export default function TodoArea({position}){
     }
 
     const newStyle={
-        ...newPosition[position]
+        ...newPosition[position],
+
     }
     return(
         <div className="todoArea" style={newStyle}>
-            <div className="todoBar">TO-DO</div>
-            <TodoList />
+            <div className="todoBar">TO-DO
+                <div className="dropdown"></div>
+            </div>
+            <TodoList color="white"/>
 
 
 

@@ -2,7 +2,6 @@
   position: absolute;
   width:445px;
   height: 346px;
-  background-color: green;
 
 
 
@@ -16,6 +15,22 @@
     letter-spacing: 0px;
     color: #FFFFFF;
     text-transform: uppercase;
+    padding-left:16px;
+    padding-right: 16px;
+    vertical-align:center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 19px;
+  .dropdown{
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 5px 5px 5px;
+    border-color: transparent transparent #FFFFFF transparent;
 
+
+
+  }
   }
 }
