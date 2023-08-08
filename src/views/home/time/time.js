@@ -52,7 +52,7 @@ export default function Time({className}){
             })
             dispatch({
                 type:'TIME',
-                payload: 5
+                payload: 2
             })
         }
     }, [state.times])

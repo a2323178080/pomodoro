@@ -18,7 +18,7 @@ export default function ResetButton({bg}){
                 })
                  dispatch({
                      type:'TIME',
-                     payload: 5
+                     payload: 2
                  })
 
                  dispatch({
