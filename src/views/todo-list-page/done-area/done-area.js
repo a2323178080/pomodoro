@@ -26,8 +26,10 @@ export default function DoneArea({position}){
 
             {state.doneTodo.map((item)=>{
                 return <div >{item.do}
+                    {item.number}
 
-                    {state.cyclesNumber}
+
+
 
                 </div>
 

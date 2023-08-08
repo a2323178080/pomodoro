@@ -10,7 +10,7 @@ export default function Input({className,color,position}) {
     const [value, setValue] = useState("");
     const cyclesNumber=state.cyclesNumber;
 
-    console.log('輸入的東西',state.todoList);
+
 
     const handleChange = (e) => {
         setValue(e.target.value);

@@ -46,17 +46,22 @@ export function context(state,action){
 
 
         case 'DONE_TODO':
-            const newDoneTodo = [...state.todoList].filter((item) => {
-                return item.id === action.payload.id;
+            const newDoneTodo = [...state.todoList].map((item) => {
+                if(item.id === action.payload.id) {
+                    item.number =action.payload.cyclesNumber+1;
+                }
+                return item;
             });
 
 
+            console.log("測",newDoneTodo)
 
             return {
                 ...state,
                 doneTodo: [
                     ...state.doneTodo,
-                    ...newDoneTodo
+                    ...newDoneTodo,
+
                 ]
             }
 

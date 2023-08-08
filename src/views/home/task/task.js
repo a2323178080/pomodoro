@@ -14,17 +14,20 @@ export default function Task(){
     }
     },[state.times])
 
+
     const removeShowTodoList=(id)=>{
-        // dispatch({
-        //     type: 'COUNT_CYCLES',
-        //     payload: state.cycles.length
-        // })
+        dispatch({
+            type: 'COUNT_CYCLES',
+            payload: state.cycles.length
+        })
 
-
+        const cyclesNumber=state.cyclesNumber;
+        // console.log("變數",cyclesNumber+1);
+        // console.log("用state抓",state.cyclesNumber+1);
         dispatch({
             type: 'DONE_TODO',
             payload: {
-                id
+                id,cyclesNumber
             }
         })
         dispatch({

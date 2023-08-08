@@ -5,7 +5,7 @@ import useColor from "../../../hook/useColor";
 export default function ProgressBar() {
     const {progressBar} = useColor ()
     const [state] = useContext(CartContext);
-    console.log(state.resetCondition)
+
 
     return (
         <div className="progressBar">
