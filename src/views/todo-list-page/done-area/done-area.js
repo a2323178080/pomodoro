@@ -25,6 +25,7 @@ export default function DoneArea({position}){
             </div>
 
             {state.doneTodo.map((item)=>{
+                console.log('item', item)
                 return <div >{item.do}
                     {item.number}
 

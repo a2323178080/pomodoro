@@ -53,8 +53,8 @@ export function context(state,action){
                 return item;
             });
 
+            console.log("store檔案的",newDoneTodo);
 
-            console.log("測",newDoneTodo)
 
             return {
                 ...state,
@@ -107,6 +107,7 @@ export function context(state,action){
 
 
         case 'COUNT_CYCLES':
+            console.log('action.payload', action.payload)
             return {
                 ...state,
                 cyclesNumber: action.payload

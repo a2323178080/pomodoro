@@ -13,12 +13,12 @@ function App() {
         startCondition: 'stop',
         workCondition:'work',
         todoList:localTodoList,
-          doneTodo:[],
+        doneTodo:[],
         showTodoList:[],
         times:5,
         handlePosition:()=>{},
-          cycles:[],
-          cyclesNumber:0
+        cycles:[],
+        cyclesNumber:0
       })
 
   return (

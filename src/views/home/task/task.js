@@ -1,10 +1,14 @@
 import "./task.scss"
-import {useContext, useEffect} from "react";
+import {useContext, useEffect,useState} from "react";
 import {CartContext, cartContext} from "../../../store/store";
 import Circle from "../../../components/circle"
 import ProgressChart from "./progress-chart";
 export default function Task(){
+
+
+
     const [state,dispatch]=useContext(CartContext);
+    const [uuid, setUUid] = useState()
     useEffect(()=>{
     if(state.times<1){
         dispatch({
@@ -16,31 +20,42 @@ export default function Task(){
 
 
     const removeShowTodoList=(id)=>{
+        setUUid(id)
         dispatch({
             type: 'COUNT_CYCLES',
             payload: state.cycles.length
         })
+        // console.log("循環",state.cycles.length);
 
-        const cyclesNumber=state.cyclesNumber+1;
+        const cyclesNumber=state.cyclesNumber;
+
+
+
+    }
+
+    useEffect(() => {
+
+
         dispatch({
             type: 'DONE_TODO',
             payload: {
-                id,cyclesNumber
+                id: uuid,
+                cyclesNumber: state.cyclesNumber
             }
         })
         dispatch({
             type: 'REMOVE_TODO',
             payload: {
-                id
+                id: uuid
             }
         })
 
         dispatch({
             type: 'REMOVE_SHOW_TODO',
             payload: []
-
         })
-    }
+    }, [state.cyclesNumber])
+
 
 
 
