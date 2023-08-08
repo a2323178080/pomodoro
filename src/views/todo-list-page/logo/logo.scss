@@ -28,6 +28,17 @@
       border-width: 15px;
       border-color: #003164;
       background-color: #FF4384;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .triangle{
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 20px 20px 20px 25px;
+        border-color: transparent transparent transparent white;
+      }
 
       .small_circle_border {
         position: absolute;
