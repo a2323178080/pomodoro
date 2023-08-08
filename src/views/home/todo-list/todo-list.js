@@ -32,12 +32,12 @@ export default function TodoList({position,page,color}){
         })
 
 
-        dispatch({
-            type: 'REMOVE_TODO',
-            payload: {
-                id
-            }
-        })
+        // dispatch({
+        //     type: 'REMOVE_TODO',
+        //     payload: {
+        //         id
+        //     }
+        // })
         dispatch({
             type:'REMOVE_CYCLES',
             payload:{}

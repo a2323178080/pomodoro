@@ -14,33 +14,60 @@ export default function Task(){
     }
     },[state.times])
 
-    const removeShowTodoList=()=>{
+    const removeShowTodoList=(id)=>{
+        // dispatch({
+        //     type: 'COUNT_CYCLES',
+        //     payload: state.cycles.length
+        // })
+
+
         dispatch({
-            type:'REMOVE_SHOW_TODO',
-            payload:""
+            type: 'DONE_TODO',
+            payload: {
+                id
+            }
+        })
+        dispatch({
+            type: 'REMOVE_TODO',
+            payload: {
+                id
+            }
         })
 
+        dispatch({
+            type: 'REMOVE_SHOW_TODO',
+            payload: []
+
+        })
     }
 
-    console.log('dfsdgdfgdfg',state.showTodoList);
+    console.log('循環次數',state.cyclesNumber);
 
     return(
         <div className="task">
-                <div className="flex">
-                    {state.showTodoList!==""&&<Circle size={48} bg="transparent" border="2px solid #003164" cursor="pointer" onClick={removeShowTodoList}/>}
-
                     <div >
                         <div className="task--font">{state.showTodoList.map((todo)=>{
-                            return <div>{todo.do}</div>
+                            return (
+                            <div className="flex">
+                                <Circle size={48} bg="transparent" border="2px solid #003164" cursor="pointer" onClick={()=>removeShowTodoList(todo.id)}/>
+
+                                <div>
+                                    <div className="task--do">{todo.do}</div>
+
+                                    <div className="task--cycleIcon">
+                                        {state.cycles.map(()=>{
+                                            return <div><Circle size={12} bg="darkBlue" border="2px solid #003164" marginLeft="eight"/>
+                                            </div>
+                                        })}
+                                        <ProgressChart/>
+                                    </div>
+
+                                </div>
+
+                            </div>)
                         })}</div>
-                        <div className="task--cycleIcon">
-                            {state.showTodoList!==""&&state.cycles.map(()=>{
-                            return <div><Circle size={12} bg="darkBlue" border="2px solid #003164" marginLeft="eight"/>
-                            </div>
-                             })}
-                            {state.showTodoList!==""&&<ProgressChart/>}
-                        </div>
-                    </div>
+
+
                 </div>
 
        </div>

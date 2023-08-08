@@ -48,6 +48,9 @@ export function context(state,action){
             const newDoneTodo = [...state.todoList].filter((item) => {
                 return item.id === action.payload.id;
             });
+
+
+
             return {
                 ...state,
                 doneTodo: [
@@ -95,6 +98,15 @@ export function context(state,action){
                 ...state,
                  cycles:[]
             }
+
+
+        case 'COUNT_CYCLES':
+            return {
+                ...state,
+                cyclesNumber: action.payload
+            }
+
+
 
         case 'RESET_CONDITION':
             return {

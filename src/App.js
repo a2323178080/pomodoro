@@ -18,7 +18,7 @@ function App() {
         times:5,
         handlePosition:()=>{},
           cycles:[],
-          resetCondition:false
+          cyclesNumber:0
       })
 
   return (
