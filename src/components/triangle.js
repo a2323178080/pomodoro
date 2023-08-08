@@ -6,6 +6,7 @@ export default function Triangle({borderColor}){
     const {triangle}=useColor();
 
 
+
     const newColor= {
         borderColor: `transparent transparent transparent var(--${triangle})`
     }
