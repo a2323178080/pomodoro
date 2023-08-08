@@ -24,7 +24,8 @@ export function context(state,action){
         case 'ADD_TODO':
             const newTodo = {
                 do: action.payload.value,
-                id: Date.now()
+                id: Date.now(),
+                number:action.payload.cyclesNumber
             }
             return {
                 ...state,

@@ -41,7 +41,7 @@ export default function Task(){
         })
     }
 
-    console.log('循環次數',state.cyclesNumber);
+
 
     return(
         <div className="task">

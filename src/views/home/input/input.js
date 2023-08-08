@@ -8,6 +8,9 @@ export default function Input({className,color,position}) {
     const {input}=useColor();
     const [state, dispatch] = useContext(CartContext);
     const [value, setValue] = useState("");
+    const cyclesNumber=state.cyclesNumber;
+
+    console.log('輸入的東西',state.todoList);
 
     const handleChange = (e) => {
         setValue(e.target.value);
@@ -17,7 +20,7 @@ export default function Input({className,color,position}) {
             dispatch({
                 type: 'ADD_TODO',
                 payload: {
-                    value
+                    value,cyclesNumber
                 },
             })
             setValue("");
