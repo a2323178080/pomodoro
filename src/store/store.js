@@ -48,7 +48,7 @@ export function context(state,action){
         case 'DONE_TODO':
             const newDoneTodo = [...state.todoList].map((item) => {
                 if(item.id === action.payload.id) {
-                    item.number =action.payload.cyclesNumber+1;
+                    item.number =action.payload.cyclesNumber;
                 }
                 return item;
             });

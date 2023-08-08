@@ -21,9 +21,7 @@ export default function Task(){
             payload: state.cycles.length
         })
 
-        const cyclesNumber=state.cyclesNumber;
-        // console.log("變數",cyclesNumber+1);
-        // console.log("用state抓",state.cyclesNumber+1);
+        const cyclesNumber=state.cyclesNumber+1;
         dispatch({
             type: 'DONE_TODO',
             payload: {
