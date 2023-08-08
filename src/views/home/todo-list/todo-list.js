@@ -20,8 +20,6 @@ export default function TodoList({position,page,color}){
             }
         })
 
-
-
     }
     const showTodo = (id,value) => {
         dispatch({
@@ -31,19 +29,13 @@ export default function TodoList({position,page,color}){
             }
         })
 
-
-        // dispatch({
-        //     type: 'REMOVE_TODO',
-        //     payload: {
-        //         id
-        //     }
-        // })
         dispatch({
             type:'REMOVE_CYCLES',
             payload:{}
         })
     }
-    const localTodoList=JSON.parse(localStorage.getItem("key"||"[]"));
+    // const localTodoList=JSON.parse(localStorage.getItem("key"||"[]"));
+    const localTodoList=state.todoList;
 
     const newPosition={
         lowerLeft:{

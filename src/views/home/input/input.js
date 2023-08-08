@@ -32,7 +32,7 @@ export default function Input({className,color,position}) {
             addTodo()
         }
     }
-    localStorage.setItem("key", JSON.stringify(state.todoList));
+    // localStorage.setItem("key", JSON.stringify(state.todoList));
 
 
     const newPosition={

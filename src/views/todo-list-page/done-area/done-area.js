@@ -31,7 +31,6 @@ export default function DoneArea({position}){
 
 
 
-
                 </div>
 
             })}

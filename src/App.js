@@ -6,13 +6,13 @@ import TodoListPage from "./views/todo-list-page/todo-list-page";
 import {CartContext} from "./store/store";
 
 function App() {
-    const localTodoList=JSON.parse(localStorage.getItem("key"));
+    // const localTodoList=JSON.parse(localStorage.getItem("key"));
 
   const cartReducer=useReducer(context
       ,{
         startCondition: 'stop',
         workCondition:'work',
-        todoList:localTodoList,
+        todoList:[],
         doneTodo:[],
         showTodoList:[],
         times:2,

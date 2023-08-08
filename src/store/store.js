@@ -45,16 +45,29 @@ export function context(state,action){
 
 
 
+        // case 'DONE_TODO':
+        //     const newDoneTodo = [...state.todoList].map((item) => {
+        //         if(item.id === action.payload.id) {
+        //             item.number =action.payload.cyclesNumber;
+        //         }
+        //         return item;
+        //     });
+        //
+        //     console.log("store檔案的",newDoneTodo);
+        //
+        //
+        //     return {
+        //         ...state,
+        //         doneTodo: [
+        //             ...state.doneTodo,
+        //             ...newDoneTodo,
+        //
+        //         ]
+        //     }
+
         case 'DONE_TODO':
-            const newDoneTodo = [...state.todoList].map((item) => {
-                if(item.id === action.payload.id) {
-                    item.number =action.payload.cyclesNumber;
-                }
-                return item;
-            });
-
-            console.log("store檔案的",newDoneTodo);
-
+            const newDoneTodo = [...state.todoList].filter((item) => {
+               return item.id === action.payload.id });
 
             return {
                 ...state,
