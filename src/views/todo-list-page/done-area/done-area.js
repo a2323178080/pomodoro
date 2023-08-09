@@ -2,35 +2,39 @@ import "./done-area.scss"
 import {useContext} from "react";
 import {CartContext} from "../../../store/store";
 
-export default function DoneArea({position}){
+export default function DoneArea({position}) {
 
     const [state] = useContext(CartContext);
 
-    const newPosition={
-        lowerMiddle:{
-            left:'475px',
-            top:'498px'
+    const newPosition = {
+        lowerMiddle: {
+            left: '475px',
+            top: '498px'
         },
 
     }
-
-    const newStyle={
+    const newStyle = {
         ...newPosition[position],
-
     }
-    return(
+
+    function handleDot(num) {
+        let list = [];
+        for (let i = 0; i < num; i++) {
+            list.push(<div>有幾個圓圈測試用</div>);
+        }
+        return list;
+    }
+
+
+    return (
         <div className="doneArea" style={newStyle}>
             <div className="doneBar">DONE
                 <div className="dropdown"></div>
             </div>
-
-            {state.doneTodo.map((item)=>{
+            {state.doneTodo.map((item) => {
                 console.log('item', item)
-                return <div >{item.do}
-                    {item.number}
-
-
-
+                return <div>{item.do}
+                    {handleDot(item.number)}
                 </div>
 
             })}
