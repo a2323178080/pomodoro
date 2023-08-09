@@ -1,3 +1,4 @@
+import {Link} from "react-router-dom";
 import {CartContext} from "../../../store/store";
 import {useContext, useEffect} from "react";
 import "./todo-list.scss";
@@ -81,15 +82,19 @@ export default function TodoList({position,page,color}){
                                           onClick={() => removeTodo(todo.id)}
                                     >radio_button_unchecked</span>
                                     <span >{todo.do}</span>
-                                    <span className="material-icons todoList--icon playIcon"
-                                          onClick={() => showTodo(todo.id,todo.do)}>play_circle_outline
-                                    </span>
+
+
+                                       <Link to='/' className="material-icons todoList--icon playIcon"
+                                          onClick={() => showTodo(todo.id,todo.do)}>
+                                           play_circle_outline
+                                        </Link>
+
                                 </li>
                             </ul>)
                     })
 
             }
-            {page==="home"&&localTodoList.length>3?<div className="more" style={{color:`var(--${word})`}}>MORE</div>:<div></div>}
+            {page==="home"&&localTodoList.length>3?<Link to='./todoListPage'><div className="more" style={{color:`var(--${word})`}}>MORE</div></Link>:<div></div>}
         </div>
     )
 }

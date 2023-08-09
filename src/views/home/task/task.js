@@ -26,8 +26,6 @@ export default function Task() {
             payload: state.cycles.length
         })
 
-        const cyclesNumber = state.cyclesNumber;
-
 
     }
     useEffect(() => {
