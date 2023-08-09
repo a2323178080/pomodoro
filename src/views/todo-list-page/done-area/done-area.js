@@ -41,7 +41,7 @@ export default function DoneArea({position}) {
                         <li className="item--li">
                             <span className="material-icons">check_circle_outline</span>
                             <span>{item.do}</span>
-                            <span>{handleDot(item.number)}</span>
+                            <span className="item--cycleIcon">{handleDot(item.number)}</span>
                         </li>
                     </ul>
 

@@ -30,10 +30,7 @@ export default function Task() {
 
 
     }
-
     useEffect(() => {
-
-
         dispatch({
             type: 'DONE_TODO',
             payload: {
