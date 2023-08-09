@@ -15,7 +15,7 @@ export default function Disc({className}){
     return(
         <div className={state.handlePosition('disc', className)}  >
             <Circle size={540}  bg="transparent">
-                    <Circle   size={520}>
+                    <Circle   size={510}>
                         {state.startCondition==="stop"? <StartIcon/>:<StopIcon/>}
                     </Circle>
             </Circle>
