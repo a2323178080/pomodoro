@@ -27,8 +27,18 @@
       border-width: 0 5px 5px 5px;
       border-color: transparent transparent #FFFFFF transparent;
 
+    }
+  }
 
+  .item{
+    text-align: left;
+    font: italic normal bold 16px/24px Roboto;
+    letter-spacing:0;
+    color: #FFFFFF;
+    text-decoration : line-through;
 
+    &--li{
+      display: flex;
     }
   }
 
