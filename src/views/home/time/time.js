@@ -4,10 +4,6 @@ import {CartContext} from "../../../store/store";
 import useColor from "../../../hook/useColor";
 let countdown = null;
 
-
-
-
-
 export default function Time({className}){
     const handlePosition =(type, className)=>type + (className ? ' ' + className : '');
 

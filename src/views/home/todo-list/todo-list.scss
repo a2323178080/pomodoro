@@ -1,7 +1,12 @@
 .todoList{
   width:445px;
   height:32px;
-  position: absolute;
+
+
+  &.homePage{
+    position: absolute;
+    top:562px;
+  }
 
   &--font{
     font: normal normal bold 16px/24px Roboto;

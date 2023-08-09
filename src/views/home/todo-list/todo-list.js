@@ -3,7 +3,7 @@ import {CartContext} from "../../../store/store";
 import {useContext, useEffect} from "react";
 import "./todo-list.scss";
 import useColor from "../../../hook/useColor";
-export default function TodoList({position,page,color}){
+export default function TodoList({position,page,color,className}){
     const {word}=useColor();
     const [state, dispatch] = useContext(CartContext);
     const removeTodo = (id) => {
@@ -38,11 +38,7 @@ export default function TodoList({position,page,color}){
     // const localTodoList=JSON.parse(localStorage.getItem("key"||"[]"));
     const localTodoList=state.todoList;
 
-    const newPosition={
-        lowerLeft:{
-            top:'562px'
-        }
-    }
+
 
     const newColor={
         white:{
@@ -51,13 +47,12 @@ export default function TodoList({position,page,color}){
     }
 
     const newStyle={
-        ...newPosition[position],
-        ...newColor[color]
+         ...newColor[color]
     }
 
 
     return(
-        <div className="todoList" style={newStyle}>
+        <div className={state.handlePosition('todoList', className)} style={newStyle}>
             {page==="home"?localTodoList.map((todo,index)=>{
                 if(index<3){
                     return(
