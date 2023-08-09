@@ -25,10 +25,8 @@ export default function Task(){
             type: 'COUNT_CYCLES',
             payload: state.cycles.length
         })
-        // console.log("循環",state.cycles.length);
 
         const cyclesNumber=state.cyclesNumber;
-
 
 
     }

@@ -42,33 +42,15 @@ export function context(state,action){
                 ...state,
                 todoList: afterRemoveTodo
             }
-
-
-
-        // case 'DONE_TODO':
-        //     const newDoneTodo = [...state.todoList].map((item) => {
-        //         if(item.id === action.payload.id) {
-        //             item.number =action.payload.cyclesNumber;
-        //         }
-        //         return item;
-        //     });
-        //
-        //     console.log("store檔案的",newDoneTodo);
-        //
-        //
-        //     return {
-        //         ...state,
-        //         doneTodo: [
-        //             ...state.doneTodo,
-        //             ...newDoneTodo,
-        //
-        //         ]
-        //     }
-
         case 'DONE_TODO':
             const newDoneTodo = [...state.todoList].filter((item) => {
-               return item.id === action.payload.id });
-
+                return item.id === action.payload.id }).map((item)=>{
+                    return {
+                        do:item.do,
+                        id:item.id,
+                        number:action.payload.cyclesNumber
+                    }
+            })
             return {
                 ...state,
                 doneTodo: [
@@ -77,7 +59,6 @@ export function context(state,action){
 
                 ]
             }
-
 
         case 'SHOW_TODO':
             const newShowTodo = [...state.todoList].filter((item) => {
