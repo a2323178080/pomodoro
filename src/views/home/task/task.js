@@ -10,7 +10,7 @@ export default function Task() {
     const [state, dispatch] = useContext(CartContext);
     const [uuid, setUUid] = useState()
     useEffect(() => {
-        if (state.times < 1&&state.workCondition==='rest') {
+        if (state.times < 1) {
             dispatch({
                 type: 'ADD_CYCLES',
                 payload: {}

@@ -4,7 +4,7 @@ import "./input.scss";
 import {PlusOutlined} from "@ant-design/icons";
 import useColor from "../../../hook/useColor";
 
-export default function Input({className,color}) {
+export default function Input({className,color,position}) {
     const {input}=useColor();
     const [state, dispatch] = useContext(CartContext);
     const [value, setValue] = useState("");
@@ -34,11 +34,21 @@ export default function Input({className,color}) {
     }
     // localStorage.setItem("key", JSON.stringify(state.todoList));
 
+    const newPosition={
+        upperMiddle:{
+            left:'475px'
+        }
+    }
+
+    const newStyle={
+        ...newPosition[position]
+
+    }
 
 
 
     return (
-        <div className={state.handlePosition('input', className)}  >
+        <div className={`input${className ? ' ' + className : ''}`} style={newStyle} >
         <input type="text"
                value={value}
                placeholder="ADD A NEW MISSION..."
