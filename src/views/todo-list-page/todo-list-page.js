@@ -6,7 +6,7 @@ import Logo from "./logo/logo";
 export default function TodoListPage(){
     return(
         <div className="todoListPage">
-            <Input position="upperMiddle"/>
+            <Input className="onTodoListPage"/>
             <TodoArea position="center"/>
            <DoneArea position="lowerMiddle"/>
             <Logo/>

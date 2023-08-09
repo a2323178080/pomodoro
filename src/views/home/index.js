@@ -27,10 +27,10 @@ export default function Home(){
             >
             <div className="layout">
                 <Input color={input}/>
-                <Time className="homePage" />
+                <Time className="onHomePage" />
                 <Task/>
-                <TodoList className="homePage" page="home"/>
-                <Disc className="homePage"/>
+                <TodoList className="onHomePage" page="home"/>
+                <Disc className="onHomePage"/>
                 <IconGroup/>
                 <Slogan/>
 
