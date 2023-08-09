@@ -10,13 +10,17 @@ export default function Task() {
     const [state, dispatch] = useContext(CartContext);
     const [uuid, setUUid] = useState()
     useEffect(() => {
-        if (state.times < 1) {
+        if (state.times < 1&&state.workCondition==='rest') {
             dispatch({
                 type: 'ADD_CYCLES',
                 payload: {}
             })
+
+
+
         }
     }, [state.times])
+
 
 
     const removeShowTodoList = (id) => {
@@ -47,8 +51,16 @@ export default function Task() {
             type: 'REMOVE_SHOW_TODO',
             payload: []
         })
+
+        dispatch({
+            type: 'COUNT_CYCLES',
+            payload: 0
+        })
+
     }, [state.cyclesNumber])
 
+    console.log('時間',state.times );
+    console.log(state.cyclesNumber);
 
     return (
         <div className="task">
