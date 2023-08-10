@@ -3,8 +3,8 @@ import React, {useContext} from "react";
 import {CartContext} from "../../../store/store";
 import Circle from "../../../components/circle";
 
-const List = ({position, aaa}) => {
-    console.log('aaa', aaa)
+const List = ({position, area}) => {
+
     const [state] = useContext(CartContext);
 
     const newPosition = {
@@ -32,7 +32,28 @@ const List = ({position, aaa}) => {
 
 
             <div className="item">
-                {aaa === 1 && state.doneTodo.map((item) => {
+
+                {area === "test" &&
+
+                    <div>222222222222</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                }
+
+                {area === "done" && state.doneTodo.map((item) => {
                     return (
                         <ul>
                             <li className="item--li">
@@ -41,14 +62,11 @@ const List = ({position, aaa}) => {
                                 <span className="item--cycleIcon">{handleDot(item.number)}</span>
                             </li>
                         </ul>
-
-
                     )
                 })}
-                {aaa === 2 && <div>222222222222</div>}
+
             </div>
         </div>
     )
 }
-
 export default List

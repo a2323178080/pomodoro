@@ -19,11 +19,11 @@ export default function TodoListPage(){
             <Logo/>
 
             <Title>
-                <Title.List aaa={1}/>
+                <Title.List area="test"/>
             </Title>
 
             <Title>
-                <Title.List aaa={2}/>
+                <Title.List area="done"/>
 
             </Title>
 
