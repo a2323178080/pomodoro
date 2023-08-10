@@ -7,14 +7,12 @@ const Title = ({children,area}) => {
             {area==="todo"&&
                 <div>
                     <div className="titleBar" >
-                        <p>TODO</p>
+                        <p>TO-DO</p>
                         <div className="dropdown"></div>
                     </div>
-
                     {children}
                 </div>
             }
-
 
             {area==="done"&&
                 <div>
