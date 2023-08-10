@@ -39,17 +39,18 @@ export default function TodoList({position,page,color,className}){
     const localTodoList=state.todoList;
 
 
-
     const newColor={
         white:{
             color:'var(--white)'
+        },
+        blue:{
+            color:'var(--blue)'
         }
     }
 
     const newStyle={
          ...newColor[color]
     }
-
 
     return(
         <div className={state.handlePosition('todoList', className)} style={newStyle}>

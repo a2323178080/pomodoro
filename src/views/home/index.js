@@ -18,7 +18,6 @@ export default function Home(){
         var(--light${homeBackground}) 830px,
         #003164 0%,
         #003164 450px)`
-
     }
 
     return(

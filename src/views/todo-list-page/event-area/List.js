@@ -26,7 +26,7 @@ const List = ({position, area}) => {
 
 
                 {area === "todo" &&
-                    <TodoList/>
+                    <TodoList color="white"/>
                 }
 
 
