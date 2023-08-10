@@ -14,7 +14,7 @@ export default function TodoListPage(){
         <div className="todoListPage">
             <div className="layout">
                 <Logo/>
-                <Input position="upperMiddle"/>
+                <Input />
                 {/*<TodoArea position="center"/>*/}
                 {/*<DoneArea position="lowerMiddle"/>*/}
 
