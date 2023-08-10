@@ -114,6 +114,12 @@ export function context(state,action){
                 ...state,
                 resetCondition:action.payload
             }
+
+        case 'HANDLE_DROPDOWN':
+            return {
+                ...state,
+                dropdownCondition: action.payload
+            }
         default:
             return state
     }

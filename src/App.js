@@ -18,7 +18,8 @@ function App() {
         times:2,
         handlePosition:()=>{},
         cycles:[],
-        cyclesNumber:0
+        cyclesNumber:0,
+        dropdownCondition:"dropdown",
       })
 
   return (

@@ -1,5 +1,21 @@
 import "./title.scss";
+import {CartContext} from "../../../store/store";
+import {useContext} from "react";
+
+
 const Title = ({children,area}) => {
+
+    const [state, dispatch] = useContext(CartContext);
+
+    const handleDropdown=()=>{
+        alert(13);
+        dispatch({
+            type: 'HANDLE_DROPDOWN',
+            payload: state.dropdownCondition==="dropdown"?"collapse":"dropdown"
+        })
+    }
+
+    console.log(state.dropdownCondition);
     return(
 
         <div className="title">
@@ -18,7 +34,7 @@ const Title = ({children,area}) => {
                 <div>
                     <div className="titleBar" >
                         <p>DONE</p>
-                        <div className="dropdown"></div>
+                        <div className="dropdown" onClick={handleDropdown}></div>
                     </div>
 
                     {children}
