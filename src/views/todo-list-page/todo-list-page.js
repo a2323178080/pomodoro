@@ -15,14 +15,14 @@ export default function TodoListPage(){
         <div className="todoListPage">
             <Input position="upperMiddle"/>
             <TodoArea position="center"/>
-           <DoneArea position="lowerMiddle"/>
+            <DoneArea position="lowerMiddle"/>
             <Logo/>
 
-            <Title>
-                <Title.List area="test"/>
+            <Title area="todo">
+                <Title.List area="todo"/>
             </Title>
 
-            <Title>
+            <Title area="done">
                 <Title.List area="done"/>
 
             </Title>

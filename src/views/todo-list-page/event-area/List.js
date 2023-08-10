@@ -2,6 +2,8 @@ import "./list.scss"
 import React, {useContext} from "react";
 import {CartContext} from "../../../store/store";
 import Circle from "../../../components/circle";
+import TodoList from "../../home/todo-list/todo-list";
+
 
 const List = ({position, area}) => {
 
@@ -33,17 +35,9 @@ const List = ({position, area}) => {
 
             <div className="item">
 
-                {area === "test" &&
+                {area === "todo" &&
 
-                    <div>222222222222</div>
-
-
-
-
-
-
-
-
+                    <TodoList/>
 
 
 
