@@ -3,8 +3,13 @@ import Input from "../home/input/input";
 import TodoArea from "./todo-area/todo-area";
 import DoneArea from "./done-area/done-area";
 import Logo from "./logo/logo";
-import Title from "../todo-list-page/event-area/title";
-import List from  "../todo-list-page/event-area/list"
+
+import Title from "./event-area";
+
+import Slider from "./NetflixSlider";
+
+
+
 export default function TodoListPage(){
     return(
         <div className="todoListPage">
@@ -14,9 +19,15 @@ export default function TodoListPage(){
             <Logo/>
 
             <Title>
+                <Title.List aaa={1}/>
+            </Title>
+
+            <Title>
+                <Title.List aaa={2}/>
 
             </Title>
-            <List/>
+
+
         </div>
     )
 }
