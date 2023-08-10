@@ -13,11 +13,7 @@ const Title = ({children,area}) => {
             payload: state.dropdownCondition==="dropdown"?"collapse":"dropdown"
         })
 
-        // alert(state.dropdownCondition);
     }
-
-
-
 
     return(
 
@@ -27,7 +23,7 @@ const Title = ({children,area}) => {
                 <div>
                     <div className="titleBar" >
                         <p>TO-DO</p>
-                        <div className="dropdown"></div>
+                        <div className="dropdownIcon"></div>
                     </div>
                     {children}
                 </div>
@@ -37,7 +33,10 @@ const Title = ({children,area}) => {
                 <div>
                     <div className="titleBar" >
                         <p>DONE</p>
-                        <div className="dropdown" onClick={handleDropdown}></div>
+                        <div className={`dropdownIcon dropdownIcon--${state.dropdownCondition}`}
+
+
+                             onClick={handleDropdown}></div>
                     </div>
 
                     {children}

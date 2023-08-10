@@ -6,7 +6,6 @@ import ProgressChart from "./progress-chart";
 
 export default function Task() {
 
-
     const [state, dispatch] = useContext(CartContext);
     const [uuid, setUUid] = useState()
     useEffect(() => {
@@ -15,12 +14,8 @@ export default function Task() {
                 type: 'ADD_CYCLES',
                 payload: {}
             })
-
-
-
         }
     }, [state.times])
-
 
     const removeShowTodoList = (id) => {
         setUUid(id)
@@ -28,11 +23,6 @@ export default function Task() {
             type: 'COUNT_CYCLES',
             payload: state.cycles.length
         })
-
-
-
-
-
     }
     useEffect(() => {
         dispatch({

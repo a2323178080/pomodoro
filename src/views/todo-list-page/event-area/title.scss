@@ -4,9 +4,6 @@
   ////top:300px;
   width:445px;
   height: 302px;
-  //background-color: red;
-  //opacity: 0.2;
-
   .titleBar{
     width: 445px;
     height: 44px;
@@ -24,14 +21,19 @@
     justify-content: space-between;
     align-items: center;
     margin-bottom: 19px;
-    .dropdown{
+    .dropdownIcon{
       width: 0;
       height: 0;
       border-style: solid;
-      border-width: 0 5px 5px 5px;
-      border-color: transparent transparent #FFFFFF transparent;
       cursor: pointer;
-
+      &--dropdown{
+        border-width: 0 5px 5px 5px;
+        border-color: transparent transparent #FFFFFF transparent;
+      }
+      &--collapse{
+        border-width: 5px 5px 0 5px;
+        border-color: #FFFFFF transparent transparent transparent;
+      }
     }
   }
 
