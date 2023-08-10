@@ -19,17 +19,16 @@ export default function TodoListPage(){
                 <Input />
                 {/*<TodoArea position="center"/>*/}
                 {/*<DoneArea position="lowerMiddle"/>*/}
+                <div className="onTodoListPage">
+                    <Title area="todo" >
+                        <Title.List area="todo"/>
+                    </Title>
 
+                    <Title area="done">
+                        <Title.List area="done"/>
 
-                <Title area="todo" >
-                    <Title.List area="todo"/>
-                </Title>
-
-                <Title area="done">
-                    <Title.List area="done"/>
-
-                </Title>
-
+                    </Title>
+                </div>
 
                 <Slogan/>
                 <CrossIcon/>
