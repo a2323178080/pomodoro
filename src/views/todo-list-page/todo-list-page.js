@@ -6,7 +6,7 @@ import Logo from "./logo/logo";
 
 import Title from "./event-area";
 
-import Slider from "./NetflixSlider";
+
 
 
 
@@ -16,7 +16,8 @@ export default function TodoListPage(){
             <Input position="upperMiddle"/>
             <TodoArea position="center"/>
             <DoneArea position="lowerMiddle"/>
-            <Logo/>
+
+
 
             <Title area="todo">
                 <Title.List area="todo"/>
@@ -26,6 +27,8 @@ export default function TodoListPage(){
                 <Title.List area="done"/>
 
             </Title>
+
+            <Logo/>
 
 
         </div>

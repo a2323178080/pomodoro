@@ -8,7 +8,7 @@ export default function DoneArea({position}) {
 
     const newPosition = {
         lowerMiddle: {
-            left: '475px',
+            left: '675px',
             top: '498px'
         },
     }

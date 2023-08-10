@@ -8,7 +8,7 @@ export default function TodoArea({position}){
             left:'475px'
         },
         center:{
-            left:'475px',
+            left:'675px',
             top:'152px'
         }
     }

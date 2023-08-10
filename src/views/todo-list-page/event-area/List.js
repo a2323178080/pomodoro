@@ -32,18 +32,9 @@ const List = ({position, area}) => {
     return(
         <div className="list" style={newStyle}>
 
-
             <div className="item">
-
                 {area === "todo" &&
-
                     <TodoList/>
-
-
-
-
-
-
 
                 }
 
