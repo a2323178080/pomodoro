@@ -5,7 +5,11 @@
     padding-top: 48px;
     padding-left: 80px;
     background-color: var(--darkBlue);
-    position: relative;
+
+    &.layout{
+      position: relative;
+    }
+
   }
 
 
