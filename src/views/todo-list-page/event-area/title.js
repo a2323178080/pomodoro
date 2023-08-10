@@ -18,17 +18,17 @@ const Title = ({children,area}) => {
     return(
 
         <div className="title">
-
             {area==="todo"&&
                 <div>
                     <div className="titleBar" >
                         <p>TO-DO</p>
-                        <div className="dropdownIcon"></div>
+                        <div className="dropdownIcon dropdownIcon--dropdown"
+
+                        ></div>
                     </div>
                     {children}
                 </div>
             }
-
             {area==="done"&&
                 <div>
                     <div className="titleBar" >
