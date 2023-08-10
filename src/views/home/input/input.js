@@ -36,7 +36,7 @@ export default function Input({className,color,position}) {
 
     const newPosition={
         upperMiddle:{
-            left:'475px'
+            left:'675px'
         }
     }
 

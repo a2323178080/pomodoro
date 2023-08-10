@@ -9,16 +9,6 @@ const List = ({position, area}) => {
 
     const [state] = useContext(CartContext);
 
-    const newPosition = {
-        lowerMiddle: {
-            left: '475px',
-            top: '498px'
-        },
-    }
-    const newStyle = {
-        ...newPosition[position],
-    }
-
     function handleDot(num) {
         let list = [];
         for (let i = 0; i < num; i++) {
@@ -30,25 +20,28 @@ const List = ({position, area}) => {
     }
 
     return(
-        <div className="list" style={newStyle}>
+        <div className="list" >
 
             <div className="item">
                 {area === "todo" &&
-                    <TodoList/>
-
+                <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium ad assumenda corporis ducimus enim excepturi illum in minima nesciunt nobis odio optio quidem quos rem sed, sit tenetur veniam voluptatum?</div>
                 }
 
-                {area === "done" && state.doneTodo.map((item) => {
-                    return (
-                        <ul>
-                            <li className="item--li">
-                                <span className="material-icons">check_circle_outline</span>
-                                <span>{item.do}</span>
-                                <span className="item--cycleIcon">{handleDot(item.number)}</span>
-                            </li>
-                        </ul>
-                    )
-                })}
+                {area === "done" &&
+                    <div>lorem done測試</div>
+                }
+
+                {/*{area === "done" && state.doneTodo.map((item) => {*/}
+                {/*    return (*/}
+                {/*        <ul>*/}
+                {/*            <li className="item--li">*/}
+                {/*                <span className="material-icons">check_circle_outline</span>*/}
+                {/*                <span>{item.do}</span>*/}
+                {/*                <span className="item--cycleIcon">{handleDot(item.number)}</span>*/}
+                {/*            </li>*/}
+                {/*        </ul>*/}
+                {/*    )*/}
+                {/*})}*/}
 
             </div>
         </div>

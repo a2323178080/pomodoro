@@ -5,18 +5,24 @@ const Title = ({children,area}) => {
         <div className="title">
 
             {area==="todo"&&
-            <div className="titleBar">
-                TO-DO
-                <div className="dropdown"></div>
-                {children}
-            </div>
+                <div>
+                    <div className="titleBar" >
+                        <p>TODO</p>
+                        <div className="dropdown"></div>
+                    </div>
+
+                    {children}
+                </div>
             }
 
 
             {area==="done"&&
-                <div className="titleBar" >
-                    DONE
-                    <div className="dropdown"></div>
+                <div>
+                    <div className="titleBar" >
+                        <p>DONE</p>
+                        <div className="dropdown"></div>
+                    </div>
+
                     {children}
                 </div>
             }
