@@ -28,9 +28,7 @@ export default function List({position}){
 
     return(
         <div className="list" style={newStyle}>
-            <div className="doneBar">DONE
-                <div className="dropdown"></div>
-            </div>
+
 
             <div className="item">
                 {state.doneTodo.map((item) => {

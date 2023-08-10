@@ -4,6 +4,7 @@ import TodoArea from "./todo-area/todo-area";
 import DoneArea from "./done-area/done-area";
 import Logo from "./logo/logo";
 import Title from "../todo-list-page/event-area/title";
+import List from  "../todo-list-page/event-area/list"
 export default function TodoListPage(){
     return(
         <div className="todoListPage">
@@ -11,7 +12,11 @@ export default function TodoListPage(){
             <TodoArea position="center"/>
            <DoneArea position="lowerMiddle"/>
             <Logo/>
-            <Title/>
+
+            <Title>
+
+            </Title>
+            <List/>
         </div>
     )
 }
