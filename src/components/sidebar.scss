@@ -1,10 +1,19 @@
 .sidebar{
-  color:red;
   position: absolute;
   left:600px;
   top:100px;
-  height:204px;
+  height:210px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  color:#FFFFFF33;
+  .font{
+    letter-spacing: 0px;
+    color:#FFFFFF33;
+    text-transform: uppercase;
+    opacity: 1;
+    font: normal normal bold 36px/36px Roboto;
+    margin-left:8px ;
+  }
+
 }
