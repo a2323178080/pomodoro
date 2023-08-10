@@ -3,8 +3,6 @@ import React, {useContext} from "react";
 import {CartContext} from "../../../store/store";
 import Circle from "../../../components/circle";
 import TodoList from "../../home/todo-list/todo-list";
-
-
 const List = ({position, area}) => {
 
     const [state] = useContext(CartContext);
@@ -18,17 +16,13 @@ const List = ({position, area}) => {
         }
         return list;
     }
-
-    return(
-        <div className="list" >
-
+    return (
+        <div className="list">
             <div className="item">
-
                 {area === "todo" &&
                     <TodoList color="white"/>
                 }
-
-                {state.dropdownCondition==="dropdown"&&area === "done" && state.doneTodo.map((item) => {
+                {state.dropdownCondition === "dropdown" && area === "done" && state.doneTodo.map((item) => {
                     return (
                         <ul>
                             <li className="item--li">

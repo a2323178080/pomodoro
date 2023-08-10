@@ -38,12 +38,10 @@ export default function Task() {
                 id: uuid
             }
         })
-
         dispatch({
             type: 'REMOVE_SHOW_TODO',
             payload: []
         })
-
         dispatch({
             type: 'COUNT_CYCLES',
             payload: 0
@@ -73,15 +71,10 @@ export default function Task() {
                                     })}
                                     <ProgressChart/>
                                 </div>
-
                             </div>
-
                         </div>)
                 })}</div>
-
-
             </div>
-
         </div>
     )
 }

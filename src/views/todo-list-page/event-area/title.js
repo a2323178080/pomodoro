@@ -14,16 +14,13 @@ const Title = ({children,area}) => {
         })
 
     }
-
     return(
-
         <div className="title">
             {area==="todo"&&
                 <div>
                     <div className="titleBar" >
                         <p>TO-DO</p>
                         <div className="dropdownIcon dropdownIcon--dropdown"
-
                         ></div>
                     </div>
                     {children}
@@ -34,24 +31,14 @@ const Title = ({children,area}) => {
                     <div className="titleBar" >
                         <p>DONE</p>
                         <div className={`dropdownIcon dropdownIcon--${state.dropdownCondition}`}
-
-
                              onClick={handleDropdown}></div>
                     </div>
 
                     {children}
                 </div>
             }
-
-
-
-
-
-
-
         </div>
     )
 
 }
-
 export default Title

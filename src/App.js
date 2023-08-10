@@ -21,7 +21,6 @@ function App() {
         cyclesNumber:0,
         dropdownCondition:"dropdown",
       })
-
   return (
       <CartContext.Provider value={cartReducer}>
         <div>
@@ -33,5 +32,4 @@ function App() {
       </CartContext.Provider>
   );
 }
-
 export default App;

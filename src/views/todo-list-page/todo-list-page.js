@@ -1,12 +1,11 @@
 import "./todo-list-page.scss";
 import Input from "../home/input/input";
-import TodoArea from "./todo-area/todo-area";
-import DoneArea from "./done-area/done-area";
+// import TodoArea from "./todo-area/todo-area";
+// import DoneArea from "./done-area/done-area";
 import Logo from "./logo/logo";
 import Title from "./event-area";
 import Slogan from "../../components/slogan"
 import CrossIcon from "../../components/cross-icon";
-
 
 
 
@@ -16,11 +15,11 @@ export default function TodoListPage(){
             <div className="layout">
                 <Logo/>
                 <Input position="upperMiddle"/>
-                <TodoArea position="center"/>
-                <DoneArea position="lowerMiddle"/>
+                {/*<TodoArea position="center"/>*/}
+                {/*<DoneArea position="lowerMiddle"/>*/}
 
 
-                <Title area="todo">
+                <Title area="todo" >
                     <Title.List area="todo"/>
                 </Title>
 

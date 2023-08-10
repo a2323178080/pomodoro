@@ -1,9 +1,7 @@
 import {createContext} from "react";
-
-export const CartContext=createContext({});
-
-export function context(state,action){
-    switch(action.type){
+export const CartContext = createContext({});
+export function context(state, action) {
+    switch (action.type) {
         case 'START_AND_STOP':
             return {
                 ...state,
@@ -20,12 +18,11 @@ export function context(state,action){
                 ...state,
                 times: action.payload
             }
-
         case 'ADD_TODO':
             const newTodo = {
                 do: action.payload.value,
                 id: Date.now(),
-                number:action.payload.cyclesNumber
+                number: action.payload.cyclesNumber
             }
             return {
                 ...state,
@@ -44,12 +41,13 @@ export function context(state,action){
             }
         case 'DONE_TODO':
             const newDoneTodo = [...state.todoList].filter((item) => {
-                return item.id === action.payload.id }).map((item)=>{
-                    return {
-                        do:item.do,
-                        id:item.id,
-                        number:action.payload.cyclesNumber
-                    }
+                return item.id === action.payload.id
+            }).map((item) => {
+                return {
+                    do: item.do,
+                    id: item.id,
+                    number: action.payload.cyclesNumber
+                }
             })
             return {
                 ...state,
@@ -59,7 +57,6 @@ export function context(state,action){
 
                 ]
             }
-
         case 'SHOW_TODO':
             const newShowTodo = [...state.todoList].filter((item) => {
                 return item.id === action.payload.id;
@@ -68,7 +65,6 @@ export function context(state,action){
                 ...state,
                 showTodoList: newShowTodo
             }
-
         case 'REMOVE_SHOW_TODO':
             return {
                 ...state,
@@ -92,29 +88,22 @@ export function context(state,action){
                     newCycles
                 ]
             }
-
         case 'REMOVE_CYCLES':
             return {
                 ...state,
-                 cycles:[]
+                cycles: []
             }
-
-
         case 'COUNT_CYCLES':
             console.log('action.payload', action.payload)
             return {
                 ...state,
                 cyclesNumber: action.payload
             }
-
-
-
         case 'RESET_CONDITION':
             return {
                 ...state,
-                resetCondition:action.payload
+                resetCondition: action.payload
             }
-
         case 'HANDLE_DROPDOWN':
             return {
                 ...state,
