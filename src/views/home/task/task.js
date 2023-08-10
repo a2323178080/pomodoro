@@ -22,13 +22,15 @@ export default function Task() {
     }, [state.times])
 
 
-
     const removeShowTodoList = (id) => {
         setUUid(id)
         dispatch({
             type: 'COUNT_CYCLES',
             payload: state.cycles.length
         })
+
+
+
 
 
     }

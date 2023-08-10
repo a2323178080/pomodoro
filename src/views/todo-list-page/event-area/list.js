@@ -29,7 +29,6 @@ const List = ({position, area}) => {
                     <TodoList color="white"/>
                 }
 
-
                 {area === "done" && state.doneTodo.map((item) => {
                     return (
                         <ul>
