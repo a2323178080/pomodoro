@@ -8,14 +8,17 @@ const Title = ({children,area}) => {
     const [state, dispatch] = useContext(CartContext);
 
     const handleDropdown=()=>{
-        alert(13);
         dispatch({
             type: 'HANDLE_DROPDOWN',
             payload: state.dropdownCondition==="dropdown"?"collapse":"dropdown"
         })
+
+        // alert(state.dropdownCondition);
     }
 
-    console.log(state.dropdownCondition);
+
+
+
     return(
 
         <div className="title">

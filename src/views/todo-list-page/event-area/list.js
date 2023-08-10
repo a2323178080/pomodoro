@@ -24,12 +24,11 @@ const List = ({position, area}) => {
 
             <div className="item">
 
-
                 {area === "todo" &&
                     <TodoList color="white"/>
                 }
 
-                {area === "done" && state.doneTodo.map((item) => {
+                {state.dropdownCondition==="dropdown"&&area === "done" && state.doneTodo.map((item) => {
                     return (
                         <ul>
                             <li className="item--li">
