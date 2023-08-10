@@ -13,6 +13,12 @@
     color: white;
     //text-decoration : line-through;
 
+    .font{
+      margin-left: 4px;
+      text-decoration: line-through;
+
+    }
+
     &--li{
       display: flex;
     }
@@ -20,6 +26,7 @@
     &--cycleIcon{
       display:flex;
       margin-left:auto;
+
     }
   }
 

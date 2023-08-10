@@ -35,10 +35,14 @@
     font: italic normal bold 16px/24px Roboto;
     letter-spacing:0;
     color: #FFFFFF;
-    text-decoration : line-through;
+
 
     &--li{
       display: flex;
+    }
+
+    .font{
+      text-decoration : line-through;
     }
 
     &--cycleIcon{

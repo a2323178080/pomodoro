@@ -19,7 +19,7 @@ export default function DoneArea({position}) {
     function handleDot(num) {
         let list = [];
         for (let i = 0; i < num; i++) {
-            list.push(<div><Circle size={12} bg="white" border="2px solid #003164"
+            list.push(<div><Circle size={15} bg="white" border="2px solid #003164"
                                    marginLeft="eight"/>
             </div>);
         }
@@ -40,7 +40,7 @@ export default function DoneArea({position}) {
                     <ul>
                         <li className="item--li">
                             <span className="material-icons">check_circle_outline</span>
-                            <span>{item.do}</span>
+                            <span className="font">{item.do}</span>
                             <span className="item--cycleIcon">{handleDot(item.number)}</span>
                         </li>
                     </ul>
