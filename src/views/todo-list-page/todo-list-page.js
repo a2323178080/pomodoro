@@ -14,27 +14,34 @@ export default function TodoListPage(){
     return(
         <div className="todoListPage">
             <div className="layout">
-                <Sidebar position="onTodoListPage"/>
-                <Logo/>
-                <Input />
+
+                <div className="col-5">
+
+                    <Sidebar position="onTodoListPage"/>
+                    <Logo/>
+                </div>
+
+
                 {/*<TodoArea position="center"/>*/}
                 {/*<DoneArea position="lowerMiddle"/>*/}
-                <div className="onTodoListPage">
+                <div className="col-5">
+                    <Input />
                     <Title area="todo" >
                         <Title.List area="todo"/>
                     </Title>
 
                     <Title area="done">
                         <Title.List area="done"/>
-
                     </Title>
                 </div>
 
-                <Slogan/>
-                <CrossIcon/>
+                <div>
+                    <CrossIcon/>
+                    <Slogan/>
+                </div>
+
 
             </div>
-
 
 
         </div>
