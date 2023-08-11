@@ -4,7 +4,6 @@ export default function Collapse({list}){
     const [openCondition,setOpenCondition]=useState(true);
     const handleOpen=()=>{
         setOpenCondition(pre=>!pre);
-
     }
 
     return(
