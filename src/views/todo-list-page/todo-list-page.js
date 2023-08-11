@@ -15,9 +15,15 @@ import Collapse from "./collapse/collapse";
 
 
 
-
 export default function TodoListPage(){
-    const [state] = useContext(CartContext);
+    const [state,dispatch] = useContext(CartContext);
+
+    const handleDropdown=()=>{
+        dispatch({
+            type: 'HANDLE_DROPDOWN',
+            payload: state.dropdownCondition==="dropdown"?"collapse":"dropdown"
+        })
+    }
 
 
 
@@ -26,9 +32,9 @@ export default function TodoListPage(){
             label:
                 <div className="title">
                     <div className="titleBar" >
-                        <p>TODO</p>
+                        <p>TO-DO</p>
                         <div className="dropdownIcon dropdownIcon--dropdown"
-                        ></div>
+                             onClick={handleDropdown}></div>
                     </div>
                 </div>
             ,
@@ -37,7 +43,6 @@ export default function TodoListPage(){
         }
     ];
 
-
     const done = [
         {
             label:
@@ -45,7 +50,7 @@ export default function TodoListPage(){
                     <div className="titleBar" >
                         <p>DONE</p>
                         <div className="dropdownIcon dropdownIcon--dropdown"
-                        ></div>
+                             onClick={handleDropdown}></div>
                     </div>
                 </div>
             ,
@@ -61,8 +66,6 @@ export default function TodoListPage(){
             })
         }
     ];
-
-
 
 
     return(
@@ -87,7 +90,6 @@ export default function TodoListPage(){
                     {/*    <Title.List area="done"/>*/}
                     {/*</Title>*/}
     {/*---------------------------------------------------------*/}
-
                     <Collapse list={todo}/>
                     <Collapse list={done}/>
 

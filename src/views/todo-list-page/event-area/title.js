@@ -12,7 +12,6 @@ const Title = ({children,area}) => {
             type: 'HANDLE_DROPDOWN',
             payload: state.dropdownCondition==="dropdown"?"collapse":"dropdown"
         })
-
     }
     return(
         <div className="title">

@@ -1,10 +1,9 @@
 import "./collapse.scss"
-import {useState} from "react";
+import {useState,useContext} from "react";
+import {CartContext} from "../../../store/store";
+
 export default function Collapse({list}){
-    const [openCondition,setOpenCondition]=useState(true);
-    const handleOpen=()=>{
-        setOpenCondition(pre=>!pre);
-    }
+    const [state,dispatch] = useContext(CartContext);
 
     return(
         <div className="collapse">
@@ -12,9 +11,9 @@ export default function Collapse({list}){
                 return (
 
                     <div>
-                        <div onClick={handleOpen}>
+                        <div >
                             {event.label}
-                            {openCondition&&<div>{event.children}</div>}
+                            {state.dropdownCondition === "dropdown"&&<div>{event.children}</div>}
                         </div>
                     </div>)
             })}
