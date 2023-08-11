@@ -7,7 +7,6 @@ export default function Collapse({list}){
 
     }
 
-
     return(
         <div className="collapse">
             {list.map((event)=>{
@@ -16,12 +15,8 @@ export default function Collapse({list}){
                     <div>
                         <div onClick={handleOpen}>
                             {event.label}
-
                             {openCondition&&<div>{event.children}</div>}
                         </div>
-
-
-
                     </div>)
             })}
         </div>

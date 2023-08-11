@@ -2,6 +2,7 @@ import "./todo-list-page.scss";
 import React, {useContext} from "react";
 import {CartContext} from "../../store/store";
 import Logo from "./logo/logo";
+import TodoList from "../home/todo-list/todo-list";
 // import TodoArea from "./todo-area/todo-area";
 // import DoneArea from "./done-area/done-area";
 import Input from "../home/input/input";
@@ -17,16 +18,38 @@ export default function TodoListPage(){
     const [state] = useContext(CartContext);
 
 
-    const text = "測試用文字";
+
+    const todo = [
+        {
+            label:
+                <div className="title">
+                    <div className="titleBar" >
+                        <p>TODO</p>
+                        <div className="dropdownIcon dropdownIcon--dropdown"
+                        ></div>
+                    </div>
+                </div>
+            ,
+            children:<TodoList color="white"/>
+
+        }
+    ];
+
 
     const done = [
         {
-            key: '1',
-            label: 'DONE',
+            label:
+                <div className="title">
+                    <div className="titleBar" >
+                        <p>DONE</p>
+                        <div className="dropdownIcon dropdownIcon--dropdown"
+                        ></div>
+                    </div>
+                </div>
+            ,
             children:
-
                 state.doneTodo.map((item)=>{
-                return <ul>
+                return <ul className="item">
                     <li className="item--li">
                         <span className="material-icons">check_circle_outline</span>
                         <span className="font">{item.do}</span>
@@ -34,18 +57,8 @@ export default function TodoListPage(){
                     </li>
                 </ul>
             })
-
-
-
-
-
-
-
         }
     ];
-
-
-
 
 
 
@@ -73,8 +86,10 @@ export default function TodoListPage(){
                     {/*</Title>*/}
     {/*---------------------------------------------------------*/}
 
-
+                    <Collapse list={todo}/>
                     <Collapse list={done}/>
+
+
                 </div>
 
                 <div>
