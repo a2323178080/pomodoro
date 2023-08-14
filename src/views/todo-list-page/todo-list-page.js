@@ -73,8 +73,8 @@ export default function TodoListPage(){
                     {/*    <Title.List area="done"/>*/}
                     {/*</Title>*/}
     {/*---------------------------------------------------------*/}
-    {/*                <Collapse title="TO-DO" list={todo}/>*/}
-                    <Collapse title="DONE" list={done}/>
+                    <Collapse title="TO-DO" list={todo}/>
+                    <Collapse title="DONE" list={done} className="onTodoListPage"/>
 
                 </div>
 

@@ -1,4 +1,8 @@
 .collapse{
+  &.onTodoListPage{
+    position: absolute;
+    top:450px;
+  }
   .title{
     .titleBar{
       width: 445px;
