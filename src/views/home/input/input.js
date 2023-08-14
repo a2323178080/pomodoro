@@ -1,5 +1,5 @@
 import {CartContext} from "../../../store/store";
-import {useState, useContext, useEffect} from "react";
+import {useState, useContext } from "react";
 import "./input.scss";
 import {PlusOutlined} from "@ant-design/icons";
 import useColor from "../../../hook/useColor";
