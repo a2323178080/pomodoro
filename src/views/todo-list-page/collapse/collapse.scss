@@ -1,6 +1,5 @@
 .collapse{
   .title{
-
     .titleBar{
       width: 445px;
       height: 44px;
@@ -37,11 +36,6 @@
 
 
 
-
-
-
-
-
   .item{
     text-align: left;
     font: italic normal bold 16px/24px Roboto;
@@ -52,17 +46,13 @@
     .font{
       margin-left: 4px;
       text-decoration: line-through;
-
     }
-
     &--li{
       display: flex;
     }
-
     &--cycleIcon{
       display:flex;
       margin-left:auto;
-
     }
   }
 

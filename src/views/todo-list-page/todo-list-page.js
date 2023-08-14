@@ -12,10 +12,23 @@ import CrossIcon from "../../components/cross-icon";
 import Sidebar from "../../components/sidebar";
 
 import Collapse from "./collapse/collapse";
-
+import Circle from "../../components/circle";
 
 export default function TodoListPage(){
     const [state] = useContext(CartContext);
+
+    function handleDot(num) {
+        let list = [];
+        for (let i = 0; i < num; i++) {
+            list.push(<div><Circle size={16} bg="white" border="2px solid #003164"
+                                   marginLeft="eight"/>
+            </div>);
+        }
+        return list;
+    }
+
+
+
 
     const todo = [
         {
@@ -31,7 +44,7 @@ export default function TodoListPage(){
                     <li className="item--li">
                         <span className="material-icons">check_circle_outline</span>
                         <span className="font">{item.do}</span>
-                        <span className="item--cycleIcon"></span>
+                        <span className="item--cycleIcon">{handleDot(item.number)}</span>
                     </li>
                 </ul>
             })
