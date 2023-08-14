@@ -1,12 +1,13 @@
 import "./collapse.scss"
-import React, {useState} from "react";
+import React, {useState,useContext} from "react";
+import {CartContext} from "../../../store/store";
 
 export default function Collapse({title,list}){
+    const [state]=useContext(CartContext);
     const [openCondition,setOpenCondition]=useState(true);
 
     const handleOpen=()=>{
         setOpenCondition(pre=>!pre);
-
     }
 
     return(
