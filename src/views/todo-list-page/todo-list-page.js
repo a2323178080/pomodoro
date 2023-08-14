@@ -32,7 +32,8 @@ export default function TodoListPage(){
 
     const todo = [
         {
-            text:<TodoList color="white"/>
+            text:<TodoList color="white"/>,
+            do:0
         }
     ];
 
@@ -47,7 +48,8 @@ export default function TodoListPage(){
                         <span className="item--cycleIcon">{handleDot(item.number)}</span>
                     </li>
                 </ul>
-            })
+            }),
+            do:0
         }
     ];
 
@@ -75,18 +77,12 @@ export default function TodoListPage(){
     {/*---------------------------------------------------------*/}
                     <Collapse title="TO-DO" list={todo}/>
                     <Collapse title="DONE" list={done} className="onTodoListPage"/>
-
                 </div>
-
-
                 <div>
                     <CrossIcon/>
                     <Slogan/>
                 </div>
-
             </div>
-
-
         </div>
     )
 }

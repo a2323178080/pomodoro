@@ -24,19 +24,17 @@ export default function Collapse({title,list,className}){
         <div className={state.handlePosition('collapse', className)} >
             {list.map((event)=>{
                 return (
-                    <div>
+                    <div key={event.do}>
                         <div className="title">
-                            <div className="titleBar" onClick={handleOpen}>
+                            <div className="titleBar" >
                                 <p>{title}</p>
-
                                 <div className={`dropdownIcon dropdownIcon--${openCondition ? 'collapse':'dropdown'}`}
-                                ></div>
+                                     onClick={handleOpen}></div>
                             </div>
                         </div>
 
-
                         <div >
-                            {openCondition&&<div>{event.text}</div>}
+                            {openCondition&& <div>{event.text}</div>}
                         </div>
                     </div>)
             })}
