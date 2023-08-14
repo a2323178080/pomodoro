@@ -14,47 +14,18 @@ import Sidebar from "../../components/sidebar";
 import Collapse from "./collapse/collapse";
 
 
-
 export default function TodoListPage(){
-    const [state,dispatch] = useContext(CartContext);
-
-    const handleDropdown=()=>{
-        dispatch({
-            type: 'HANDLE_DROPDOWN',
-            payload: state.dropdownCondition==="dropdown"?"collapse":"dropdown"
-        })
-    }
-
-
+    const [state] = useContext(CartContext);
 
     const todo = [
         {
-            label:
-                <div className="title">
-                    <div className="titleBar" >
-                        <p>TO-DO</p>
-                        <div className="dropdownIcon dropdownIcon--dropdown"
-                             onClick={handleDropdown}></div>
-                    </div>
-                </div>
-            ,
-            children:<TodoList color="white"/>
-
+            text:<TodoList color="white"/>
         }
     ];
 
     const done = [
         {
-            label:
-                <div className="title">
-                    <div className="titleBar" >
-                        <p>DONE</p>
-                        <div className="dropdownIcon dropdownIcon--dropdown"
-                             onClick={handleDropdown}></div>
-                    </div>
-                </div>
-            ,
-            children:
+            text:
                 state.doneTodo.map((item)=>{
                 return <ul className="item">
                     <li className="item--li">
@@ -66,7 +37,6 @@ export default function TodoListPage(){
             })
         }
     ];
-
 
     return(
         <div className="todoListPage">
@@ -90,17 +60,16 @@ export default function TodoListPage(){
                     {/*    <Title.List area="done"/>*/}
                     {/*</Title>*/}
     {/*---------------------------------------------------------*/}
-                    <Collapse list={todo}/>
-                    <Collapse list={done}/>
-
+                    <Collapse title="TO-DO" list={todo}/>
+                    <Collapse title="DONE" list={done}/>
 
                 </div>
+
 
                 <div>
                     <CrossIcon/>
                     <Slogan/>
                 </div>
-
 
             </div>
 
