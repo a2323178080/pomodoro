@@ -4,9 +4,7 @@ import {CartContext} from "../../../store/store";
 import Circle from "../../../components/circle";
 import TodoList from "../../home/todo-list/todo-list";
 const List = ({position, area}) => {
-
     const [state] = useContext(CartContext);
-
     function handleDot(num) {
         let list = [];
         for (let i = 0; i < num; i++) {
@@ -33,7 +31,6 @@ const List = ({position, area}) => {
                         </ul>
                     )
                 })}
-
             </div>
         </div>
     )

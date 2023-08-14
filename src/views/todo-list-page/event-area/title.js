@@ -1,12 +1,8 @@
 import "./title.scss";
 import {CartContext} from "../../../store/store";
 import {useContext} from "react";
-
-
 const Title = ({children,area}) => {
-
     const [state, dispatch] = useContext(CartContext);
-
     const handleDropdown=()=>{
         dispatch({
             type: 'HANDLE_DROPDOWN',
@@ -38,6 +34,5 @@ const Title = ({children,area}) => {
             }
         </div>
     )
-
 }
 export default Title
