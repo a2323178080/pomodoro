@@ -28,15 +28,14 @@ export default function Collapse({title,list,className}){
                         <div className="title">
                             <div className="titleBar" onClick={handleOpen}>
                                 <p>{title}</p>
-                                <div className="dropdownIcon dropdownIcon--dropdown"
-                                     ></div>
+
+                                <div className={`dropdownIcon dropdownIcon--${openCondition ? 'collapse':'dropdown'}`}
+                                ></div>
                             </div>
                         </div>
 
 
-
                         <div >
-
                             {openCondition&&<div>{event.text}</div>}
                         </div>
                     </div>)
