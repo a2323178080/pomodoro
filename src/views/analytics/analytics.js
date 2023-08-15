@@ -8,6 +8,7 @@ import CrossIcon from "../../components/cross-icon";
 import Slogan from "../../components/slogan";
 import BarChart from "./bar-chart/bar-chart";
 import Collapse from "../todo-list-page/collapse/collapse";
+import FocusTime from  "../analytics/focus-time/focus-time";
 
 
 export default function Analytics(){
@@ -15,7 +16,7 @@ export default function Analytics(){
 
     const focusTime = [
         {
-            text:1,
+            text:<FocusTime/>,
             do:0
         }
     ];
@@ -33,9 +34,7 @@ export default function Analytics(){
 
                 <div className="col-5">
 
-                    {/*{state.doneTodo.reduce((accumulator,currentValue)=>{*/}
-                    {/*    return accumulator+currentValue.number*/}
-                    {/*},0)}*/}
+
 
                     <Collapse title="FOCUS TIME" list={focusTime}/>
                     <br/>
