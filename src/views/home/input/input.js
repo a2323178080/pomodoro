@@ -32,6 +32,7 @@ export default function Input({className,color}) {
     }
     // localStorage.setItem("key", JSON.stringify(state.todoList));
 
+
     return (
         <div className={`input${className ? ' ' + className : ''}`}  >
         <input type="text"
