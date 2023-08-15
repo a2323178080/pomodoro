@@ -28,8 +28,6 @@ export default function TodoListPage(){
     }
 
 
-
-
     const todo = [
         {
             text:<TodoList color="white"/>,
@@ -63,18 +61,6 @@ export default function TodoListPage(){
 
                 <div className="col-5">
                     <Input />
-
-                    {/*<TodoArea position="center"/>*/}
-                    {/*<DoneArea position="lowerMiddle"/>*/}
-    {/*---------------------------------------------------------*/}
-                    {/*<Title area="todo" >*/}
-                    {/*    <Title.List area="todo"/>*/}
-                    {/*</Title>*/}
-
-                    {/*<Title area="done">*/}
-                    {/*    <Title.List area="done"/>*/}
-                    {/*</Title>*/}
-    {/*---------------------------------------------------------*/}
                     <Collapse title="TO-DO" list={todo}/>
                     <Collapse title="DONE" list={done} className="onTodoListPage"/>
                 </div>

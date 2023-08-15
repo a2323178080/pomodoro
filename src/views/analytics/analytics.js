@@ -1,10 +1,14 @@
-import "./analytics.scss"
+import "./analytics.scss";
+import {useContext} from "react";
+import {CartContext} from "../../store/store";
+
 import Sidebar from "../../components/sidebar";
 import Logo from "../todo-list-page/logo/logo";
 import CrossIcon from "../../components/cross-icon";
 import Slogan from "../../components/slogan";
-
 export default function Analytics(){
+    const [state] = useContext(CartContext);
+
     return(
         <div className="analytics">
             <div className="layout">

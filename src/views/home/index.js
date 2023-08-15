@@ -10,6 +10,7 @@ import Slogan from "../../components/slogan";
 
 
 export default function Home(){
+
     const {homeBackground,input}=useColor()
 
     const newBackground={

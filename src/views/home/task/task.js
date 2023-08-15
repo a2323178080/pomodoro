@@ -7,7 +7,8 @@ import ProgressChart from "./progress-chart";
 export default function Task() {
 
     const [state, dispatch] = useContext(CartContext);
-    const [uuid, setUUid] = useState()
+    const [uuid, setUUid] = useState();
+    console.log(state.cyclesNumber);
     useEffect(() => {
         if (state.times < 1&&state.workCondition==='rest') {
             dispatch({
@@ -49,8 +50,7 @@ export default function Task() {
 
     }, [state.cyclesNumber])
 
-    console.log('時間',state.times );
-    console.log(state.cyclesNumber);
+
 
     return (
         <div className="task">

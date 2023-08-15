@@ -94,7 +94,7 @@ export function context(state, action) {
                 cycles: []
             }
         case 'COUNT_CYCLES':
-            console.log('action.payload', action.payload)
+
             return {
                 ...state,
                 cyclesNumber: action.payload
