@@ -5,23 +5,31 @@ import { Column } from '@ant-design/charts';
 export default function BarChart(){
     const data = [
         {
-            action: '浏览网站',
-            pv: 50000,
+            action: '7/1',
+            pv: 5000,
         },
         {
-            action: '放入购物车',
+            action: '7/2',
             pv: 35000,
         },
         {
-            action: '生成订单',
+            action: '7/3',
             pv: 25000,
         },
         {
-            action: '支付订单',
+            action: '7/4',
             pv: 15000,
         },
         {
-            action: '完成交易',
+            action: '7/5',
+            pv: 8500,
+        },
+        {
+            action: '7/6',
+            pv: 8500,
+        },
+        {
+            action: '7/7',
             pv: 8500,
         },
     ];
