@@ -8,7 +8,7 @@ export default function Task() {
 
     const [state, dispatch] = useContext(CartContext);
     const [uuid, setUUid] = useState();
-    console.log(state.cyclesNumber);
+
     useEffect(() => {
         if (state.times < 1&&state.workCondition==='rest') {
             dispatch({
@@ -24,8 +24,11 @@ export default function Task() {
             type: 'COUNT_CYCLES',
             payload: state.cycles.length
         })
+
     }
     useEffect(() => {
+
+
         dispatch({
             type: 'DONE_TODO',
             payload: {
@@ -43,6 +46,25 @@ export default function Task() {
             type: 'REMOVE_SHOW_TODO',
             payload: []
         })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         dispatch({
             type: 'COUNT_CYCLES',
             payload: 0
@@ -51,6 +73,7 @@ export default function Task() {
     }, [state.cyclesNumber])
 
 
+    console.log("總共tomato",state.totalCyclesNumber);
 
     return (
         <div className="task">

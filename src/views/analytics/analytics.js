@@ -6,8 +6,14 @@ import Sidebar from "../../components/sidebar";
 import Logo from "../todo-list-page/logo/logo";
 import CrossIcon from "../../components/cross-icon";
 import Slogan from "../../components/slogan";
+import BarChart from "./bar-chart/bar-chart";
+
 export default function Analytics(){
     const [state] = useContext(CartContext);
+
+
+
+
 
     return(
         <div className="analytics">
@@ -19,8 +25,13 @@ export default function Analytics(){
 
                 <div className="col-5">
 
+                    {/*{state.doneTodo.reduce((accumulator,currentValue)=>{*/}
+                    {/*    return accumulator+currentValue.number*/}
+                    {/*},0)}*/}
 
-                    chart區域
+
+
+                    <BarChart/>
                 </div>
                 <div>
                     <CrossIcon/>

@@ -94,11 +94,12 @@ export function context(state, action) {
                 cycles: []
             }
         case 'COUNT_CYCLES':
-
             return {
                 ...state,
                 cyclesNumber: action.payload
             }
+
+
         case 'RESET_CONDITION':
             return {
                 ...state,

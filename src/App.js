@@ -20,6 +20,7 @@ function App() {
         handlePosition:()=>{},
         cycles:[],
         cyclesNumber:0,
+        totalCyclesNumber :0,
         dropdownCondition:"dropdown",
       })
   return (
