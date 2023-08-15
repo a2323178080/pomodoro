@@ -16,12 +16,12 @@ export default function Sidebar({position}){
     return(
         <div className="sidebar">
 
-            <Link  to="/todoListPage" className="fa fa-list-ul fa-2x homeBackground--iconContent--listIcon" style={newStyle[position]}>
-                <span className="font" style={newStyle[position]}>TO-DO LIST</span>
+            <Link  to="/todoListPage" className={`fa fa-list-ul fa-2x homeBackground--iconContent--listIcon ${position==='onAnalyticsPage'?'pink':'gray'}`}>
+                <span className={`font ${position==='onAnalyticsPage'?'pink':'gray'}`} >TO-DO LIST</span>
             </Link>
 
-            <Link to="/analytics" className="fas fa-chart-bar fa-2x homeBackground--iconContent--chartIcon">
-                <span className="font" >ANALYTICS</span>
+            <Link to="/analytics" className={`fas fa-chart-bar fa-2x homeBackground--iconContent--chartIcon ${position==='onAnalyticsPage'?'pink':'gray'}`} >
+                <span className={`font ${position==='onAnalyticsPage'?'pink':'gray'}`}  >ANALYTICS</span>
             </Link>
 
             <i className="fas fa-music fa-2x homeBackground--iconContent--musicIcon">
