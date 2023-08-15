@@ -1,7 +1,4 @@
 .sidebar{
-  //position: absolute;
-  //left:600px;
-  //top:100px;
   height:210px;
   display: flex;
   flex-direction: column;
@@ -15,5 +12,10 @@
     font: normal normal bold 36px/36px Roboto;
     margin-left:8px ;
   }
+
+    :hover{
+      color:var(--pink);
+      }
+
 
 }
