@@ -10,7 +10,6 @@ import BarChart from "./bar-chart/bar-chart";
 import Collapse from "../todo-list-page/collapse/collapse";
 import FocusTime from  "../analytics/focus-time/focus-time";
 
-
 export default function Analytics(){
     const [state] = useContext(CartContext);
 
@@ -20,16 +19,12 @@ export default function Analytics(){
             do:0
         }
     ];
-
     const chart = [
         {
             text:<BarChart/>,
             do:0
         }
     ];
-
-
-
 
     return(
         <div className="analytics">
@@ -38,17 +33,12 @@ export default function Analytics(){
                     <Sidebar position="onAnalyticsPage"/>
                     <Logo/>
                 </div>
-
                 <div className="col-5">
-
-
-
                     <Collapse title="FOCUS TIME" list={focusTime}/>
                     <br/>
                     <br/>
                     <br/>
-
-                    <Collapse title="CHART TIME" list={chart}/>
+                    <Collapse title="CHART" list={chart}/>
 
                 </div>
                 <div>

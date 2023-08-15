@@ -34,6 +34,7 @@ export default function Home(){
                 <IconGroup/>
                 <Slogan/>
 
+
             </div>
         </div>
     )
