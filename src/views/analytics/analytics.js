@@ -21,6 +21,13 @@ export default function Analytics(){
         }
     ];
 
+    const chart = [
+        {
+            text:<BarChart/>,
+            do:0
+        }
+    ];
+
 
 
 
@@ -38,13 +45,10 @@ export default function Analytics(){
 
                     <Collapse title="FOCUS TIME" list={focusTime}/>
                     <br/>
-                    <br/> <br/>
-                    <br/>
-                    <br/>
                     <br/>
                     <br/>
 
-                    <BarChart/>
+                    <Collapse title="CHART TIME" list={chart}/>
 
                 </div>
                 <div>

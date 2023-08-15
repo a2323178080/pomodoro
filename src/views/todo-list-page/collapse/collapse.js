@@ -28,6 +28,7 @@ export default function Collapse({title,list,className}){
                         <div className="title">
                             <div className="titleBar" >
                                 <p>{title}</p>
+
                                 <div className={`dropdownIcon dropdownIcon--${openCondition ? 'collapse':'dropdown'}`}
                                      onClick={handleOpen}></div>
                             </div>
