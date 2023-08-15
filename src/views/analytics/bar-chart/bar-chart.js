@@ -5,50 +5,61 @@ import { Column } from '@ant-design/charts';
 export default function BarChart(){
     const data = [
         {
-            action: '7/1',
-            pv: 5000,
+            type: '7/1',
+            sales: 16,
         },
         {
-            action: '7/2',
-            pv: 35000,
+            type: '7/2',
+            sales: 52,
         },
         {
-            action: '7/3',
-            pv: 25000,
+            type: '7/3',
+            sales: 12,
         },
         {
-            action: '7/4',
-            pv: 15000,
+            type: '7/4',
+            sales: 145,
         },
         {
-            action: '7/5',
-            pv: 8500,
+            type: '7/5',
+            sales: 48,
         },
         {
-            action: '7/6',
-            pv: 8500,
+            type: '7/6',
+            sales: 38,
         },
         {
-            action: '7/7',
-            pv: 8500,
+            type: '7/7',
+            sales: 38,
         },
+
     ];
     const config = {
         title: {
             visible: true,
-            text: '基础柱状图-转化率组件',
+            text: '基础柱状图-图形标签位置',
         },
         description: {
             visible: true,
-            text: '基础柱状图的图形之间添加转化率标签图形\uFF0C用户希望关注从左到右的数据变化比例',
+            text:
+                '基础柱状图的图形标签位置可以指定为top-柱形上部\uFF0Cmiddle-柱形中心\uFF0Cbottom-柱形底部\u3002',
         },
         forceFit: true,
         data,
         padding: 'auto',
-        xField: 'action',
-        yField: 'pv',
-        conversionTag: {
+        xField: 'type',
+        yField: 'sales',
+        meta: {
+            type: {
+                alias: '类别',
+            },
+            sales: {
+                alias: '次數',
+            },
+        },
+        label: {
             visible: true,
+            position: 'middle',
         },
     };
 

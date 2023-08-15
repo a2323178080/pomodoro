@@ -20,6 +20,7 @@ export default function Collapse({title,list,className}){
 
     },[])
 
+    console.log('openCondition', openCondition)
     return(
         <div className={state.handlePosition('collapse', className)} >
             {list.map((event)=>{
@@ -28,9 +29,10 @@ export default function Collapse({title,list,className}){
                         <div className="title">
                             <div className="titleBar" >
                                 <p>{title}</p>
-
-                                <div className={`dropdownIcon dropdownIcon--${openCondition ? 'collapse':'dropdown'}`}
-                                     onClick={handleOpen}></div>
+                                {(title==="TO-DO" || title=== "DONE") &&(
+                                    <div className={`dropdownIcon dropdownIcon--${openCondition ? 'collapse':'dropdown'}`}
+                                         onClick={handleOpen}></div>
+                                )}
                             </div>
                         </div>
 

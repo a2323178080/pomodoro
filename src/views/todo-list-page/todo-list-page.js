@@ -61,7 +61,7 @@ export default function TodoListPage(){
 
                 <div className="col-5">
                     <Input />
-                    <Collapse title="TO-DO" list={todo}/>
+                    <Collapse title="TO-DO" list={todo} />
                     <Collapse title="DONE" list={done} className="onTodoListPage"/>
                 </div>
                 <div>
