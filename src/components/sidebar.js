@@ -8,7 +8,6 @@ export default function Sidebar({position}){
             <Link  to="/todoListPage" className={`fa fa-list-ul fa-2x homeBackground--iconContent--listIcon ${position==='onTodoListPage'?'pink':'gray'}`}>
                 <span className={`font ${position==='onTodoListPage'?'pink':'gray'}`} >TO-DO LIST</span>
             </Link>
-
             <Link to="/analytics" className={`fas fa-chart-bar fa-2x homeBackground--iconContent--chartIcon ${position==='onAnalyticsPage'?'pink':'gray'}`} >
                 <span className={`font ${position==='onAnalyticsPage'?'pink':'gray'}`}  >ANALYTICS</span>
             </Link>

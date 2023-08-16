@@ -5,10 +5,8 @@ import Home from "./views/home/index";
 import TodoListPage from "./views/todo-list-page/todo-list-page";
 import Analytics from "./views/analytics/analytics";
 import {CartContext} from "./store/store";
-
 function App() {
     // const localTodoList=JSON.parse(localStorage.getItem("key"));
-
   const cartReducer=useReducer(context
       ,{
         startCondition: 'stop',

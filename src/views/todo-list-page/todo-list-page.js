@@ -26,15 +26,12 @@ export default function TodoListPage(){
         }
         return list;
     }
-
-
     const todo = [
         {
             text:<TodoList color="white"/>,
             do:0
         }
     ];
-
     const done = [
         {
             text:
@@ -50,7 +47,6 @@ export default function TodoListPage(){
             do:0
         }
     ];
-
     return(
         <div className="todoListPage">
             <div className="layout">
