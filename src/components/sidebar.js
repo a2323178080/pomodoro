@@ -1,6 +1,5 @@
 import "./sidebar.scss";
 import {Link} from "react-router-dom";
-
 export default function Sidebar({position}){
 
     return(

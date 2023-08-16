@@ -1,11 +1,8 @@
-.logo{
+.logo {
   position: absolute;
-  top:522px;
-  width:350px;
+  top: 522px;
+  width: 350px;
   height: 233px;
-
-
-
   .big_circle {
     position: absolute;
     bottom: 0;
@@ -14,9 +11,7 @@
     border-top-left-radius: 350px;
     border-top-right-radius: 350px;
     background-color: #FFEDF7;
-
-
-    .small_circle{
+    .small_circle {
       position: absolute;
       z-index: 3;
       left: 110px;
@@ -31,15 +26,13 @@
       display: flex;
       justify-content: center;
       align-items: center;
-
-      .triangle{
+      .triangle {
         width: 0;
         height: 0;
         border-style: solid;
         border-width: 20px 20px 20px 25px;
         border-color: transparent transparent transparent white;
       }
-
       .small_circle_border {
         position: absolute;
         z-index: 4;
@@ -66,13 +59,10 @@
       letter-spacing: 0;
 
     }
-
-
-    .text{
+    .text {
       position: absolute;
-      bottom:24px;
+      bottom: 24px;
       left: 53px;
-
       height: 19px;
       font: normal normal bold 16px/24px Roboto;
       letter-spacing: 0;
@@ -80,9 +70,6 @@
       text-transform: uppercase;
     }
   }
-
-
-
 }
 
 
