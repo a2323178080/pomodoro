@@ -4,6 +4,7 @@ import { useReducer} from "react";
 import Home from "./views/home/index";
 import TodoListPage from "./views/todo-list-page/todo-list-page";
 import Analytics from "./views/analytics/analytics";
+import Backstage from "./views/backstage/backstage";
 import {CartContext} from "./store/store";
 function App() {
     // const localTodoList=JSON.parse(localStorage.getItem("key"));
@@ -26,11 +27,16 @@ function App() {
         <div>
             <Routes>
                 <Route path='/' element={<Home/>}></Route>
-                <Route path='/todoListPage' element={<TodoListPage/>}></Route>
-                <Route path='/analytics' element={<Analytics/>}></Route>
+                <Route path='/backStage' element={<Backstage/>}>
+                    <Route path='todoListPage' element={<TodoListPage/>}></Route>
+                    <Route path='analytics' element={<Analytics/>}></Route>
+
+                </Route>
+
             </Routes>
         </div>
       </CartContext.Provider>
   );
 }
 export default App;
+

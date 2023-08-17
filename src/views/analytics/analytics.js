@@ -12,40 +12,22 @@ import Collapse from "../../views/todo-list-page/collapse/collapse";
 export default function Analytics(){
     const [state] = useContext(CartContext);
 
-    const focusTime = [
-        {
-            text:<FocusTime/>,
-            do:0
-        }
-    ];
-    const chart = [
-        {
-            text:<BarChart/>,
-            do:0
-        }
-    ];
+
 
     return(
         <div className="analytics">
-            <div className="layout">
-                <div className="col-5">
-                    <Sidebar position="onAnalyticsPage"/>
-                    <Logo/>
-                </div>
-                <div className="col-5">
-                    <CollapseTest title="FOCUS TIME" list={focusTime}/>
-                    <br/>
-                    <br/>
-                    <br/>
-                    <CollapseTest title="CHART" list={chart}/>
-                    <Collapse title="FOCUS TIME"/>
 
-                </div>
-                <div>
-                    <CrossIcon/>
-                    <Slogan/>
-                </div>
-            </div>
+            <Collapse title="FOCUS TIME"/>
+            <FocusTime/>
+            <br/>
+            <br/>
+            <br/>
+            <Collapse title="CHART"/>
+            <BarChart/>
+
+
+
+
         </div>
     )
 }
