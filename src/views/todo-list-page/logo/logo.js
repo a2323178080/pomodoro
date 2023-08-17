@@ -1,5 +1,30 @@
 import "./logo.scss";
+import {useContext,useEffect} from "react";
+import {CartContext} from "../../../store/store";
+
+// const localTimes=JSON.parse(localStorage.getItem("keyTimes"));
+// console.log("我是時間呀",localTimes);
+
 export default function Logo() {
+
+    const [state,dispatch] = useContext(CartContext);
+
+
+    // useEffect(
+    //     () => {setInterval(function() {
+    //                 state.times=state.times-1;
+    //                 dispatch({
+    //                     type:'TIME',
+    //                     payload:state.times,
+    //                 })
+    //             }, 1000);
+    //
+    //     }, [state.times])
+
+
+
+
+
     return (
         <div className="logo">
             <div className="big_circle">
@@ -8,7 +33,7 @@ export default function Logo() {
                     <div className="small_circle_border"></div>
                 </div>
                 <div className="clock">
-                    <div>25</div>
+                    <div>{state.times}</div>
                     <div>:</div>
                     <div>00</div>
                 </div>

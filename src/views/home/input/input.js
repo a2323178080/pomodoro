@@ -30,7 +30,7 @@ export default function Input({className,color}) {
             addTodo()
         }
     }
-    // localStorage.setItem("key", JSON.stringify(state.todoList));
+    localStorage.setItem("key", JSON.stringify(state.todoList));
 
     return (
         <div className={`input${className ? ' ' + className : ''}`}  >

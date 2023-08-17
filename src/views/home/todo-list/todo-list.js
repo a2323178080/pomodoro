@@ -35,8 +35,8 @@ export default function TodoList({position,page,color,className}){
             payload:{}
         })
     }
-    // const localTodoList=JSON.parse(localStorage.getItem("key"||"[]"));
-    const localTodoList=state.todoList;
+    const localTodoList=JSON.parse(localStorage.getItem("key"||"[]"));
+    // const localTodoList=state.todoList;
 
 
     const newColor={
@@ -90,7 +90,7 @@ export default function TodoList({position,page,color,className}){
                     })
 
             }
-            {page==="home"&&localTodoList.length>3?<Link to='./todoListPage'><div className="more" style={{color:`var(--${word})`}}>MORE</div></Link>:<div></div>}
+            {page==="home"&&localTodoList.length>3?<Link to='./backStage/todoListPage'><div className="more" style={{color:`var(--${word})`}}>MORE</div></Link>:<div></div>}
         </div>
     )
 }
