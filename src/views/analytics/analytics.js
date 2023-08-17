@@ -6,7 +6,7 @@ import Logo from "../todo-list-page/logo/logo";
 import CrossIcon from "../../components/cross-icon";
 import Slogan from "../../components/slogan";
 import BarChart from "./bar-chart/bar-chart";
-import Collapse from "../todo-list-page/collapse/collapse";
+import CollapseTest from "../todo-list-page/collapse-test/collapse-test";
 import FocusTime from  "../analytics/focus-time/focus-time";
 export default function Analytics(){
     const [state] = useContext(CartContext);
@@ -32,11 +32,11 @@ export default function Analytics(){
                     <Logo/>
                 </div>
                 <div className="col-5">
-                    <Collapse title="FOCUS TIME" list={focusTime}/>
+                    <CollapseTest title="FOCUS TIME" list={focusTime}/>
                     <br/>
                     <br/>
                     <br/>
-                    <Collapse title="CHART" list={chart}/>
+                    <CollapseTest title="CHART" list={chart}/>
 
                 </div>
                 <div>

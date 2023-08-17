@@ -11,7 +11,9 @@ import Slogan from "../../components/slogan"
 import CrossIcon from "../../components/cross-icon";
 import Sidebar from "../../components/sidebar";
 
+import CollapseTest from "./collapse-test/collapse-test";
 import Collapse from "./collapse/collapse";
+
 import Circle from "../../components/circle";
 
 export default function TodoListPage(){
@@ -49,6 +51,7 @@ export default function TodoListPage(){
     ];
     return(
         <div className="todoListPage">
+
             <div className="layout">
                 <div className="col-5">
                     <Sidebar position="onTodoListPage"/>
@@ -57,8 +60,9 @@ export default function TodoListPage(){
 
                 <div className="col-5">
                     <Input />
-                    <Collapse title="TO-DO" list={todo} />
-                    <Collapse title="DONE" list={done} className="onTodoListPage"/>
+                    <Collapse/>
+                    <CollapseTest title="TO-DO" list={todo} />
+                    <CollapseTest title="DONE" list={done} className="onTodoListPage"/>
                 </div>
                 <div>
                     <CrossIcon/>
