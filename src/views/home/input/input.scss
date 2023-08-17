@@ -2,6 +2,9 @@
     width: 445px;
     margin-bottom: 48px;
     position: relative;
+    display: flex;
+    justify-content:center;
+
   .inputArea {
     width: 445px;
     height: 56px;
@@ -9,10 +12,11 @@
     opacity: 1;
     border: 0px;
     outline: none;
+    padding-left: 20px;
     &--plusIcon {
       position: absolute;
       right: 16px;
-      top: 16px;
+      top: 18px;
 
     }
 &--work{
@@ -22,7 +26,6 @@
     letter-spacing: 0px;
     text-transform: uppercase;
     color: var(--pink);
-    padding-left: 17px;
 
   }
 }
@@ -36,7 +39,6 @@
         padding-left: 17px;
       }
     }
-
   }
 }
 
