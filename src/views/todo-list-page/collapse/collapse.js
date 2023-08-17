@@ -45,7 +45,6 @@ export default function Collapse({title,text,className,dropdownIcon}){
         })
 
     }
-
     // const localTodoList=JSON.parse(localStorage.getItem("key"||"[]"));
     return(
         <div  className={state.handlePosition('collapse', className)}>

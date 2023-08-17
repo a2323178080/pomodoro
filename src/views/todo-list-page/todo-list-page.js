@@ -32,7 +32,6 @@ export default function TodoListPage(){
                     <Collapse title="TO-DO" text="todoList" dropdownIcon/>
 
                     <Collapse title="DONE" text="doneTodo" dropdownIcon className="onTodoListPage"/>
-
                 </div>
                 <div>
                     <CrossIcon/>
