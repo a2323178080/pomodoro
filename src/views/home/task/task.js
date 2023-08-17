@@ -64,7 +64,6 @@ export default function Task() {
 
 
 
-
         dispatch({
             type: 'COUNT_CYCLES',
             payload: 0
@@ -72,13 +71,13 @@ export default function Task() {
 
     }, [state.cyclesNumber])
 
+    const localShowTodoList=JSON.parse(localStorage.getItem("showTodoListKey"||"[]"));
 
-    console.log("總共tomato",state.totalCyclesNumber);
 
     return (
         <div className="task">
             <div>
-                <div className="task--font">{state.showTodoList.map((todo) => {
+                <div className="task--font">{localShowTodoList.map((todo) => {
                     return (
                         <div className="flex">
                             <Circle size={48} bg="transparent" border="2px solid #003164" cursor="pointer"

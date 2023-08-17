@@ -37,6 +37,7 @@ export default function TodoList({position,page,color,className}){
     }
     const localTodoList=JSON.parse(localStorage.getItem("key"||"[]"));
     // const localTodoList=state.todoList;
+    localStorage.setItem("showTodoListKey", JSON.stringify(state.showTodoList));
 
 
     const newColor={
@@ -51,6 +52,8 @@ export default function TodoList({position,page,color,className}){
     const newStyle={
          ...newColor[color]
     }
+
+
 
     return(
         <div className={state.handlePosition('todoList', className)} style={newStyle}>
