@@ -4,7 +4,7 @@ import {CartContext} from "../../../store/store";
 import useColor from "../../../hook/useColor";
 let countdown = null;
 
-export default function Time({className}){
+export default function Time({className,size}){
     const handlePosition =(type, className)=>type + (className ? ' ' + className : '');
 
     useEffect(()=>{
@@ -56,8 +56,26 @@ export default function Time({className}){
     const seconds = state.times % 60;
 
 
+
+    const newSize={
+        forLogo:{
+            font: 'normal normal bold 64px/64px Roboto'
+        }
+    }
+
+    const newStyle={
+        color:`var(--${time})`,
+        ...newSize[size]
+
+    }
+
+
+
+
+
+
     return(
-        <div className={state.handlePosition('time', className)} style={{color:`var(--${time})`}}>
+        <div className={state.handlePosition('time', className)} style={newStyle}>
             <div>{`
                 ${minutes}:${seconds < 10
                 ? "0" + seconds

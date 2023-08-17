@@ -10,5 +10,11 @@
     position: absolute;
     top:249px;
   }
+  &.onTodoListPage{
+    position: absolute;
+   top:120px;
+    left:-50px;
+    z-index: 1;
+  }
 }
 
