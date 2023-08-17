@@ -17,7 +17,7 @@ export default function CollapseTest({title,list,className}){
     },[])
 
     return(
-        <div className={state.handlePosition('collapse', className)} >
+        <div className={state.handlePosition('collapseTest', className)} >
             {list.map((event)=>{
                 return (
                     <div key={event.do}>

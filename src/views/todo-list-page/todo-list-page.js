@@ -19,36 +19,7 @@ import Circle from "../../components/circle";
 export default function TodoListPage(){
     const [state] = useContext(CartContext);
 
-    function handleDot(num) {
-        let list = [];
-        for (let i = 0; i < num; i++) {
-            list.push(<div><Circle size={16} bg="white" border="2px solid #003164"
-                                   marginLeft="eight"/>
-            </div>);
-        }
-        return list;
-    }
-    const todo = [
-        {
-            text:<TodoList color="white"/>,
-            do:0
-        }
-    ];
-    const done = [
-        {
-            text:
-                state.doneTodo.map((item)=>{
-                return <ul className="item">
-                    <li className="item--li">
-                        <span className="material-icons">check_circle_outline</span>
-                        <span className="font">{item.do}</span>
-                        <span className="item--cycleIcon">{handleDot(item.number)}</span>
-                    </li>
-                </ul>
-            }),
-            do:0
-        }
-    ];
+
     return(
         <div className="todoListPage">
 
@@ -60,9 +31,12 @@ export default function TodoListPage(){
 
                 <div className="col-5">
                     <Input />
-                    <Collapse/>
-                    <CollapseTest title="TO-DO" list={todo} />
-                    <CollapseTest title="DONE" list={done} className="onTodoListPage"/>
+                    <Collapse title="TO-DO" text="todoList"/>
+
+                    <Collapse title="DONE" text="doneTodo"/>
+
+                    {/*<CollapseTest title="TO-DO" list={todo} />*/}
+                    {/*<CollapseTest title="DONE" list={done} className="onTodoListPage"/>*/}
                 </div>
                 <div>
                     <CrossIcon/>
