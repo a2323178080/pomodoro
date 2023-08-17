@@ -48,14 +48,13 @@ export default function Time({className}){
             })
             dispatch({
                 type:'TIME',
-                payload: 5
+                payload: 2
             })
         }
     }, [state.times])
     const minutes = Math.floor(state.times / 60);
     const seconds = state.times % 60;
 
-    // localStorage.setItem("keyTimes", JSON.stringify(state.times));
 
     return(
         <div className={state.handlePosition('time', className)} style={{color:`var(--${time})`}}>
