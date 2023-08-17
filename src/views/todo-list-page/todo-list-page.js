@@ -29,9 +29,9 @@ export default function TodoListPage(){
 
                 <div className="col-5">
                     <Input />
-                    <Collapse title="TO-DO" text="todoList"/>
+                    <Collapse title="TO-DO" text="todoList" dropdownIcon/>
 
-                    <Collapse title="DONE" text="doneTodo" className="onTodoListPage"/>
+                    <Collapse title="DONE" text="doneTodo" dropdownIcon className="onTodoListPage"/>
 
                 </div>
                 <div>

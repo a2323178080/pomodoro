@@ -8,6 +8,7 @@ import Slogan from "../../components/slogan";
 import BarChart from "./bar-chart/bar-chart";
 import CollapseTest from "../todo-list-page/collapse-test/collapse-test";
 import FocusTime from  "../analytics/focus-time/focus-time";
+import Collapse from "../../views/todo-list-page/collapse/collapse";
 export default function Analytics(){
     const [state] = useContext(CartContext);
 
@@ -37,6 +38,7 @@ export default function Analytics(){
                     <br/>
                     <br/>
                     <CollapseTest title="CHART" list={chart}/>
+                    <Collapse title="FOCUS TIME"/>
 
                 </div>
                 <div>

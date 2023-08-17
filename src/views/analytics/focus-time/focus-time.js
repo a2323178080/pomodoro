@@ -11,7 +11,7 @@ export default function FocusTime() {
         return accumulator + currentValue.number
     }, 0)
 
-    console.log('看看看!!',state.doneTodo);
+
     return (
         <div className="focusTime">
             <div>

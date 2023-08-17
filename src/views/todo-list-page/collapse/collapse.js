@@ -4,8 +4,7 @@ import React, {useContext, useEffect, useState} from "react";
 import {CartContext} from "../../../store/store";
 import {Link} from "react-router-dom";
 
-
-export default function Collapse({title,text,className}){
+export default function Collapse({title,text,className,dropdownIcon}){
     const [state,dispatch] = useContext(CartContext);
 
 
@@ -21,7 +20,6 @@ export default function Collapse({title,text,className}){
             payload:handlePosition
         })
     },[])
-
 
     function handleDot(num) {
         let list = [];
@@ -47,6 +45,7 @@ export default function Collapse({title,text,className}){
         })
 
     }
+
     // const localTodoList=JSON.parse(localStorage.getItem("key"||"[]"));
     return(
         <div  className={state.handlePosition('collapse', className)}>
@@ -54,11 +53,10 @@ export default function Collapse({title,text,className}){
                     <div className="titleBar" >
                         <p>{title}</p>
                         <div >
-                            {(title==="TO-DO" || title=== "DONE") &&(
+                            {dropdownIcon&&(
                                 <div className={`dropdownIcon dropdownIcon--${openCondition ? 'dropdown':'collapse'}`}
                                      onClick={handleOpen}></div>
                             )}
-
                         </div>
                     </div>
                 </div>
@@ -66,24 +64,30 @@ export default function Collapse({title,text,className}){
 
             {text!==undefined&&openCondition&&
                 <div >
-                    {(text==="todoList"?state.todoList:state.doneTodo).map((todo,index)=>{
+                    {(text==="todoList"?state.todoList:state.doneTodo).map((todo)=>{
                         return(
-                            <ul key={todo.id} className="todoList--font" style={{color:'white'}}>
-                                <li className="todoList--li">
 
+                            <ul key={todo.id}  >
+                                <li className="text">
                                     {text==="todoList"&& <span className="material-icons "
                                                              onClick={() => removeTodo(todo.id)}
                                     >radio_button_unchecked</span>}
                                     {text==="doneTodo"&&<span className="material-icons">check_circle_outline</span>}
 
-                                    <span >{todo.do}</span>
 
-                                    {text==="todoList"&&<span className="material-icons  playIcon"
+
+                                    <span className="font">{todo.do}</span>
+
+
+
+
+                                    {text==="todoList"&&<span className="material-icons playIcon"
                                     >play_circle_outline
                                     </span>}
-                                    { text==="doneTodo"&&<span className="item--cycleIcon">{handleDot(todo.number)}</span>}
+                                    { text==="doneTodo"&&<span className="playIcon">{handleDot(todo.number)}</span>}
                                 </li>
                             </ul>)
+
                     })
                     }
                 </div>}
