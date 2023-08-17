@@ -1,7 +1,7 @@
 import "./collapse-test.scss"
 import React, {useState, useContext, useEffect} from "react";
 import {CartContext} from "../../../store/store";
-import Date from "../../analytics/bar-chart/date";
+import Date from "../../analytics/chart/date";
 export default function CollapseTest({title,list,className}){
     const [state,dispatch]=useContext(CartContext);
     const [openCondition,setOpenCondition]=useState(true);

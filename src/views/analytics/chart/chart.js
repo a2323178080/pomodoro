@@ -1,6 +1,6 @@
-import "./bar-chart.scss";
+import "./chart.scss";
 import {Column} from '@ant-design/charts';
-export default function BarChart() {
+export default function Chart() {
     const data = [
         {
             type: '7/1',

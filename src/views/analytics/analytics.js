@@ -5,7 +5,7 @@ import Sidebar from "../../components/sidebar";
 import Logo from "../todo-list-page/logo/logo";
 import CrossIcon from "../../components/cross-icon";
 import Slogan from "../../components/slogan";
-import BarChart from "./bar-chart/bar-chart";
+import Chart from "./chart/chart";
 import CollapseTest from "../todo-list-page/collapse-test/collapse-test";
 import FocusTime from  "../analytics/focus-time/focus-time";
 import Collapse from "../../views/todo-list-page/collapse/collapse";
@@ -23,7 +23,7 @@ export default function Analytics(){
             <br/>
             <br/>
             <Collapse title="CHART"/>
-            <BarChart/>
+            <Chart/>
 
 
 
