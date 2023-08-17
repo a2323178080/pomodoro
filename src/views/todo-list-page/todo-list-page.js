@@ -11,13 +11,11 @@ import Slogan from "../../components/slogan"
 import CrossIcon from "../../components/cross-icon";
 import Sidebar from "../../components/sidebar";
 
-import CollapseTest from "./collapse-test/collapse-test";
+
 import Collapse from "./collapse/collapse";
 
-import Circle from "../../components/circle";
 
 export default function TodoListPage(){
-    const [state] = useContext(CartContext);
 
 
     return(
@@ -33,10 +31,8 @@ export default function TodoListPage(){
                     <Input />
                     <Collapse title="TO-DO" text="todoList"/>
 
-                    <Collapse title="DONE" text="doneTodo"/>
+                    <Collapse title="DONE" text="doneTodo" className="onTodoListPage"/>
 
-                    {/*<CollapseTest title="TO-DO" list={todo} />*/}
-                    {/*<CollapseTest title="DONE" list={done} className="onTodoListPage"/>*/}
                 </div>
                 <div>
                     <CrossIcon/>

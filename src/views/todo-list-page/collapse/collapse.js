@@ -1,11 +1,11 @@
 import "./collapse.scss"
 import Circle from "../../../components/circle";
-import React, {useContext, useState} from "react";
+import React, {useContext, useEffect, useState} from "react";
 import {CartContext} from "../../../store/store";
 import {Link} from "react-router-dom";
 
 
-export default function Collapse({title,text}){
+export default function Collapse({title,text,className}){
     const [state,dispatch] = useContext(CartContext);
 
 
@@ -14,9 +14,13 @@ export default function Collapse({title,text}){
         setOpenCondition(pre=>!pre);
     }
 
-
-
-
+    const handlePosition =(type, className)=>type + (className ? ' ' + className : '');
+    useEffect(()=>{
+        dispatch({
+            type:'HANDLE_POSITION',
+            payload:handlePosition
+        })
+    },[])
 
 
     function handleDot(num) {
@@ -45,24 +49,19 @@ export default function Collapse({title,text}){
     }
     // const localTodoList=JSON.parse(localStorage.getItem("key"||"[]"));
     return(
-        <div className="collapse">
-
+        <div  className={state.handlePosition('collapse', className)}>
                 <div className="title">
                     <div className="titleBar" >
                         <p>{title}</p>
                         <div >
-
                             {(title==="TO-DO" || title=== "DONE") &&(
                                 <div className={`dropdownIcon dropdownIcon--${openCondition ? 'dropdown':'collapse'}`}
                                      onClick={handleOpen}></div>
                             )}
 
-
-
                         </div>
                     </div>
                 </div>
-
 
 
             {text!==undefined&&openCondition&&
@@ -83,7 +82,6 @@ export default function Collapse({title,text}){
                                     >play_circle_outline
                                     </span>}
                                     { text==="doneTodo"&&<span className="item--cycleIcon">{handleDot(todo.number)}</span>}
-
                                 </li>
                             </ul>)
                     })
