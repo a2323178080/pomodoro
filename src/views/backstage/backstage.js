@@ -11,8 +11,9 @@ export default function Backstage(){
         <div className="backstage">
             <div className="layout">
                 <div className="col-5">
-                    <Sidebar position="onTodoListPage"/>
+
                     <Logo/>
+
                 </div>
 
                 <div className="col-5">

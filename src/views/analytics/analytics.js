@@ -16,7 +16,7 @@ export default function Analytics(){
 
     return(
         <div className="analytics">
-
+            <Sidebar position="onAnalyticsPage"/>
             <Collapse title="FOCUS TIME"/>
             <FocusTime/>
             <br/>
