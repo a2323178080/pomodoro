@@ -5,15 +5,7 @@ import useColor from "../../../hook/useColor";
 let countdown = null;
 
 export default function Time({className,size}){
-    const handlePosition =(type, className)=>type + (className ? ' ' + className : '');
 
-    useEffect(()=>{
-        dispatch({
-            type:'HANDLE_POSITION',
-            payload:handlePosition
-        })
-
-    },[])
 
     const {time}=useColor()
 

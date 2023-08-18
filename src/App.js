@@ -23,6 +23,8 @@ function App() {
         cyclesNumber:0,
         totalCyclesNumber :0,
         dropdownCondition:"dropdown",
+        open:"open",
+
       })
   return (
       <CartContext.Provider value={cartReducer}>

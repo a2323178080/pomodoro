@@ -1,3 +1,5 @@
+import {CartContext} from "../../store/store";
+import {useContext, useEffect, useState} from 'react';
 import Disc from './disc/disc'
 import "./home.scss"
 import useColor from "../../hook/useColor";
@@ -10,6 +12,18 @@ import Slogan from "../../components/slogan";
 
 
 export default function Home(){
+    const [state, dispatch]=useContext(CartContext);
+    const handlePosition =(type, className)=>type + (className ? ' ' + className : '');
+
+    useEffect(()=>{
+        dispatch({
+            type:'HANDLE_POSITION',
+            payload:handlePosition
+        })
+
+    },[])
+
+
 
     const {homeBackground,input}=useColor()
 

@@ -8,19 +8,23 @@ import Sidebar from "../../components/sidebar";
 import List from "./list/list";
 
 
-export default function TodoListPage(){
+export default function TodoListPage() {
 
 
-    return(
+    return (
         <div className="todoListPage">
             <Sidebar position="onTodoListPage"/>
-                    <Input />
-                    <Collapse title="TO-DO" text="todoList" dropdownIcon/>
 
-            <List/>
+            <Input/>
+            <Collapse title="TO-DO" dropdownIcon/>
 
+            <List text="todoList"/>
+            <div >
+                <Collapse title="DONE" dropdownIcon />
 
-            <Collapse title="DONE" text="doneTodo" dropdownIcon className="onTodoListPage"/>
+                <List text="doneTodo"/>
+            </div>
+
 
         </div>
     )

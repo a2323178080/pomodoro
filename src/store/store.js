@@ -110,6 +110,11 @@ export function context(state, action) {
                 ...state,
                 dropdownCondition: action.payload
             }
+        case 'HANDLE_OPEN':
+            return {
+                ...state,
+                open: action.payload
+            }
         default:
             return state
     }
