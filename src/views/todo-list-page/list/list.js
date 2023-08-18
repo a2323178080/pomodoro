@@ -2,20 +2,10 @@ import "./list.scss"
 import React, {useContext, useEffect} from "react";
 import {CartContext} from "../../../store/store";
 import Circle from "../../../components/circle";
-export default function List({text}){
+export default function List({text,className}){
     const [state,dispatch] = useContext(CartContext);
 
-
-
-    const handlePosition =(type, className)=>type + (className ? ' ' + className : '');
-    useEffect(()=>{
-        dispatch({
-            type:'HANDLE_POSITION',
-            payload:handlePosition
-        })
-    },[])
-
-    function handleDot(num) {
+        function handleDot(num) {
         let list = [];
         for (let i = 0; i < num; i++) {
             list.push(<div><Circle size={16} bg="white" border="2px solid #003164"
@@ -40,35 +30,45 @@ export default function List({text}){
 
     }
 
-
-
-
     return(
-        <div className="list">
-            {state.open==="open"&&
-                <div >
-                    {(text==="todoList"?state.todoList:state.doneTodo).map((todo)=>{
-                        return(
+        <div className={state.handlePosition('list', className)}>
 
+            {(state.open==="open"&&text==="todoList")&&
+                <div >
+                    {state.todoList.map((todo)=>{
+                        return(
                             <ul key={todo.id}  >
                                 <li className="text">
-                                    {text==="todoList"&& <span className="material-icons "
+                                     <span className="material-icons "
                                                                onClick={() => removeTodo(todo.id)}
-                                    >radio_button_unchecked</span>}
-                                    {text==="doneTodo"&&<span className="material-icons">check_circle_outline</span>}
-
+                                    >radio_button_unchecked</span>
 
                                     <span className="font">{todo.do}</span>
 
-
-
-                                    {text==="todoList"&&<span className="material-icons playIcon"
+                                    <span className="material-icons playIcon"
                                     >play_circle_outline
-                                    </span>}
-                                    { text==="doneTodo"&&<span className="playIcon">{handleDot(todo.number)}</span>}
+                                    </span>
                                 </li>
                             </ul>)
+                    })
+                    }
+                </div>}
 
+
+
+            {(state.open==="open"&&text==="doneTodo")&&
+                <div >
+                    {state.doneTodo.map((todo)=>{
+                        return(
+                            <ul key={todo.id}  >
+                                <li className="text">
+                                    <span className="material-icons">check_circle_outline</span>
+
+                                    <span className="font">{todo.do}</span>
+
+                                    <span className="playIcon">{handleDot(todo.number)}</span>
+                                </li>
+                            </ul>)
                     })
                     }
                 </div>}
@@ -80,9 +80,33 @@ export default function List({text}){
 
 
 
+            {/*{state.open==="open"&&*/}
+            {/*    <div >*/}
+            {/*        {(text==="todoList"?state.todoList:state.doneTodo).map((todo)=>{*/}
+            {/*            return(*/}
+
+            {/*                <ul key={todo.id}  >*/}
+            {/*                    <li className="text">*/}
+            {/*                        {text==="todoList"&& <span className="material-icons "*/}
+            {/*                                                   onClick={() => removeTodo(todo.id)}*/}
+            {/*                        >radio_button_unchecked</span>}*/}
+            {/*                        {text==="doneTodo"&&<span className="material-icons">check_circle_outline</span>}*/}
+
+
+            {/*                        <span className="font">{todo.do}</span>*/}
 
 
 
+            {/*                        {text==="todoList"&&<span className="material-icons playIcon"*/}
+            {/*                        >play_circle_outline*/}
+            {/*                        </span>}*/}
+            {/*                        { text==="doneTodo"&&<span className="playIcon">{handleDot(todo.number)}</span>}*/}
+            {/*                    </li>*/}
+            {/*                </ul>)*/}
+
+            {/*        })*/}
+            {/*        }*/}
+            {/*    </div>}*/}
 
 
 
