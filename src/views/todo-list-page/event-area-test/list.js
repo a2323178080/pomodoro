@@ -2,7 +2,7 @@ import "./list.scss"
 import React, {useContext} from "react";
 import {CartContext} from "../../../store/store";
 import Circle from "../../../components/circle";
-import TodoList from "../../home/todo-list/todo-list";
+import TodoList from "../../../components/todo-list";
 const List = ({position, area}) => {
     const [state] = useContext(CartContext);
     function handleDot(num) {

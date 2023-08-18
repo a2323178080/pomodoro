@@ -6,7 +6,7 @@ import useColor from "../../hook/useColor";
 import Input from "./input/input";
 import Task from "./task/task.js";
 import Time from "./time/time.js";
-import TodoList from "./todo-list/todo-list";
+import TodoList from "../../components/todo-list";
 import IconGroup from "./icon-group/icon-group";
 import Slogan from "../../components/slogan";
 

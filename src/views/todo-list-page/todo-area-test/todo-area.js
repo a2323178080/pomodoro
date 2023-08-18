@@ -1,5 +1,5 @@
 import "./todo-area.scss";
-import TodoList from "../../home/todo-list/todo-list";
+import TodoList from "../../../components/todo-list";
 
 export default function TodoArea({position}){
 

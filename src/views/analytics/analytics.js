@@ -8,7 +8,7 @@ import Slogan from "../../components/slogan";
 import Chart from "./chart/chart";
 import CollapseTest from "../todo-list-page/collapse-test/collapse-test";
 import FocusTime from  "../analytics/focus-time/focus-time";
-import Collapse from "../../views/todo-list-page/collapse/collapse";
+import CollapseTest2 from "../todo-list-page/collapse-test2/collapse-test2";
 export default function Analytics(){
     const [state] = useContext(CartContext);
 
@@ -17,12 +17,12 @@ export default function Analytics(){
     return(
         <div className="analytics">
             <Sidebar position="onAnalyticsPage"/>
-            <Collapse title="FOCUS TIME"/>
+            <CollapseTest2 title="FOCUS TIME"/>
             <FocusTime/>
             <br/>
             <br/>
             <br/>
-            <Collapse title="CHART"/>
+            <CollapseTest2 title="CHART"/>
             <Chart/>
 
 

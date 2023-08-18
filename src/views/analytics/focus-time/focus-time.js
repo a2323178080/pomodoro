@@ -8,7 +8,6 @@ export default function FocusTime() {
         if(currentValue.number===undefined){
             return accumulator + 0
         }
-        return accumulator + currentValue.number
     }, 0)
 
 

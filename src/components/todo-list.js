@@ -1,13 +1,12 @@
 import {Link} from "react-router-dom";
-import {CartContext} from "../../../store/store";
-import {useContext, useEffect} from "react";
+import {CartContext} from "../store/store";
+import {useContext} from "react";
 import "./todo-list.scss";
-import useColor from "../../../hook/useColor";
+import useColor from "../hook/useColor";
 export default function TodoList({position,page,color,className}){
     const {word}=useColor();
     const [state, dispatch] = useContext(CartContext);
     const removeTodo = (id) => {
-
         dispatch({
             type: 'DONE_TODO',
             payload: {
@@ -39,7 +38,6 @@ export default function TodoList({position,page,color,className}){
     // const localTodoList=state.todoList;
     // localStorage.setItem("showTodoListKey", JSON.stringify(state.showTodoList));
 
-
     const newColor={
         white:{
             color:'var(--white)'
@@ -48,12 +46,9 @@ export default function TodoList({position,page,color,className}){
             color:'var(--blue)'
         }
     }
-
     const newStyle={
          ...newColor[color]
     }
-
-
 
     return(
         <div className={state.handlePosition('todoList', className)} style={newStyle}>

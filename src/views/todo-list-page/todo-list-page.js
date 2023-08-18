@@ -2,9 +2,12 @@ import "./todo-list-page.scss";
 import React, {useContext, useEffect} from "react";
 import {CartContext} from "../../store/store";
 import Input from "../home/input/input";
-import Collapse from "./collapse/collapse";
+
 import Sidebar from "../../components/sidebar";
-import List from "./list/list";
+
+import DoneList from "./done-list/done-list";
+import TodoList from "../../components/todo-list";
+import Collapse from "../../components/collapse";
 
 export default function TodoListPage() {
     const [state, dispatch] = useContext(CartContext);
@@ -18,21 +21,21 @@ export default function TodoListPage() {
         })
     }, [])
 
-
     return (
         <div className="todoListPage">
             <Sidebar position="onTodoListPage"/>
-
             <Input/>
-            <Collapse title="TO-DO" dropdownIcon >
-                <List text="todoList"/>
+
+
+            <Collapse title="TO-DO" dropdownIcon>
+                <TodoList color="white"/>
             </Collapse>
 
 
-            <Collapse title="DONE" dropdownIcon className="onTodoListPage">
-                <List text="doneTodo" className="onTodoListPage"/>
-            </Collapse>
+            <Collapse className="onTodoListPage" title="DONE" dropdownIcon >
+                <DoneList/>
 
+            </Collapse>
 
 
 

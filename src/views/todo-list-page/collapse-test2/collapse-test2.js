@@ -1,10 +1,10 @@
-import "./collapse.scss"
+import "./collapse-test2.scss"
 
 import React, {useContext, useEffect, useState} from "react";
 import {CartContext} from "../../../store/store";
 
 
-export default function Collapse({title,text,className,dropdownIcon, children}){
+export default function CollapseTest2({title,text,className,dropdownIcon, children}){
     const [state,dispatch] = useContext(CartContext);
 
 
