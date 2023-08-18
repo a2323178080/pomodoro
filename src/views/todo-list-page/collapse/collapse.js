@@ -4,7 +4,7 @@ import React, {useContext, useEffect, useState} from "react";
 import {CartContext} from "../../../store/store";
 
 
-export default function Collapse({title,text,className,dropdownIcon}){
+export default function Collapse({title,text,className,dropdownIcon, children}){
     const [state,dispatch] = useContext(CartContext);
 
 
@@ -17,7 +17,8 @@ export default function Collapse({title,text,className,dropdownIcon}){
 
     // const localTodoList=JSON.parse(localStorage.getItem("key"||"[]"));
     return(
-        <div  className={state.handlePosition('collapse', className)}>
+        <>
+            <div  className={state.handlePosition('collapse', className)}>
                 <div className="title">
                     <div className="titleBar" >
                         <p>{title}</p>
@@ -33,6 +34,8 @@ export default function Collapse({title,text,className,dropdownIcon}){
 
 
 
-        </div>
+            </div>
+            {children}
+        </>
     )
 }
