@@ -8,7 +8,7 @@ import Backstage from "./views/backstage/backstage";
 import {CartContext} from "./store/store";
 function App() {
     const localTodoList=JSON.parse(localStorage.getItem("key"));
-    const localShowTodoList=JSON.parse(localStorage.getItem("showTodoListKey"));
+    // const localShowTodoList=JSON.parse(localStorage.getItem("showTodoListKey"));
 
   const cartReducer=useReducer(context
       ,{
@@ -16,7 +16,7 @@ function App() {
         workCondition:'work',
         todoList:localTodoList,
         doneTodo:[],
-        showTodoList:localShowTodoList,
+        showTodoList:[],
         times:2,
         handlePosition:()=>{},
         cycles:[],

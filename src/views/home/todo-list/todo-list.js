@@ -37,7 +37,7 @@ export default function TodoList({position,page,color,className}){
     }
     const localTodoList=JSON.parse(localStorage.getItem("key"||"[]"));
     // const localTodoList=state.todoList;
-    localStorage.setItem("showTodoListKey", JSON.stringify(state.showTodoList));
+    // localStorage.setItem("showTodoListKey", JSON.stringify(state.showTodoList));
 
 
     const newColor={
