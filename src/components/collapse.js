@@ -10,14 +10,14 @@ export default function Collapse({title,dropdownIcon,children,className,item}){
         setOpen(pre=>!pre);
     }
 
-
+    console.log(item)
     return(
     <div className={state.handlePosition('collapseTest', className)}>
         <div className="title">
             <div className="titleBar" >
                 <p>{title}</p>
                 <div >
-                    {dropdownIcon&&(
+                    {item==="dropdownIcon"&&(
                         <div className={`dropdownIcon dropdownIcon--${open===true ? 'dropdown':'collapse'}`}
                              onClick={handleOpen}></div>
                     )}

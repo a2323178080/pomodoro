@@ -1,5 +1,5 @@
 import "./analytics.scss";
-import React, {useContext} from "react";
+import React, {useContext, useEffect} from "react";
 import {CartContext} from "../../store/store";
 import Sidebar from "../../components/sidebar";
 import Logo from "../todo-list-page/logo/logo";
@@ -11,8 +11,15 @@ import FocusTime from  "../analytics/focus-time/focus-time";
 import CollapseTest2 from "../todo-list-page/collapse-test2/collapse-test2";
 import Collapse from "../../components/collapse";
 export default function Analytics(){
-    const [state] = useContext(CartContext);
+    const [state, dispatch] = useContext(CartContext);
 
+    const handlePosition = (type, className) => type + (className ? ' ' + className : '');
+    useEffect(() => {
+        dispatch({
+            type: 'HANDLE_POSITION',
+            payload: handlePosition
+        })
+    }, [])
 
 
     return(

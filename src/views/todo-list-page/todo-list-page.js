@@ -25,11 +25,11 @@ export default function TodoListPage() {
             <Sidebar position="onTodoListPage"/>
             <Input/>
 
-            <Collapse title="TO-DO" dropdownIcon>
+            <Collapse title="TO-DO" item="dropdownIcon" >
                 <TodoList color="white"/>
             </Collapse>
 
-            <Collapse className="onTodoListPage" title="DONE" dropdownIcon >
+            <Collapse className="onTodoListPage" title="DONE" item="dropdownIcon" >
                 <DoneList/>
             </Collapse>
         </div>
