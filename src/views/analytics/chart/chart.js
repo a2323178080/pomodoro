@@ -15,8 +15,6 @@ export default function Chart(){
     }, 0)
 
 
-
-
     return(
         <div className="chart">
             <div className="d-flex">
