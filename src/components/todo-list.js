@@ -49,6 +49,9 @@ export default function TodoList({position,page,color,className}){
          ...newColor[color]
     }
 
+
+
+
     return(
         <div className={state.handlePosition('todoList', className)} >
             {page==="home"?localTodoList.map((todo,index)=>{
@@ -75,6 +78,7 @@ export default function TodoList({position,page,color,className}){
                                           onClick={() => removeTodo(todo.id)}
                                     >radio_button_unchecked</span>
                                     <span >{todo.do}</span>
+
 
 
                                        <Link to='/' className="material-icons todoList--icon playIcon"

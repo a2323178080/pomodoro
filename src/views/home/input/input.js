@@ -9,6 +9,7 @@ export default function Input({className,color}) {
     const [state, dispatch] = useContext(CartContext);
     const [value, setValue] = useState("");
     const cyclesNumber=state.cyclesNumber;
+    const date=new Date().getDate();
 
     const handleChange = (e) => {
         setValue(e.target.value);
@@ -18,7 +19,7 @@ export default function Input({className,color}) {
             dispatch({
                 type: 'ADD_TODO',
                 payload: {
-                    value,cyclesNumber
+                    value,cyclesNumber,date
                 },
             })
             setValue("");
@@ -31,6 +32,8 @@ export default function Input({className,color}) {
         }
     }
     localStorage.setItem("key", JSON.stringify(state.todoList));
+
+
 
     return (
         <div className={`input${className ? ' ' + className : ''}`}  >

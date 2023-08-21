@@ -10,7 +10,7 @@ export default function Collapse({title,dropdownIcon,children,className,item}){
         setOpen(pre=>!pre);
     }
 
-    console.log(item)
+
     return(
     <div className={state.handlePosition('collapseTest', className)}>
         <div className="title">

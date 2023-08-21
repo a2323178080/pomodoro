@@ -22,7 +22,8 @@ export function context(state, action) {
             const newTodo = {
                 do: action.payload.value,
                 id: Date.now(),
-                number: action.payload.cyclesNumber
+                number: action.payload.cyclesNumber,
+                date:action.payload.date,
             }
             return {
                 ...state,
@@ -46,7 +47,8 @@ export function context(state, action) {
                 return {
                     do: item.do,
                     id: item.id,
-                    number: action.payload.cyclesNumber
+                    number: action.payload.cyclesNumber,
+                    date:action.payload.date,
                 }
             })
             return {

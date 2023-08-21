@@ -33,7 +33,9 @@ export default function Task() {
             type: 'DONE_TODO',
             payload: {
                 id: uuid,
-                cyclesNumber: state.cyclesNumber
+                cyclesNumber: state.cyclesNumber,
+                date:new Date().getDate()
+
             }
         })
         dispatch({

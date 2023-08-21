@@ -14,7 +14,10 @@ export default function Chart(){
         return accumulator + currentValue.number
     }, 0)
 
+
     const Today=new Date();
+
+    console.log("done是",state.doneTodo);
 
     return(
         <div className="chart">
@@ -40,7 +43,7 @@ export default function Chart(){
                 </div>
             </div>
 
-            <div className="day">
+            <div className="date">
                 <p>{`${Today.getMonth()+1}/${Today.getDate()}`}</p>
                 <p>{`${Today.getMonth()+1}/${Today.getDate()+1}`}</p>
                 <p>{`${Today.getMonth()+1}/${Today.getDate()+2}`}</p>
