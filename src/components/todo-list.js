@@ -19,7 +19,6 @@ export default function TodoList({position,page,color,className}){
                 id
             }
         })
-
     }
     const showTodo = (id,value) => {
         dispatch({
@@ -51,11 +50,11 @@ export default function TodoList({position,page,color,className}){
     }
 
     return(
-        <div className={state.handlePosition('todoList', className)} style={newStyle}>
+        <div className={state.handlePosition('todoList', className)} >
             {page==="home"?localTodoList.map((todo,index)=>{
                 if(index<3){
                     return(
-                        <ul key={todo.id} className="todoList--font" >
+                        <ul key={todo.id} className="todoList--font" style={newStyle} >
                                 <li className="todoList--li">
                                     <span className="material-icons todoList--icon"
                                     onClick={() => removeTodo(todo.id)}
