@@ -1,3 +1,15 @@
-.dropdownIcon{
-  color:red;
+.dropdownIcon {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  cursor: pointer;
+
+  &--dropdown {
+    border-width: 0 5px 5px 5px;
+    border-color: transparent transparent #FFFFFF transparent;
+  }
+  &--collapse {
+    border-width: 5px 5px 0 5px;
+    border-color: #FFFFFF transparent transparent transparent;
+  }
 }

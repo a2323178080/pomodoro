@@ -1,3 +1,22 @@
 .header{
-  color:red;
+  .title {
+    .titleBar {
+      width: 445px;
+      height: 44px;
+      background: #FFFFFF33 0% 0% no-repeat padding-box;
+      opacity: 1;
+      text-align: left;
+      font: normal normal bold 24px/36px Roboto;
+      letter-spacing: 0px;
+      color: #FFFFFF;
+      text-transform: uppercase;
+      padding-left: 16px;
+      padding-right: 16px;
+      vertical-align: center;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 19px;
+    }
+  }
 }
