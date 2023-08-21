@@ -4,12 +4,15 @@ import {useContext} from "react";
 
 export default function FocusTime() {
     const [state] = useContext(CartContext);
-    const focusTime = state.doneTodo.reduce((accumulator, currentValue) => {
-        if(currentValue.number===undefined){
-            return accumulator + 0
-        }
-        return accumulator + currentValue.number
-    }, 0)
+    const focusTime = state.doneTodo
+        .filter((item)=>{
+            return item.date===new Date().getDate()})
+        .reduce((accumulator, currentValue) => {
+            if(currentValue.number===undefined){
+                return accumulator + 0
+            }
+            return accumulator + currentValue.number
+        }, 0)
 
 
     return (

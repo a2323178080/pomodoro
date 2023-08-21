@@ -7,13 +7,18 @@ export default function Chart(){
 
 
 
-    const focusTime = state.doneTodo.reduce((accumulator, currentValue) => {
+
+
+
+    const focusTime = state.doneTodo
+        .filter((item)=>{
+        return item.date===new Date().getDate()})
+        .reduce((accumulator, currentValue) => {
         if(currentValue.number===undefined){
             return accumulator + 0
         }
         return accumulator + currentValue.number
     }, 0)
-
 
     const Today=new Date();
 
@@ -44,13 +49,13 @@ export default function Chart(){
             </div>
 
             <div className="date">
+                <p>{`${Today.getMonth()+1}/${Today.getDate()-6}`}</p>
+                <p>{`${Today.getMonth()+1}/${Today.getDate()-5}`}</p>
+                <p>{`${Today.getMonth()+1}/${Today.getDate()-4}`}</p>
+                <p>{`${Today.getMonth()+1}/${Today.getDate()-3}`}</p>
+                <p>{`${Today.getMonth()+1}/${Today.getDate()-2}`}</p>
+                <p>{`${Today.getMonth()+1}/${Today.getDate()-1}`}</p>
                 <p>{`${Today.getMonth()+1}/${Today.getDate()}`}</p>
-                <p>{`${Today.getMonth()+1}/${Today.getDate()+1}`}</p>
-                <p>{`${Today.getMonth()+1}/${Today.getDate()+2}`}</p>
-                <p>{`${Today.getMonth()+1}/${Today.getDate()+3}`}</p>
-                <p>{`${Today.getMonth()+1}/${Today.getDate()+4}`}</p>
-                <p>{`${Today.getMonth()+1}/${Today.getDate()+5}`}</p>
-                <p>{`${Today.getMonth()+1}/${Today.getDate()+6}`}</p>
 
             </div>
 
