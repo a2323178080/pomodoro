@@ -1,5 +1,22 @@
-import "./chart.scss"
+import "./chart.scss";
+import {CartContext} from "../../../store/store";
+import {useContext} from "react";
+
 export default function Chart(){
+    const [state] = useContext(CartContext);
+
+
+
+    const focusTime = state.doneTodo.reduce((accumulator, currentValue) => {
+        if(currentValue.number===undefined){
+            return accumulator + 0
+        }
+        return accumulator + currentValue.number
+    }, 0)
+
+
+
+
     return(
         <div className="chart">
             <div className="d-flex">
@@ -13,6 +30,13 @@ export default function Chart(){
 
                 </div>
                 <div className="content">
+                    <div className={`bar bar--${focusTime}`}></div>
+                    <div className={`bar bar--${focusTime}`}></div>
+                    <div className={`bar bar--${focusTime}`}></div>
+                    <div className={`bar bar--${focusTime}`}></div>
+                    <div className={`bar bar--${focusTime}`}></div>
+                    <div className={`bar bar--${focusTime}`}></div>
+                    <div className={`bar bar--${focusTime}`}></div>
 
                 </div>
             </div>
