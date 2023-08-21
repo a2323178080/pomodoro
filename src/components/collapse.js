@@ -2,7 +2,7 @@ import "./collapse.scss"
 import React, {useState,useContext} from "react";
 import {CartContext} from "../store/store";
 import Date from "../../src/views/analytics/chart/date"
-export default function Collapse({title,dropdownIcon,children,className}){
+export default function Collapse({title,dropdownIcon,children,className,item}){
     const [state,dispatch]=useContext(CartContext);
 
     const [open,setOpen]=useState(true);
@@ -21,7 +21,8 @@ export default function Collapse({title,dropdownIcon,children,className}){
                         <div className={`dropdownIcon dropdownIcon--${open===true ? 'dropdown':'collapse'}`}
                              onClick={handleOpen}></div>
                     )}
-                    <Date/>
+                    {item==="date"&&<Date/>}
+
 
                 </div>
             </div>

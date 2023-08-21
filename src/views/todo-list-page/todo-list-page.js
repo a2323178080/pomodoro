@@ -12,7 +12,6 @@ import Collapse from "../../components/collapse";
 export default function TodoListPage() {
     const [state, dispatch] = useContext(CartContext);
 
-
     const handlePosition = (type, className) => type + (className ? ' ' + className : '');
     useEffect(() => {
         dispatch({
@@ -26,19 +25,13 @@ export default function TodoListPage() {
             <Sidebar position="onTodoListPage"/>
             <Input/>
 
-
             <Collapse title="TO-DO" dropdownIcon>
                 <TodoList color="white"/>
             </Collapse>
 
-
             <Collapse className="onTodoListPage" title="DONE" dropdownIcon >
                 <DoneList/>
-
             </Collapse>
-
-
-
         </div>
     )
 }

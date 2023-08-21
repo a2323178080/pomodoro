@@ -26,7 +26,7 @@ export default function Analytics(){
             <br/>
             <br/>
 
-            <Collapse title="CHART">
+            <Collapse title="CHART" item="date">
                 <Chart/>
             </Collapse>
 
