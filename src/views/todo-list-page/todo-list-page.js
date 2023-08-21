@@ -1,5 +1,5 @@
 import "./todo-list-page.scss";
-import React, {useContext, useEffect} from "react";
+import React, {useContext, useEffect, useState} from "react";
 import {CartContext} from "../../store/store";
 import Input from "../home/input/input";
 
@@ -20,16 +20,24 @@ export default function TodoListPage() {
         })
     }, [])
 
+
+    const [open,setOpen]=useState(true);
+    const handleOpen=()=>{
+        setOpen(pre=>!pre);
+    }
+
+
+
     return (
         <div className="todoListPage">
             <Sidebar position="onTodoListPage"/>
             <Input/>
 
-            <Collapse >
+            <Collapse title="TO-DO" >
                 <TodoList color="white"/>
             </Collapse>
 
-            <Collapse className="onTodoListPage" >
+            <Collapse className="onTodoListPage" title="DONE">
                 <DoneList/>
             </Collapse>
         </div>
