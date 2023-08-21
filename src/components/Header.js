@@ -9,6 +9,7 @@ export default function Header({title,rightContent}){
                     <div>
                         {rightContent}
                     </div>
+
                 </div>
             </div>
         </div>
