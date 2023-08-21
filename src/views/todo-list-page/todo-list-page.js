@@ -8,6 +8,7 @@ import Sidebar from "../../components/sidebar";
 import DoneList from "./done-list/done-list";
 import TodoList from "../../components/todo-list";
 import Collapse from "../../components/collapse";
+import DropdownIcon from "../../components/dropdown-icon";
 
 export default function TodoListPage() {
     const [state, dispatch] = useContext(CartContext);
@@ -21,20 +22,17 @@ export default function TodoListPage() {
     }, [])
 
 
-    const [open,setOpen]=useState(true);
-    const handleOpen=()=>{
-        setOpen(pre=>!pre);
-    }
 
 
 
     return (
         <div className="todoListPage">
+
             <Sidebar position="onTodoListPage"/>
             <Input/>
 
-            <Collapse title="TO-DO" open={handleOpen}>
-                <TodoList color="white" row={6}/>
+            <Collapse title="TO-DO" >
+               <TodoList color="white" row={6}/>
             </Collapse>
 
             <Collapse className="onTodoListPage" title="DONE">

@@ -11,7 +11,9 @@ export default function Date() {
         <div className="date">
             <RangePicker
                 defaultValue={[moment('2023/01/01', dateFormat), moment('2023/01/30', dateFormat)]}
-                format={dateFormat}
+                format={dateFormat} onClick={(e)=>{
+                    alert(e.target.value)
+            }}
             />
         </div>
     )
