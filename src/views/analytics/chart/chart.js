@@ -14,6 +14,7 @@ export default function Chart(){
         return accumulator + currentValue.number
     }, 0)
 
+    const Today=new Date();
 
     return(
         <div className="chart">
@@ -40,13 +41,13 @@ export default function Chart(){
             </div>
 
             <div className="day">
-                <p>7/1</p>
-                <p>7/2</p>
-                <p>7/3</p>
-                <p>7/4</p>
-                <p>7/5</p>
-                <p>7/6</p>
-                <p>7/7</p>
+                <p>{`${Today.getMonth()+1}/${Today.getDate()}`}</p>
+                <p>{`${Today.getMonth()+1}/${Today.getDate()+1}`}</p>
+                <p>{`${Today.getMonth()+1}/${Today.getDate()+2}`}</p>
+                <p>{`${Today.getMonth()+1}/${Today.getDate()+3}`}</p>
+                <p>{`${Today.getMonth()+1}/${Today.getDate()+4}`}</p>
+                <p>{`${Today.getMonth()+1}/${Today.getDate()+5}`}</p>
+                <p>{`${Today.getMonth()+1}/${Today.getDate()+6}`}</p>
 
             </div>
 
