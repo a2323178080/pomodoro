@@ -5,11 +5,11 @@ import Date from "../../src/views/analytics/chart/date";
 import Header from "./Header";
 import DropdownIcon from "./dropdown-icon";
 
-export default function Collapse({title,dropdownIcon,children,className,item}){
+export default function Collapse({title,dropdownIcon,children,className,item,open}){
     const [state,dispatch]=useContext(CartContext);
 
 
-
+    console.log(open);
 
 
     return(

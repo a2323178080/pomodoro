@@ -33,8 +33,8 @@ export default function TodoListPage() {
             <Sidebar position="onTodoListPage"/>
             <Input/>
 
-            <Collapse title="TO-DO" >
-                <TodoList color="white"/>
+            <Collapse title="TO-DO" open={handleOpen}>
+                <TodoList color="white" row={6}/>
             </Collapse>
 
             <Collapse className="onTodoListPage" title="DONE">

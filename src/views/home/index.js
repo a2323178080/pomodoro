@@ -43,7 +43,7 @@ export default function Home(){
                 <Input color={input}/>
                 <Time className="onHomePage" />
                 <Task/>
-                <TodoList className="onHomePage" page="home"/>
+                <TodoList className="onHomePage" page="home" row={3}/>
                 <Disc className="onHomePage"/>
                 <IconGroup/>
                 <Slogan/>
