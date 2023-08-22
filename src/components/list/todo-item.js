@@ -1,9 +1,9 @@
 import {Link} from "react-router-dom";
-import {CartContext} from "../store/store";
+import {CartContext} from "../../store/store";
 import {useContext} from "react";
-import "./todo-list.scss";
-import useColor from "../hook/useColor";
-export default function TodoList({position,page,color,className,row}){
+import "./todo-item.scss";
+import useColor from "../../hook/useColor";
+export default function TodoItem({position,page,color,className,row}){
     const {word}=useColor();
     const [state, dispatch] = useContext(CartContext);
     const removeTodo = (id) => {

@@ -1,9 +1,9 @@
-import "./done-list.scss"
+import "./done-item.scss"
 import React, {useContext, useEffect} from "react";
-import {CartContext} from "../../../store/store";
-import Circle from "../../../components/circle";
+import {CartContext} from "../../store/store";
+import Circle from "../circle";
 
-export default function DoneList() {
+export default function DoneItem() {
     const [state, dispatch] = useContext(CartContext);
 
 

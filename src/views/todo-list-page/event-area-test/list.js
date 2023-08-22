@@ -2,7 +2,7 @@ import "./list.scss"
 import React, {useContext} from "react";
 import {CartContext} from "../../../store/store";
 import Circle from "../../../components/circle";
-import TodoList from "../../../components/todo-list";
+import TodoItem from "../../../components/list/todo-item";
 const List = ({position, area}) => {
     const [state] = useContext(CartContext);
     function handleDot(num) {
@@ -18,7 +18,7 @@ const List = ({position, area}) => {
         <div className="list">
             <div className="item">
                 {area === "todo" &&
-                    <TodoList color="white"/>
+                    <TodoItem color="white"/>
                 }
                 {state.dropdownCondition === "dropdown" && area === "done" && state.doneTodo.map((item) => {
                     return (

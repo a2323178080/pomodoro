@@ -1,5 +1,5 @@
 import "./todo-area.scss";
-import TodoList from "../../../components/todo-list";
+import TodoItem from "../../../components/list/todo-item";
 
 export default function TodoArea({position}){
 
@@ -22,7 +22,7 @@ export default function TodoArea({position}){
             <div className="todoBar">TO-DO
                 <div className="dropdown"></div>
             </div>
-            <TodoList color="white"/>
+            <TodoItem color="white"/>
 
 
 

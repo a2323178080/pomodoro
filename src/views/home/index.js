@@ -6,9 +6,10 @@ import useColor from "../../hook/useColor";
 import Input from "./input/input";
 import Task from "./task/task.js";
 import Time from "./time/time.js";
-import TodoList from "../../components/todo-list";
+import TodoItem from "../../components/list/todo-item";
 import IconGroup from "./icon-group/icon-group";
 import Slogan from "../../components/slogan";
+import List from "../../components/list/list"
 
 
 export default function Home(){
@@ -43,7 +44,8 @@ export default function Home(){
                 <Input color={input}/>
                 <Time className="onHomePage" />
                 <Task/>
-                <TodoList className="onHomePage" page="home" row={3}/>
+                <List/>
+                <TodoItem className="onHomePage" page="home" row={3}/>
                 <Disc className="onHomePage"/>
                 <IconGroup/>
                 <Slogan/>
