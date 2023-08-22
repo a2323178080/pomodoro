@@ -7,12 +7,17 @@ import Date from "./date";
 import Bar from "./bar"
 
 export default function Chart({renderContent}){
-    const [date,setDate]=useState("")
+    const [year,setyear]=useState("");
+    const [month,setMonth]=useState("");
+    const [day,setDay]=useState("");
     const handleDate=(date,dateString)=>{
-        setDate(dateString[0]);
+        setyear(dateString[0].slice(0,4));
+        setMonth(dateString[0].slice(5,7));
+        setDay(dateString[0].slice(8,10));
+
 
     }
-    console.log(date);
+    console.log(year)
 
     return(
         <div className="chart">
@@ -21,7 +26,7 @@ export default function Chart({renderContent}){
 
 
             <div >
-                <Bar date={date}/>
+                <Bar year={year} month={month} day={day}/>
             </div>
 
 

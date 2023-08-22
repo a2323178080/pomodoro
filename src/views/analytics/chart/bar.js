@@ -2,11 +2,11 @@ import "./bar.scss";
 import {CartContext} from "../../../store/store";
 import {useContext} from "react";
 
-export default function Bar({date}){
+export default function Bar({year,month,day}){
     const [state] = useContext(CartContext);
 
-
-
+    const date=new Date(year,month,day);
+    console.log("date是啥咪",date);
 
 
 
@@ -22,9 +22,10 @@ export default function Bar({date}){
 
     const Today=new Date();
 
-    console.log("done是",state.doneTodo);
+
 
     const count=[24,20,16,12,8,4];
+    // const dateArray=[{date},{date}+1]
 
     return(
         <div className="chart">
@@ -56,7 +57,8 @@ export default function Bar({date}){
                 {/*<p>{`${Today.getMonth()+1}/${Today.getDate()-2}`}</p>*/}
                 {/*<p>{`${Today.getMonth()+1}/${Today.getDate()-1}`}</p>*/}
                 {/*<p>{`${Today.getMonth()+1}/${Today.getDate()}`}</p>*/}
-               <p>{date}</p>
+               <p>{year}</p>
+
 
             </div>
 
