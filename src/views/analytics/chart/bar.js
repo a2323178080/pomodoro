@@ -5,8 +5,8 @@ import {useContext} from "react";
 export default function Bar({year,month,day}){
     const [state] = useContext(CartContext);
 
-    const date=new Date(year,month,day);
-    console.log("date是啥咪",date);
+    const selectDate=new Date(year,month-1,day);
+    console.log("selectDate是啥咪",selectDate);
 
 
 
@@ -57,7 +57,7 @@ export default function Bar({year,month,day}){
                 {/*<p>{`${Today.getMonth()+1}/${Today.getDate()-2}`}</p>*/}
                 {/*<p>{`${Today.getMonth()+1}/${Today.getDate()-1}`}</p>*/}
                 {/*<p>{`${Today.getMonth()+1}/${Today.getDate()}`}</p>*/}
-               <p>{year}</p>
+               <p>{selectDate.getDate()}</p>
 
 
             </div>
