@@ -24,16 +24,16 @@ export default function Chart(){
 
     console.log("done是",state.doneTodo);
 
+    const count=[24,20,16,12,8,4];
+
     return(
         <div className="chart">
             <div className="d-flex">
                 <div className="count">
-                    <p>24</p>
-                    <p>20</p>
-                    <p>16</p>
-                    <p>12</p>
-                    <p>8</p>
-                    <p>4</p>
+                    {count.map((item)=>{
+                        return <p>{item}</p>
+                    })}
+
 
                 </div>
                 <div className="content">

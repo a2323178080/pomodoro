@@ -12,7 +12,7 @@ export default function Date() {
             <RangePicker
                 defaultValue={[moment('2023/01/01', dateFormat), moment('2023/01/30', dateFormat)]}
                 format={dateFormat} onClick={(e)=>{
-                    alert(e.target.value)
+                console.log("e是啥",e.target)
             }}
             />
         </div>
