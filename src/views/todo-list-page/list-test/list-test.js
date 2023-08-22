@@ -1,8 +1,8 @@
-import "./list.scss"
+import "./list-test.scss"
 import React, {useContext, useEffect} from "react";
 import {CartContext} from "../../../store/store";
 import Circle from "../../../components/circle";
-export default function List({text,className}){
+export default function ListTest({text,className}){
     const [state,dispatch] = useContext(CartContext);
 
         function handleDot(num) {

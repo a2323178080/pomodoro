@@ -51,7 +51,7 @@ export default function TodoList({position,page,color,className,row}){
 
     return(
         <div className={state.handlePosition('todoList', className)} >
-            {localTodoList.map((todo,index)=>{
+            {localTodoList.slice(0,row).map((todo,index)=>{
                 return(
                     <ul key={todo.id} className="todoList--font" style={newStyle}>
                         <li className="todoList--li">
@@ -59,7 +59,6 @@ export default function TodoList({position,page,color,className,row}){
                                           onClick={() => removeTodo(todo.id)}
                                     >radio_button_unchecked</span>
                             <span >{todo.do}</span>
-
 
 
                             <Link to='/' className="material-icons todoList--icon playIcon"
@@ -70,7 +69,7 @@ export default function TodoList({position,page,color,className,row}){
                         </li>
                     </ul>)
             })
-                .slice(0,row)
+
             }
             {page==="home"&&localTodoList.length>3?<Link to='./backStage/todoListPage'><div className="more" style={{color:`var(--${word})`}}>MORE</div></Link>:<div></div>}
         </div>

@@ -14,7 +14,7 @@ export default function Collapse({title,dropdownIcon,children,className,item,ren
     }
 
     return(
-    <div className={state.handlePosition('collapseTest', className)}>
+    <div className={state.handlePosition('collapse', className)}>
         <Header title={title} rightContent={<DropdownIcon open={open} handleClick={handleClick} />}/>
 
 
