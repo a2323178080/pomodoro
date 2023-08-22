@@ -1,4 +1,4 @@
-import "./chart.scss";
+import "./index.scss";
 import {useState} from "react";
 import Header from "../../../components/Header";
 import DropdownIcon from "../../../components/dropdown-icon";
@@ -6,7 +6,7 @@ import React from "react";
 import Date from "./date";
 import Bar from "./bar"
 
-export default function Chart({renderContent}){
+export default function Index({renderContent}){
     const [year,setyear]=useState("");
     const [month,setMonth]=useState("");
     const [day,setDay]=useState("");

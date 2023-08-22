@@ -7,7 +7,7 @@ import FocusTime from  "../analytics/focus-time/focus-time";
 import Bar from "./chart/bar";
 import Header from "../../components/Header";
 import Date from "../analytics/chart/date";
-import Chart from "./chart/chart";
+import Index from "./chart";
 export default function Analytics(){
     const [state, dispatch] = useContext(CartContext);
 
@@ -28,7 +28,7 @@ export default function Analytics(){
             <br/>
             <br/>
             <br/>
-            <Chart />
+            <Index />
 
 
         </div>
