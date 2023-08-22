@@ -44,8 +44,10 @@ export default function Home(){
                 <Input color={input}/>
                 <Time className="onHomePage" />
                 <Task/>
-                <List/>
-                <TodoItem className="onHomePage" page="home" row={3}/>
+                <List>
+                    <TodoItem className="onHomePage" page="home" row={3}/>
+                </List>
+
                 <Disc className="onHomePage"/>
                 <IconGroup/>
                 <Slogan/>

@@ -1,13 +1,12 @@
-import "./list.scss"
+import "./list.scss";
+import TodoItem from "./todo-item";
+import DoneItem from "./done-item";
 
 
-export default function List(){
+export default function List({children}){
     return(
         <div className="list">
-            純list
-
-
-
+            {children}
         </div>
     )
 }

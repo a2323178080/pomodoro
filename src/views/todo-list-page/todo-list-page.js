@@ -8,6 +8,7 @@ import Sidebar from "../../components/sidebar";
 import DoneItem from "../../components/list/done-item";
 import TodoItem from "../../components/list/todo-item";
 import Collapse from "../../components/collapse";
+import List from "../../components/list/list";
 import DropdownIcon from "../../components/dropdown-icon";
 
 export default function TodoListPage() {
@@ -22,18 +23,26 @@ export default function TodoListPage() {
     }, [])
 
 
-
-
-
     return (
         <div className="todoListPage">
 
             <Sidebar position="onTodoListPage"/>
             <Input/>
 
-            <Collapse title="TO-DO" renderList={<TodoItem color="white" row={6}/>}></Collapse>
+            <Collapse title="TO-DO" renderList={
+                <List>
+                    <TodoItem color="white" row={6}/>
+                </List>
+            }/>
 
-            <Collapse className="onTodoListPage" title="DONE" renderList={<DoneItem/>}></Collapse>
+
+            <Collapse className="onTodoListPage" title="DONE" renderList={
+                <List>
+                    <DoneItem/>
+                </List>
+            }/>
+
+
         </div>
     )
 }
