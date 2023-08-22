@@ -5,15 +5,13 @@ import moment from 'moment';
 import React from 'react';
 const {RangePicker} = DatePicker;
 const dateFormat = 'YYYY/MM/DD';
-export default function Date() {
+export default function Date({handleDate}) {
 
     return (
         <div className="date">
             <RangePicker
                 defaultValue={[moment('2023/01/01', dateFormat), moment('2023/01/30', dateFormat)]}
-                format={dateFormat} onChange={(date, dateString)=>{
-                console.log({date, dateString})
-            }}
+                format={dateFormat} onChange={handleDate}
             />
         </div>
     )

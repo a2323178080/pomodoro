@@ -13,7 +13,6 @@ export default function Collapse({title,dropdownIcon,children,className,item,ren
         setOpen(pre=>pre==="open"?"collapse":"open");
     }
 
-    console.log("render是啥", open)
     return(
     <div className={state.handlePosition('collapseTest', className)}>
         <Header title={title} rightContent={<DropdownIcon open={open} handleClick={handleClick} />}/>
