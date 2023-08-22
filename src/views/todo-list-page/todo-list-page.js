@@ -31,13 +31,9 @@ export default function TodoListPage() {
             <Sidebar position="onTodoListPage"/>
             <Input/>
 
-            <Collapse title="TO-DO" >
-               <TodoList color="white" row={6}/>
-            </Collapse>
+            <Collapse title="TO-DO" renderList={<TodoList color="white" row={6}/>}></Collapse>
 
-            <Collapse className="onTodoListPage" title="DONE">
-                <DoneList/>
-            </Collapse>
+            <Collapse className="onTodoListPage" title="DONE" renderList={<DoneList/>}></Collapse>
         </div>
     )
 }
