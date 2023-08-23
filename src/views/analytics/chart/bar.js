@@ -53,7 +53,6 @@ export default function Bar({firstDay,seventhDay}){
                 {days.map((day, index) => (
                     <div key={index}>{day}</div>
                 ))}
-
             </div>
 
 
