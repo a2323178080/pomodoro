@@ -16,13 +16,12 @@ export default function Bar({firstDay,lastSevenDay}){
         startDate.add(1, 'days');
     }
 
-    console.log(state.doneTodo)
 
-    const test=(whatDate)=>{
+    const calDateWithCount=(whichDate)=>{
 
         return state.doneTodo
             .filter((item)=>{
-                return item.date===parseInt(whatDate)})
+                return item.date===parseInt(whichDate)})
             .reduce((accumulator, currentValue) => {
                 if(currentValue.number===undefined){
                     return accumulator + 0
@@ -33,7 +32,7 @@ export default function Bar({firstDay,lastSevenDay}){
 
 
     return(
-        <div className="chart">
+        <div className="bar">
             <div className="d-flex">
                 <div className="count">
                     {count.map((item,index)=>{
@@ -44,7 +43,7 @@ export default function Bar({firstDay,lastSevenDay}){
                 </div>
                 <div className="content">
                     {dates.map((date, index) => (
-                        <div key={index} className={`bar bar--${test(date.slice(3,5))}`}>
+                        <div key={index} className={`column column--${calDateWithCount(date.slice(3,5))}`}>
                         </div>
                     ))}
 

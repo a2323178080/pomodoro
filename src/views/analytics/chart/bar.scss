@@ -43,7 +43,6 @@ $height-24:$height*24;
     }
   }
  .content{
-
    width:420px;
    height: 243px;
    margin-left: 7px;
@@ -54,7 +53,7 @@ $height-24:$height*24;
    justify-content: space-around;
    align-items: flex-end;
 
-   .bar{
+   .column{
      width:28px;
      background-color: var(--white);
 
