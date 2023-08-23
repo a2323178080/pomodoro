@@ -18,7 +18,7 @@ export default function Bar({firstDay,seventhDay}){
 
     const focusTime = state.doneTodo
         .filter((item)=>{
-            return item.date===new Date().getDate()})
+            return item.date===parseInt(firstDay.format("DD"))})
         .reduce((accumulator, currentValue) => {
             if(currentValue.number===undefined){
                 return accumulator + 0
@@ -27,12 +27,18 @@ export default function Bar({firstDay,seventhDay}){
         }, 0)
 
 
+    console.log("done是啥?",state.doneTodo)
+    console.log("format是",typeof firstDay.format("DD"))
+
+
+
+
     return(
         <div className="chart">
             <div className="d-flex">
                 <div className="count">
-                    {count.map((item)=>{
-                        return <p>{item}</p>
+                    {count.map((item,index)=>{
+                        return <p key={index}>{item}</p>
                     })}
 
 
