@@ -30,7 +30,10 @@ export default function Bar({firstDay,lastSevenDay}){
             }, 0)
     }
 
+    console.log(moment().format('YYYY-MM-DD'))
+    console.log(firstDay.format('YYYY-MM-DD'))
 
+    console.log(moment().format('YYYY-MM-DD')===firstDay.format('YYYY-MM-DD'))
     return(
         <div className="bar">
             <div className="d-flex">
@@ -43,7 +46,9 @@ export default function Bar({firstDay,lastSevenDay}){
                 </div>
                 <div className="content">
                     {dates.map((date, index) => (
-                        <div key={index} className={`column column--${calDateWithCount(date.slice(3,5))}`}>
+                        <div key={index} className={`column column--${calDateWithCount(date.slice(3,5))} `}
+                        style={{backgroundColor:firstDay===moment()?'red':'blue'}}
+                        >
                         </div>
                     ))}
 
