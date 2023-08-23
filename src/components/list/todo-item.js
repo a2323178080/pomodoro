@@ -49,6 +49,8 @@ export default function TodoItem({position,page,color,className,row}){
          ...newColor[color]
     }
 
+    localStorage.setItem("doneTodoKey", JSON.stringify(state.doneTodo));
+
     return(
         <div className={state.handlePosition('todoList', className)} >
             {localTodoList.slice(0,row).map((todo,index)=>{

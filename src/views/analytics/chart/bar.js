@@ -17,14 +17,6 @@ export default function Bar({firstDay,lastSevenDay}){
     }
 
 
-    // useEffect(()=>{
-    //     localStorage.setItem("doneTodoListKey", JSON.stringify(state.doneTodo));
-    // },[])
-    //
-    //
-    // const localDoneTodoList=JSON.parse(localStorage.getItem("doneTodoListKey"));
-    //
-    // console.log(localDoneTodoList)
 
     const calDateWithCount=(whichDate)=>{
         return state.doneTodo

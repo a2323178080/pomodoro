@@ -17,9 +17,12 @@ export default function DoneItem() {
         return list;
     }
 
+
+    const localDoneTodoList=JSON.parse(localStorage.getItem("doneTodoKey"||"[]"));
+
     return (
         <div className="doneList">
-            {state.doneTodo.map((todo) => {
+            {localDoneTodoList.map((todo) => {
                 return (
                     <ul key={todo.id}>
                         <li className="text">

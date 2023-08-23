@@ -58,6 +58,8 @@ export default function Task() {
 
     // const localShowTodoList=JSON.parse(localStorage.getItem("showTodoListKey"||"[]"));
 
+    localStorage.setItem("doneTodoKey", JSON.stringify(state.doneTodo));
+
     return (
         <div className="task">
             <div>
