@@ -13,16 +13,16 @@ import moment from "moment/moment";
 export default function Index(){
 
     const [firstDay,setFirstDay]=useState(moment())
-    const [seventhDay,setSeventhDay]=useState(moment().subtract(6, 'days'));
+    const [lastSevenDay,setLastSevenDay]=useState(moment().subtract(6, 'days'));
     const [key,setKey]=useState(1)
 
     const nextCycleDay=()=>{
-        setSeventhDay(pre=> pre.add(7, 'days'));
+        setLastSevenDay(pre=> pre.add(7, 'days'));
         setFirstDay(pre=>pre.add(7, 'days'));
         setKey(pre=>pre+1);
     }
     const previousCycleDay=()=>{
-        setSeventhDay(pre=>pre.subtract(7, 'days'));
+        setLastSevenDay(pre=>pre.subtract(7, 'days'));
         setFirstDay(pre=>pre.subtract(7, 'days'));
         setKey(pre=>pre-1);
     }
@@ -33,7 +33,7 @@ export default function Index(){
         <div className="chart">
             <Header title="CHART" rightContent={<Date
                 firstDay={firstDay}
-                seventhDay={seventhDay}
+                lastSevenDay={lastSevenDay}
                 key={key}
                 previousCycleDay={previousCycleDay}
                 nextCycleDay={nextCycleDay}
@@ -42,7 +42,7 @@ export default function Index(){
             />}/>
 
             <div >
-                <Bar firstDay={firstDay} seventhDay={seventhDay}/>
+                <Bar firstDay={firstDay} lastSevenDay={lastSevenDay}/>
             </div>
 
 

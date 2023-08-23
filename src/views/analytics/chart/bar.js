@@ -3,19 +3,18 @@ import moment from 'moment';
 import {CartContext} from "../../../store/store";
 import {useContext} from "react";
 
-export default function Bar({firstDay,seventhDay}){
+export default function Bar({firstDay,lastSevenDay}){
     const [state] = useContext(CartContext);
 
     const count=[24,20,16,12,8,4];
 
-    const startDate = moment(seventhDay.format('YYYY.MM.DD'));
-    const endDate = moment(firstDay.format('YYYY.MM.DD'));
     const dates = [];
+    const startDate = moment(lastSevenDay.format('YYYY.MM.DD'));
+    const endDate = moment(firstDay.format('YYYY.MM.DD'));
     while (startDate.isSameOrBefore(endDate)) {
         dates.push(startDate.format('MM/DD'));
         startDate.add(1, 'days');
     }
-
 
     console.log(state.doneTodo)
 
@@ -32,14 +31,6 @@ export default function Bar({firstDay,seventhDay}){
                 return accumulator + currentValue.number
             }, 0)
     }
-
-
-    // console.log(test());
-    //
-    // console.log("done是啥?",state.doneTodo)
-    // console.log("format是",typeof firstDay.format("DD"))
-
-
 
 
     return(

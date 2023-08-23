@@ -3,7 +3,7 @@ import moment from 'moment';
 import {useEffect, useState} from "react";
 import {RightOutlined,LeftOutlined } from '@ant-design/icons'
 
-export default function Date({firstDay,seventhDay,key,previousCycleDay,nextCycleDay}){
+export default function Date({firstDay,lastSevenDay,key,previousCycleDay,nextCycleDay}){
 
 
 
@@ -11,9 +11,8 @@ export default function Date({firstDay,seventhDay,key,previousCycleDay,nextCycle
     return(
         <div className="date">
             <div key={key}><LeftOutlined onClick={previousCycleDay}/>
-                {seventhDay.format('YYYY.MM.DD')}--{firstDay.format('YYYY.MM.DD')}
+                {lastSevenDay.format('YYYY.MM.DD')}--{firstDay.format('YYYY.MM.DD')}
                 <RightOutlined onClick={nextCycleDay}/>
-
 
             </div>
 
