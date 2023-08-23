@@ -1,13 +1,10 @@
 import "./bar.scss";
+import moment from 'moment';
 import {CartContext} from "../../../store/store";
 import {useContext} from "react";
 
 export default function Bar({year,month,day}){
     const [state] = useContext(CartContext);
-
-    const selectDate=new Date(year,month-1,day);
-
-
 
 
     const focusTime = state.doneTodo
@@ -20,12 +17,21 @@ export default function Bar({year,month,day}){
         return accumulator + currentValue.number
     }, 0)
 
-    const Today=new Date();
-
 
 
     const count=[24,20,16,12,8,4];
     // const dateArray=[{date},{date}+1]
+
+
+    const startDate = moment('2023-08-23');
+    const endDate = moment('2023-08-29');
+    const days = [];
+    while (startDate.isSameOrBefore(endDate)) {
+        days.push(startDate.format('MM/DD'));
+        startDate.add(1, 'days');
+    }
+
+
 
     return(
         <div className="chart">
@@ -50,17 +56,13 @@ export default function Bar({year,month,day}){
             </div>
 
             <div className="date">
-                {/*<p>{`${Today.getMonth()+1}/${Today.getDate()-6}`}</p>*/}
-                {/*<p>{`${Today.getMonth()+1}/${Today.getDate()-5}`}</p>*/}
-                {/*<p>{`${Today.getMonth()+1}/${Today.getDate()-4}`}</p>*/}
-                {/*<p>{`${Today.getMonth()+1}/${Today.getDate()-3}`}</p>*/}
-                {/*<p>{`${Today.getMonth()+1}/${Today.getDate()-2}`}</p>*/}
-                {/*<p>{`${Today.getMonth()+1}/${Today.getDate()-1}`}</p>*/}
-                {/*<p>{`${Today.getMonth()+1}/${Today.getDate()}`}</p>*/}
-               <p>{selectDate.getDate()}</p>
-
+                {days.map((day, index) => (
+                    <div key={index}>{day}</div>
+                ))}
 
             </div>
+
+
 
 
         </div>
