@@ -6,6 +6,16 @@ import Circle from "../circle";
 export default function DoneItem() {
     const [state, dispatch] = useContext(CartContext);
 
+    const removeDoneTodo = (id) => {
+
+        dispatch({
+            type: 'REMOVE_DONE_TODO',
+            payload: {
+                id
+            }
+        })
+    }
+
 
     function handleDot(num) {
         let list = [];
@@ -26,7 +36,9 @@ export default function DoneItem() {
                 return (
                     <ul key={todo.id}>
                         <li className="text">
-                            <span className="material-icons">check_circle_outline</span>
+                            <span className="material-icons"
+                                  onClick={() => removeDoneTodo(todo.id)}
+                            >check_circle_outline</span>
 
                             <span className="font">{todo.do}</span>
 
