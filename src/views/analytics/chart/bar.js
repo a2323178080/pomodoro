@@ -16,9 +16,7 @@ export default function Bar({firstDay,lastSevenDay}){
         startDate.add(1, 'days');
     }
 
-
     const calDateWithCount=(whichDate)=>{
-
         return state.doneTodo
             .filter((item)=>{
                 return item.date===parseInt(whichDate)})
@@ -30,12 +28,6 @@ export default function Bar({firstDay,lastSevenDay}){
             }, 0)
     }
 
-    console.log(moment().format('YYYY-MM-DD'))
-    console.log(firstDay.format('YYYY-MM-DD'))
-
-    console.log(moment().format('YYYY-MM-DD')===firstDay.format('YYYY-MM-DD'))
-
-
     return(
         <div className="bar">
             <div className="d-flex">
@@ -43,9 +35,8 @@ export default function Bar({firstDay,lastSevenDay}){
                     {count.map((item,index)=>{
                         return <p key={index}>{item}</p>
                     })}
-
-
                 </div>
+
                 <div className="content">
                     {dates.map((date, index) => (
                         <div key={index} className={`column column--${calDateWithCount(date.slice(3,5))} `}
@@ -53,8 +44,6 @@ export default function Bar({firstDay,lastSevenDay}){
                         >
                         </div>
                     ))}
-
-
                 </div>
             </div>
 
@@ -63,13 +52,7 @@ export default function Bar({firstDay,lastSevenDay}){
                     <div key={index}>{date}</div>
 
                 ))}
-
-
             </div>
-
-
-
-
         </div>
     )
 }
