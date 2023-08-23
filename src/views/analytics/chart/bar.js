@@ -6,7 +6,7 @@ export default function Bar({year,month,day}){
     const [state] = useContext(CartContext);
 
     const selectDate=new Date(year,month-1,day);
-    console.log("selectDate是啥咪",selectDate);
+
 
 
 

@@ -3,7 +3,8 @@ import {useState} from "react";
 import Header from "../../../components/Header";
 import DropdownIcon from "../../../components/dropdown-icon";
 import React from "react";
-import Date from "./date";
+
+import Date from "./date"
 import Bar from "./bar"
 
 export default function Index({renderContent}){

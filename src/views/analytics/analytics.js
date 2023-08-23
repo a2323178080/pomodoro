@@ -6,7 +6,7 @@ import Sidebar from "../../components/sidebar";
 import FocusTime from  "../analytics/focus-time/focus-time";
 import Bar from "./chart/bar";
 import Header from "../../components/Header";
-import Date from "../analytics/chart/date";
+import DateTest from "./chart/date-test";
 import Index from "./chart";
 export default function Analytics(){
     const [state, dispatch] = useContext(CartContext);

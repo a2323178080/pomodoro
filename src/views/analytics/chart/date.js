@@ -1,18 +1,31 @@
-import "./date.scss"
-import 'antd/dist/antd.css';
-import {DatePicker, Space} from 'antd';
+import "./date.scss";
 import moment from 'moment';
-import React from 'react';
-const {RangePicker} = DatePicker;
-const dateFormat = 'YYYY/MM/DD';
-export default function Date({handleDate}) {
+import {useState,useEffect} from "react";
+import {RightOutlined,LeftOutlined } from '@ant-design/icons'
 
-    return (
+export default function Date(){
+
+    const [firstDay,setFirstDay]=useState(moment())
+    const [seventhDay,setSeventhDay]=useState(moment().add(6, 'days'));
+
+    const next=()=>{
+       setSeventhDay(pre=>pre.add(6, 'days'));
+       console.log(123)
+    }
+
+
+
+    return(
         <div className="date">
-            <RangePicker
-                defaultValue={[moment('2023/01/01', dateFormat), moment('2023/01/30', dateFormat)]}
-                format={dateFormat} onChange={handleDate}
-            />
+            <div><LeftOutlined />
+                {firstDay.format('YYYY.MM.DD')}-{seventhDay.format('YYYY.MM.DD')}
+{}
+                {/*<RightOutlined onClick={next}/>*/}
+                <button type="button" onClick={next}>測試按鈕</button>
+            </div>
+
+
+
         </div>
     )
 }

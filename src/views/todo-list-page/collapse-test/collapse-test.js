@@ -1,7 +1,7 @@
 import "./collapse-test.scss"
 import React, {useState, useContext, useEffect} from "react";
 import {CartContext} from "../../../store/store";
-import Date from "../../analytics/chart/date";
+import DateTest from "../../analytics/chart/date-test";
 export default function CollapseTest({title,list,className}){
     const [state,dispatch]=useContext(CartContext);
     const [openCondition,setOpenCondition]=useState(true);
@@ -24,7 +24,7 @@ export default function CollapseTest({title,list,className}){
                         <div className="title">
                             <div className="titleBar" >
                                 <p>{title}</p>
-                                {title==="CHART"&&<Date/>}
+                                {title==="CHART"&&<DateTest/>}
                                 {(title==="TO-DO" || title=== "DONE") &&(
                                     <div className={`dropdownIcon dropdownIcon--${openCondition ? 'collapse':'dropdown'}`}
                                          onClick={handleOpen}></div>
