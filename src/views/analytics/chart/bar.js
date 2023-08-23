@@ -1,7 +1,7 @@
 import "./bar.scss";
 import moment from 'moment';
 import {CartContext} from "../../../store/store";
-import {useContext} from "react";
+import {useContext, useEffect} from "react";
 
 export default function Bar({firstDay,lastSevenDay}){
     const [state] = useContext(CartContext);
@@ -15,6 +15,16 @@ export default function Bar({firstDay,lastSevenDay}){
         dates.push(startDate.format('MM/DD'));
         startDate.add(1, 'days');
     }
+
+
+    // useEffect(()=>{
+    //     localStorage.setItem("doneTodoListKey", JSON.stringify(state.doneTodo));
+    // },[])
+    //
+    //
+    // const localDoneTodoList=JSON.parse(localStorage.getItem("doneTodoListKey"));
+    //
+    // console.log(localDoneTodoList)
 
     const calDateWithCount=(whichDate)=>{
         return state.doneTodo
