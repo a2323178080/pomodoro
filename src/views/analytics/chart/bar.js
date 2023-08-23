@@ -10,25 +10,34 @@ export default function Bar({firstDay,seventhDay}){
 
     const startDate = moment(firstDay.format('YYYY.MM.DD'));
     const endDate = moment(seventhDay.format('YYYY.MM.DD'));
-    const days = [];
+    const dates = [];
     while (startDate.isSameOrBefore(endDate)) {
-        days.push(startDate.format('MM/DD'));
+        dates.push(startDate.format('MM/DD'));
         startDate.add(1, 'days');
     }
 
-    const focusTime = state.doneTodo
-        .filter((item)=>{
-            return item.date===parseInt(firstDay.format("DD"))})
-        .reduce((accumulator, currentValue) => {
-            if(currentValue.number===undefined){
-                return accumulator + 0
-            }
-            return accumulator + currentValue.number
-        }, 0)
+
+    console.log(dates)
 
 
-    console.log("done是啥?",state.doneTodo)
-    console.log("format是",typeof firstDay.format("DD"))
+    const test=(whatDate)=>{
+
+        return state.doneTodo
+            .filter((item)=>{
+                return item.date===parseInt(whatDate.format("DD"))})
+            .reduce((accumulator, currentValue) => {
+                if(currentValue.number===undefined){
+                    return accumulator + 0
+                }
+                return accumulator + currentValue.number
+            }, 0)
+    }
+
+
+    // console.log(test());
+    //
+    // console.log("done是啥?",state.doneTodo)
+    // console.log("format是",typeof firstDay.format("DD"))
 
 
 
@@ -44,21 +53,28 @@ export default function Bar({firstDay,seventhDay}){
 
                 </div>
                 <div className="content">
-                    <div className={`bar bar--${focusTime}`}></div>
-                    <div className={`bar bar--${focusTime}`}></div>
-                    <div className={`bar bar--${focusTime}`}></div>
-                    <div className={`bar bar--${focusTime}`}></div>
-                    <div className={`bar bar--${focusTime}`}></div>
-                    <div className={`bar bar--${focusTime}`}></div>
-                    <div className={`bar bar--${focusTime}`}></div>
+                    {/*<div className={`bar bar--${focusTime}`}></div>*/}
+                    {/*<div className={`bar bar--${focusTime}`}></div>*/}
+                    {/*<div className={`bar bar--${focusTime}`}></div>*/}
+                    {/*<div className={`bar bar--${focusTime}`}></div>*/}
+                    {/*<div className={`bar bar--${focusTime}`}></div>*/}
+                    {/*<div className={`bar bar--${focusTime}`}></div>*/}
+                    {/*<div className={`bar bar--${focusTime}`}></div>*/}
+                    {dates.map((date, index) => (
+                        <div key={index}>{date.slice(3,5)}</div>
+
+                    ))}
 
                 </div>
             </div>
 
             <div className="date">
-                {days.map((day, index) => (
-                    <div key={index}>{day}</div>
+                {dates.map((date, index) => (
+                    <div key={index}>{date}</div>
+
                 ))}
+
+
             </div>
 
 
