@@ -18,7 +18,7 @@ export default function Bar({firstDay,lastSevenDay}){
 
 
 
-    const calDateWithCount=(whichDate)=>{
+    const calDateMatchCount=(whichDate)=>{
         return state.doneTodo
             .filter((item)=>{
                 return item.date===parseInt(whichDate)})
@@ -41,7 +41,7 @@ export default function Bar({firstDay,lastSevenDay}){
 
                 <div className="content">
                     {dates.map((date, index) => (
-                        <div key={index} className={`column column--${calDateWithCount(date.slice(3,5))} `}
+                        <div key={index} className={`column column--${calDateMatchCount(date.slice(3,5))} `}
                         style={{backgroundColor:date===moment().format('MM/DD')?'var(--pink)':'var(--white)'}}
                         >
                         </div>
