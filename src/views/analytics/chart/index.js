@@ -1,7 +1,6 @@
 import "./index.scss";
 import {useState} from "react";
 import Header from "../../../components/Header";
-import DropdownIcon from "../../../components/dropdown-icon";
 import React from "react";
 import Date from "./date"
 import Bar from "./bar"
@@ -11,16 +10,14 @@ moment.suppressDeprecationWarnings=true;
 export default function Index(){
     const [firstDay,setFirstDay]=useState(moment())
     const [lastSevenDay,setLastSevenDay]=useState(moment().subtract(6, 'days'));
-    const [key,setKey]=useState(1)
+
     const nextCycleDay=()=>{
-        setLastSevenDay(pre=> pre.add(7, 'days'));
-        setFirstDay(pre=>pre.add(7, 'days'));
-        setKey(pre=>pre+1);
+        setLastSevenDay(pre=> pre.clone().add(7, 'days'));
+        setFirstDay(pre=>pre.clone().add(7, 'days'));
     }
     const previousCycleDay=()=>{
-        setLastSevenDay(pre=>pre.subtract(7, 'days'));
-        setFirstDay(pre=>pre.subtract(7, 'days'));
-        setKey(pre=>pre-1);
+        setLastSevenDay(pre=>pre.clone().subtract(7, 'days'));
+        setFirstDay(pre=>pre.clone().subtract(7, 'days'));
     }
 
     return(
