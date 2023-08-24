@@ -13,7 +13,7 @@ import moment from "moment/moment";
 export default function Index(){
 
     const [firstDay,setFirstDay]=useState(moment())
-    const [seventhDay,setSeventhDay]=useState(moment().add(6, 'days'));
+    const [seventhDay,setSeventhDay]=useState(moment().subtract(6, 'days'));
     const [key,setKey]=useState(1)
 
     const nextCycleDay=()=>{

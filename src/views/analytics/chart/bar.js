@@ -8,8 +8,8 @@ export default function Bar({firstDay,seventhDay}){
 
     const count=[24,20,16,12,8,4];
 
-    const startDate = moment(firstDay.format('YYYY.MM.DD'));
-    const endDate = moment(seventhDay.format('YYYY.MM.DD'));
+    const startDate = moment(seventhDay.format('YYYY.MM.DD'));
+    const endDate = moment(firstDay.format('YYYY.MM.DD'));
     const dates = [];
     while (startDate.isSameOrBefore(endDate)) {
         dates.push(startDate.format('MM/DD'));

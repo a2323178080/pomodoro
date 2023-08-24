@@ -11,8 +11,7 @@ export default function Date({firstDay,seventhDay,key,previousCycleDay,nextCycle
     return(
         <div className="date">
             <div key={key}><LeftOutlined onClick={previousCycleDay}/>
-                {firstDay.format('YYYY.MM.DD')}-{seventhDay.format('YYYY.MM.DD')}
-
+                {seventhDay.format('YYYY.MM.DD')}--{firstDay.format('YYYY.MM.DD')}
                 <RightOutlined onClick={nextCycleDay}/>
 
 
