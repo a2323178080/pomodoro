@@ -56,24 +56,25 @@ export default function Task() {
 
     }, [state.cyclesNumber])
 
-    // const localShowTodoList=JSON.parse(localStorage.getItem("showTodoListKey"||"[]"));
 
     localStorage.setItem("doneTodoKey", JSON.stringify(state.doneTodo));
+
+    console.log(state.cycles)
 
     return (
         <div className="task">
             <div>
                 <div className="task--font">{state.showTodoList.map((todo) => {
                     return (
-                        <div className="flex">
+                        <div className="flex" key={todo.id}>
                             <Circle size={48} bg="transparent" border="2px solid #003164" cursor="pointer"
                                     onClick={() => removeShowTodoList(todo.id)}/>
                             <div>
                                 <div className="task--do">{todo.do}</div>
 
                                 <div className="task--cycleIcon">
-                                    {state.cycles.map(() => {
-                                        return <div><Circle size={12} bg="darkBlue" border="2px solid #003164"
+                                    {state.cycles.map((item) => {
+                                        return <div key={item.id}><Circle size={12} bg="darkBlue" border="2px solid #003164"
                                                             marginLeft="eight"/>
                                         </div>
                                     })}
