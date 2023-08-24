@@ -30,6 +30,21 @@ export default function Bar({firstDay,lastSevenDay}){
             }, 0)
     }
 
+
+    const weekCount=dates
+        .map((date) =>
+        calDateMatchCount(date.slice(3,5)))
+        .reduce((accumulator,currentValue)=>{
+        return accumulator+currentValue
+    },0)
+    console.log("共",weekCount);
+
+
+
+
+
+
+
     return(
         <div className="bar">
             <div className="d-flex">
@@ -55,6 +70,23 @@ export default function Bar({firstDay,lastSevenDay}){
 
                 ))}
             </div>
+
+
+
+            {dates.map((date) =>
+                calDateMatchCount(date.slice(3,5))
+            )}
+
+            {dates.map((date) =>
+                <div>{ calDateMatchCount(date.slice(3,5))}</div>
+
+            )}
+
+
+
+
+
+
         </div>
     )
 }
