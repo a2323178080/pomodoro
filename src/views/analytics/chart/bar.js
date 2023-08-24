@@ -18,7 +18,6 @@ export default function Bar({firstDay,lastSevenDay}){
 
     console.log(state.doneTodo)
 
-
     const test=(whatDate)=>{
 
         return state.doneTodo
@@ -44,16 +43,8 @@ export default function Bar({firstDay,lastSevenDay}){
 
                 </div>
                 <div className="content">
-                    {/*<div className={`bar bar--${focusTime}`}></div>*/}
-                    {/*<div className={`bar bar--${focusTime}`}></div>*/}
-                    {/*<div className={`bar bar--${focusTime}`}></div>*/}
-                    {/*<div className={`bar bar--${focusTime}`}></div>*/}
-                    {/*<div className={`bar bar--${focusTime}`}></div>*/}
-                    {/*<div className={`bar bar--${focusTime}`}></div>*/}
-                    {/*<div className={`bar bar--${focusTime}`}></div>*/}
                     {dates.map((date, index) => (
-                        <div key={index}>
-                            {test(date.slice(3,5))}
+                        <div key={index} className={`bar bar--${test(date.slice(3,5))}`}>
                         </div>
                     ))}
 
