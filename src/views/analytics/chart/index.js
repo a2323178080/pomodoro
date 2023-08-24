@@ -6,6 +6,7 @@ import React from "react";
 import Date from "./date"
 import Bar from "./bar"
 import moment from "moment/moment";
+moment.suppressDeprecationWarnings=true;
 
 export default function Index(){
     const [firstDay,setFirstDay]=useState(moment())
@@ -27,7 +28,7 @@ export default function Index(){
             <Header title="CHART" rightContent={<Date
                 firstDay={firstDay}
                 lastSevenDay={lastSevenDay}
-                key={key}
+
                 previousCycleDay={previousCycleDay}
                 nextCycleDay={nextCycleDay}
             />}/>
