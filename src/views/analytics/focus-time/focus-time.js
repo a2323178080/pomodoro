@@ -15,6 +15,7 @@ export default function FocusTime() {
         }, 0)
 
 
+
     return (
         <div className="focusTime">
             <div>
@@ -23,7 +24,7 @@ export default function FocusTime() {
             </div>
             <div>
                 <div className="duration">WEEK</div>
-                <span className="cyclesNumber">{focusTime}</span><span className="font-tomato">/TOMATO</span>
+                <span className="cyclesNumber">{state.weekCount}</span><span className="font-tomato">/TOMATO</span>
             </div>
         </div>
     )

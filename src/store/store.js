@@ -129,6 +129,11 @@ export function context(state, action) {
                 ...state,
                 open: action.payload
             }
+        case 'WEEK_COUNT':
+            return {
+                ...state,
+                weekCount: action.payload
+            }
         default:
             return state
     }

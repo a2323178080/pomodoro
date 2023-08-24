@@ -3,10 +3,10 @@ import moment from 'moment';
 import {CartContext} from "../../../store/store";
 import {useContext, useEffect} from "react";
 
-export default function Bar({firstDay,lastSevenDay}){
-    const [state] = useContext(CartContext);
+export default function Bar({firstDay, lastSevenDay}) {
+    const [state, dispatch] = useContext(CartContext);
 
-    const count=[24,20,16,12,8,4];
+    const count = [24, 20, 16, 12, 8, 4];
 
     const dates = [];
     const startDate = moment(lastSevenDay.format('YYYY.MM.DD'));
@@ -15,78 +15,52 @@ export default function Bar({firstDay,lastSevenDay}){
         dates.push(startDate.format('MM/DD'));
         startDate.add(1, 'days');
     }
-
-
-
-    const calDateMatchCount=(whichDate)=>{
+    const calDateMatchCount = (whichDate) => {
         return state.doneTodo
-            .filter((item)=>{
-                return item.date===parseInt(whichDate)})
+            .filter((item) => {
+                return item.date === parseInt(whichDate)
+            })
             .reduce((accumulator, currentValue) => {
-                if(currentValue.number===undefined){
+                if (currentValue.number === undefined) {
                     return accumulator + 0
                 }
                 return accumulator + currentValue.number
             }, 0)
     }
 
+    useEffect(() => {
+        const weekCount = dates
+            .map((date) => calDateMatchCount(date.slice(3, 5)))
+            .reduce((accumulator, currentValue) => {
+                return accumulator + currentValue
+            }, 0)
+        dispatch({
+            type: 'WEEK_COUNT', payload: weekCount
+        })
+    }, [dates[0]])
 
-    const weekCount=dates
-        .map((date) =>
-        calDateMatchCount(date.slice(3,5)))
-        .reduce((accumulator,currentValue)=>{
-        return accumulator+currentValue
-    },0)
-    console.log("共",weekCount);
-
-
-
-
-
-
-
-    return(
-        <div className="bar">
+    console.log(dates)
+    return (<div className="bar">
             <div className="d-flex">
                 <div className="count">
-                    {count.map((item,index)=>{
+                    {count.map((item, index) => {
                         return <p key={index}>{item}</p>
                     })}
                 </div>
 
                 <div className="content">
                     {dates.map((date, index) => (
-                        <div key={index} className={`column column--${calDateMatchCount(date.slice(3,5))} `}
-                        style={{backgroundColor:date===moment().format('MM/DD')?'var(--pink)':'var(--white)'}}
+                        <div key={index} className={`column column--${calDateMatchCount(date.slice(3, 5))} `}
+                             style={{backgroundColor: date === moment().format('MM/DD') ? 'var(--pink)' : 'var(--white)'}}
                         >
-                        </div>
-                    ))}
+                        </div>))}
                 </div>
             </div>
 
             <div className="date">
-                {dates.map((date, index) => (
-                    <div key={index}>{date}</div>
+                {dates.map((date, index) => (<div key={index}>{date}</div>
 
                 ))}
             </div>
-
-
-
-            {dates.map((date) =>
-                calDateMatchCount(date.slice(3,5))
-            )}
-
-            {dates.map((date) =>
-                <div>{ calDateMatchCount(date.slice(3,5))}</div>
-
-            )}
-
-
-
-
-
-
-        </div>
-    )
+        </div>)
 }

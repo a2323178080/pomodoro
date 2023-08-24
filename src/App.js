@@ -25,6 +25,7 @@ function App() {
         totalCyclesNumber :0,
         dropdownCondition:"dropdown",
         open:"open",
+        weekCount:0,
 
       })
   return (
