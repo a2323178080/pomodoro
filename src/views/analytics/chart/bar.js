@@ -17,14 +17,14 @@ export default function Bar({firstDay,seventhDay}){
     }
 
 
-    console.log(dates)
+    console.log(state.doneTodo)
 
 
     const test=(whatDate)=>{
 
         return state.doneTodo
             .filter((item)=>{
-                return item.date===parseInt(whatDate.format("DD"))})
+                return item.date===parseInt(whatDate)})
             .reduce((accumulator, currentValue) => {
                 if(currentValue.number===undefined){
                     return accumulator + 0
@@ -61,9 +61,11 @@ export default function Bar({firstDay,seventhDay}){
                     {/*<div className={`bar bar--${focusTime}`}></div>*/}
                     {/*<div className={`bar bar--${focusTime}`}></div>*/}
                     {dates.map((date, index) => (
-                        <div key={index}>{date.slice(3,5)}</div>
-
+                        <div key={index}>
+                            {test(date.slice(3,5))}
+                        </div>
                     ))}
+
 
                 </div>
             </div>
