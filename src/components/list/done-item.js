@@ -16,7 +16,6 @@ export default function DoneItem() {
         })
     }
 
-
     function handleDot(num) {
         let list = [];
         for (let i = 0; i < num; i++) {

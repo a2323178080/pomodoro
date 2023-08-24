@@ -56,10 +56,7 @@ export default function Task() {
 
     }, [state.cyclesNumber])
 
-
     localStorage.setItem("doneTodoKey", JSON.stringify(state.doneTodo));
-
-    console.log(state.cycles)
 
     return (
         <div className="task">
