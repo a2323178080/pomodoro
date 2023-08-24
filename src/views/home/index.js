@@ -11,7 +11,6 @@ import IconGroup from "./icon-group/icon-group";
 import Slogan from "../../components/slogan";
 import List from "../../components/list/list"
 
-
 export default function Home(){
     const [state, dispatch]=useContext(CartContext);
     const handlePosition =(type, className)=>type + (className ? ' ' + className : '');
@@ -23,8 +22,6 @@ export default function Home(){
         })
 
     },[])
-
-
 
     const {homeBackground,input}=useColor()
 
@@ -45,7 +42,7 @@ export default function Home(){
                 <Time className="onHomePage" />
                 <Task/>
                 <List>
-                    <TodoItem className="onHomePage" page="home" row={3}/>
+                    <TodoItem className="onHomePage" page="home" color="darkBlue" row={3}/>
                 </List>
 
                 <Disc className="onHomePage"/>

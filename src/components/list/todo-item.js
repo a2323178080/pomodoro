@@ -41,8 +41,8 @@ export default function TodoItem({position,page,color,className,row}){
         white:{
             color:'var(--white)'
         },
-        blue:{
-            color:'var(--blue)'
+        darkBlue:{
+            color:'var(--darkBlue)'
         }
     }
     const newStyle={
@@ -64,7 +64,7 @@ export default function TodoItem({position,page,color,className,row}){
 
 
                             <Link to='/' className="material-icons todoList--icon playIcon"
-                                  onClick={() => showTodo(todo.id,todo.do)}>
+                                  onClick={() => showTodo(todo.id,todo.do)} style={newStyle}>
                                 play_circle_outline
                             </Link>
 
