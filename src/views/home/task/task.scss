@@ -1,30 +1,26 @@
-.task{
+.task {
   position: absolute;
-  top:201px;
-  width:412px;
+  top: 201px;
+  width: 412px;
   height: 48px;
-
-  .flex{
+  .flex {
     display: flex;
   }
-
-  &--do{
-    margin-left:16px;
+  &--do {
+    margin-left: 16px;
   }
-
-  &--cycleIcon{
-    display:flex;
-    margin-left:8px;
+  &--cycleIcon {
+    display: flex;
+    margin-left: 8px;
   }
-
-  &--font{
+  &--font {
     text-align: left;
     font: normal normal bold 24px/28px Roboto;
     letter-spacing: 0;
     color: #003164;
     text-transform: uppercase;
     opacity: 1;
-    margin-left:16px;
+    margin-left: 16px;
     margin-bottom: 8px;
   }
 }
