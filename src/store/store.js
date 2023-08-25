@@ -129,6 +129,16 @@ export function context(state, action) {
                 ...state,
                 weekCount: action.payload
             }
+        case 'COUNT_FIRST_DAY':
+            return {
+                ...state,
+                firstDay: action.payload
+            }
+        case 'COUNT_LAST_SEVEN_DAY':
+            return {
+                ...state,
+                lastSevenDay: action.payload
+            }
         default:
             return state
     }

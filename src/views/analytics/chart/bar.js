@@ -7,8 +7,8 @@ export default function Bar({firstDay, lastSevenDay}) {
     const [state, dispatch] = useContext(CartContext);
     const count = [24, 20, 16, 12, 8, 4];
     const dates = [];
-    const startDate = moment(lastSevenDay.format('YYYY.MM.DD'));
-    const endDate = moment(firstDay.format('YYYY.MM.DD'));
+    const startDate = moment(state.lastSevenDay.format('YYYY.MM.DD'));
+    const endDate = moment(state.firstDay.format('YYYY.MM.DD'));
     while (startDate.isSameOrBefore(endDate)) {
         dates.push(startDate.format('MM/DD'));
         startDate.add(1, 'days');

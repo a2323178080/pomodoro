@@ -6,6 +6,8 @@ import TodoListPage from "./views/todo-list-page/todo-list-page";
 import Analytics from "./views/analytics/analytics";
 import Backstage from "./views/backstage/backstage";
 import {CartContext} from "./store/store";
+import moment from "moment/moment";
+moment.suppressDeprecationWarnings = true;
 
 function App() {
     const localTodoList = JSON.parse(localStorage.getItem("key"));
@@ -26,6 +28,8 @@ function App() {
         dropdownCondition: "dropdown",
         open: "open",
         weekCount: 0,
+        firstDay:moment(),
+        lastSevenDay:moment().subtract(6, 'days')
     })
 
     return (<CartContext.Provider value={cartReducer}>

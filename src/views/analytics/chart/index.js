@@ -8,19 +8,16 @@ import moment from "moment/moment";
 moment.suppressDeprecationWarnings = true;
 
 export default function Index() {
-    const [firstDay, setFirstDay] = useState(moment())
-    const [lastSevenDay, setLastSevenDay] = useState(moment().subtract(6, 'days'));
+    // const [firstDay, setFirstDay] = useState(moment())
+    // const [lastSevenDay, setLastSevenDay] = useState(moment().subtract(6, 'days'));
 
     return (
         <div>
             <Header title="CHART" rightContent={<Date
-                firstDay={firstDay}
-                lastSevenDay={lastSevenDay}
-                setFirstDay={setFirstDay}
-                setLastSevenDay={setLastSevenDay}
+
             />}/>
             <div>
-                <Bar firstDay={firstDay} lastSevenDay={lastSevenDay}/>
+                <Bar/>
             </div>
         </div>
     )
