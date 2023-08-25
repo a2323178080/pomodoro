@@ -25,7 +25,6 @@ export default function DoneItem() {
     }
 
     const localDoneTodoList = JSON.parse(localStorage.getItem("doneTodoKey" || "[]"));
-
     return (
         <div className="doneList">
             {localDoneTodoList.map((todo) => {

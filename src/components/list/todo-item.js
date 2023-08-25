@@ -47,7 +47,7 @@ export default function TodoItem({position, page, color, className, row}) {
             {localTodoList.slice(0, row).map((todo) => {
                 return (
                     <ul key={todo.id} className="todoList--font" style={newStyle}>
-                        <li className="todoList--li">
+                        <li className="todoList--li" >
                             <span className="material-icons todoList--icon"
                                   onClick={() => removeTodo(todo.id)}
                             >radio_button_unchecked
