@@ -12,7 +12,7 @@ import Slogan from "../../components/slogan";
 import List from "../../components/list/list"
 
 export default function Home() {
-    const [state,dispatch] = useContext(CartContext);
+    const [state, dispatch] = useContext(CartContext);
     const handlePosition = (type, className) => type + (className ? ' ' + className : '');
     useEffect(() => {
         dispatch({
@@ -28,6 +28,7 @@ export default function Home() {
         #003164 0%,
         #003164 450px)`
     }
+
     return (
         <div className="home"
              style={newBackground}

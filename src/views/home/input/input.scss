@@ -1,9 +1,9 @@
 .input {
-    width: 445px;
-    margin-bottom: 48px;
-    position: relative;
-    display: flex;
-    justify-content:center;
+  width: 445px;
+  margin-bottom: 48px;
+  position: relative;
+  display: flex;
+  justify-content: center;
 
   .inputArea {
     width: 445px;
@@ -13,23 +13,26 @@
     border: 0px;
     outline: none;
     padding-left: 20px;
+
     &--plusIcon {
       position: absolute;
       right: 16px;
       top: 18px;
 
     }
-&--work{
-  &::placeholder {
-    white-space: nowrap;
-    font: italic normal bold 16px/19px Roboto;
-    letter-spacing: 0px;
-    text-transform: uppercase;
-    color: var(--pink);
 
-  }
-}
-    &--rest{
+    &--work {
+      &::placeholder {
+        white-space: nowrap;
+        font: italic normal bold 16px/19px Roboto;
+        letter-spacing: 0px;
+        text-transform: uppercase;
+        color: var(--pink);
+
+      }
+    }
+
+    &--rest {
       &::placeholder {
         white-space: nowrap;
         font: italic normal bold 16px/19px Roboto;

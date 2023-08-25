@@ -3,6 +3,7 @@
   height: 800px;
   padding-top: 48px;
   padding-left: 80px;
+
   &.pink {
     background: linear-gradient(to right,
             #FFEDF7 0%,
@@ -11,6 +12,7 @@
             #003164 450px);
 
   }
+
   &.blue {
     background: linear-gradient(to right,
             var(--lightBlue) 0%,
@@ -20,6 +22,7 @@
 
   }
 }
+
 .layout {
   position: relative;
 }

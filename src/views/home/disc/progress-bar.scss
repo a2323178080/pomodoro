@@ -1,147 +1,158 @@
-.progressBar{
+.progressBar {
   position: absolute;
   top: 0;
   left: 0;
   z-index: -1;
-  .element1{
-    margin-left:50px;
-    top:0;
-    left:0;
-    position:relative;
-    width:270px;
-    height:540px;
-    border-radius:0px 270px 270px 0px;
-    overflow:hidden;
-    animation:a1 2s linear 0s infinite;
+
+  .element1 {
+    margin-left: 50px;
+    top: 0;
+    left: 0;
+    position: relative;
+    width: 270px;
+    height: 540px;
+    border-radius: 0px 270px 270px 0px;
+    overflow: hidden;
+    animation: a1 2s linear 0s infinite;
+
     &--stop {
       animation-play-state: paused;
     }
+
     &--reset {
-      animation:reset-a1 2s linear 0s infinite;
+      animation: reset-a1 2s linear 0s infinite;
     }
   }
-  .element2{
-    content:"";
-    box-sizing:border-box;
-    position:absolute;
-    top:0;
+
+  .element2 {
+    content: "";
+    box-sizing: border-box;
+    position: absolute;
+    top: 0;
     right: 0;
-    width:540px;
-    height:270px;
-    background:transparent;
-    border-style:solid;
-    border-color:#FF4384;
-    border-width:15px 15px 0;
-    border-radius:270px 270px 0 0;
-    transform-origin:270px 270px;
-    transform:rotate(-90deg);
-    z-index:1;
-    animation:a2 2s infinite linear;
+    width: 540px;
+    height: 270px;
+    background: transparent;
+    border-style: solid;
+    border-color: #FF4384;
+    border-width: 15px 15px 0;
+    border-radius: 270px 270px 0 0;
+    transform-origin: 270px 270px;
+    transform: rotate(-90deg);
+    z-index: 1;
+    animation: a2 2s infinite linear;
+
     &--stop {
       animation-play-state: paused;
     }
+
     &--reset {
-      animation:reset-a2 2s linear 0s infinite;
+      animation: reset-a2 2s linear 0s infinite;
     }
   }
-  .element3{
-    box-sizing:border-box;
-    position:absolute;
-    top:0;
+
+  .element3 {
+    box-sizing: border-box;
+    position: absolute;
+    top: 0;
     right: 0;
-    width:540px;
-    height:270px;
-    background:transparent;
-    border-style:solid;
-    border-color:#FF4384;
-    border-width:15px 15px 0;
-    border-radius:270px 270px 0 0;
-    transform-origin:270px 270px;
-    transform:rotate(90deg);
-    z-index:2;
-    animation:a3 2s infinite linear;
+    width: 540px;
+    height: 270px;
+    background: transparent;
+    border-style: solid;
+    border-color: #FF4384;
+    border-width: 15px 15px 0;
+    border-radius: 270px 270px 0 0;
+    transform-origin: 270px 270px;
+    transform: rotate(90deg);
+    z-index: 2;
+    animation: a3 2s infinite linear;
+
     &--stop {
       animation-play-state: paused;
     }
+
     &--reset {
-      animation:reset-a3 2s linear 0s infinite;
+      animation: reset-a3 2s linear 0s infinite;
     }
   }
-  @keyframes a1{
-    0%{
-      margin-left:270px;
-      width:270px;
-      border-radius:0 270px 270px 0;
+
+  @keyframes a1 {
+    0% {
+      margin-left: 270px;
+      width: 270px;
+      border-radius: 0 270px 270px 0;
     }
-    49.99%{
-      margin-left:270px;
-      width:270px;
-      border-radius:0 270px 270px 0;
+    49.99% {
+      margin-left: 270px;
+      width: 270px;
+      border-radius: 0 270px 270px 0;
     }
-    50%{
-      margin-left:0;
-      width:540px;
-      border-radius:0;
+    50% {
+      margin-left: 0;
+      width: 540px;
+      border-radius: 0;
     }
-    100%{
-      margin-left:0;
-      width:540px;
-      border-radius:0;
-    }
-  }
-  @keyframes a2{
-    0%{
-      transform:rotate(-90deg);
-    }
-    100%{
-      transform:rotate(270deg);
+    100% {
+      margin-left: 0;
+      width: 540px;
+      border-radius: 0;
     }
   }
-  @keyframes a3{
-    0%{
-      opacity:0;
+  @keyframes a2 {
+    0% {
+      transform: rotate(-90deg);
     }
-    49.99%{
-      opacity:0;
+    100% {
+      transform: rotate(270deg);
     }
-    50%{
-      opacity:1;
+  }
+  @keyframes a3 {
+    0% {
+      opacity: 0;
     }
-    100%{
-      opacity:1;
+    49.99% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 1;
     }
   }
 }
 
 
-
-@keyframes reset-a1{
-  0%{
-    margin-left:270px;
-    width:270px;
-    border-radius:0 270px 270px 0;
+@keyframes reset-a1 {
+  0% {
+    margin-left: 270px;
+    width: 270px;
+    border-radius: 0 270px 270px 0;
   }
-  100%{
-    margin-left:270px;
-    width:270px;
-    border-radius:0 270px 270px 0;
+  100% {
+    margin-left: 270px;
+    width: 270px;
+    border-radius: 0 270px 270px 0;
   }
 
 }
-@keyframes reset-a2{
-  0%{
-    transform:rotate(-90deg);
+
+@keyframes reset-a2 {
+  0% {
+    transform: rotate(-90deg);
   }
-  100%{
-    transform:rotate(-90deg);
+  100% {
+    transform: rotate(-90deg);
   }
 }
-@keyframes reset-a3{
-  0%{
-    opacity:0;
+
+@keyframes reset-a3 {
+  0% {
+    opacity: 0;
   }
-  100%{
-    opacity:0;
+  100% {
+    opacity: 0;
   }
 }
 

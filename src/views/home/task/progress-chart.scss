@@ -1,108 +1,115 @@
-.progressChart{
+.progressChart {
   margin-left: 8px;
 
-  .borderCircle{
+  .borderCircle {
     width: 13px;
     height: 13px;
     border-radius: 50%/50%;
   }
-  .element1{
-    margin-left:50px;
-    top:0;
-    left:0;
-    position:relative;
-    width:6px;
-    height:12px;
-    border-radius:0 12px 12px 0;
-    overflow:hidden;
-    animation:b1 2s linear 0s infinite;
+
+  .element1 {
+    margin-left: 50px;
+    top: 0;
+    left: 0;
+    position: relative;
+    width: 6px;
+    height: 12px;
+    border-radius: 0 12px 12px 0;
+    overflow: hidden;
+    animation: b1 2s linear 0s infinite;
+
     &--stop {
       animation-play-state: paused;
     }
   }
-  .element2{
-    content:"";
-    box-sizing:border-box;
-    position:absolute;
-    top:0;
+
+  .element2 {
+    content: "";
+    box-sizing: border-box;
+    position: absolute;
+    top: 0;
     right: 0;
-    width:12px;
-    height:6px;
+    width: 12px;
+    height: 6px;
     background-color: red;
-    border-style:solid;
-    border-color:#FF4384;
-    border-width:1px 1px 0;
-    border-radius:6px 6px 0 0;
-    transform-origin:6px 6px;
-    transform:rotate(-90deg);
-    z-index:1;
-    animation:b2 2s infinite linear;
+    border-style: solid;
+    border-color: #FF4384;
+    border-width: 1px 1px 0;
+    border-radius: 6px 6px 0 0;
+    transform-origin: 6px 6px;
+    transform: rotate(-90deg);
+    z-index: 1;
+    animation: b2 2s infinite linear;
+
     &--stop {
       animation-play-state: paused;
     }
   }
-  .element3{
-    box-sizing:border-box;
-    position:absolute;
-    top:0;
+
+  .element3 {
+    box-sizing: border-box;
+    position: absolute;
+    top: 0;
     right: 0;
-    width:12px;
-    height:6px;
-    background:red;
-    border-style:solid;
-    border-color:#FF4384;
-    border-width:1px 1px 0;
-    border-radius:6px 6px 0 0;
-    transform-origin:6px 6px;
-    transform:rotate(90deg);
-    z-index:2;
-    animation:b3 2s infinite linear;
+    width: 12px;
+    height: 6px;
+    background: red;
+    border-style: solid;
+    border-color: #FF4384;
+    border-width: 1px 1px 0;
+    border-radius: 6px 6px 0 0;
+    transform-origin: 6px 6px;
+    transform: rotate(90deg);
+    z-index: 2;
+    animation: b3 2s infinite linear;
+
     &--stop {
       animation-play-state: paused;
     }
   }
-  @keyframes b1{
-    0%{
-      margin-left:6px;
-      width:6px;
-      border-radius:0 6px 6px 0;
+
+  @keyframes b1 {
+    0% {
+      margin-left: 6px;
+      width: 6px;
+      border-radius: 0 6px 6px 0;
     }
-    49.99%{
-      margin-left:6px;
-      width:6px;
-      border-radius:0 6px 6px 0;
+    49.99% {
+      margin-left: 6px;
+      width: 6px;
+      border-radius: 0 6px 6px 0;
     }
-    50%{
-      margin-left:0;
-      width:12px;
-      border-radius:0;
+    50% {
+      margin-left: 0;
+      width: 12px;
+      border-radius: 0;
     }
-    100%{
-      margin-left:0;
-      width:12px;
-      border-radius:0;
-    }
-  }
-  @keyframes b2{
-    0%{
-      transform:rotate(-90deg);
-    }
-    100%{
-      transform:rotate(270deg);
+    100% {
+      margin-left: 0;
+      width: 12px;
+      border-radius: 0;
     }
   }
-  @keyframes b3{
-    0%{
-      opacity:0;
+  @keyframes b2 {
+    0% {
+      transform: rotate(-90deg);
     }
-    49.99%{
-      opacity:0;
+    100% {
+      transform: rotate(270deg);
     }
-    50%{
-      opacity:1;
+  }
+  @keyframes b3 {
+    0% {
+      opacity: 0;
     }
-    100%{
-      opacity:1;
+    49.99% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 1;
     }
   }
 }

@@ -3,16 +3,20 @@
   top: 201px;
   width: 412px;
   height: 48px;
+
   .flex {
     display: flex;
   }
+
   &--do {
     margin-left: 16px;
   }
+
   &--cycleIcon {
     display: flex;
     margin-left: 8px;
   }
+
   &--font {
     text-align: left;
     font: normal normal bold 24px/28px Roboto;

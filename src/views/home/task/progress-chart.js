@@ -6,6 +6,7 @@ import useColor from "../../../hook/useColor";
 export default function ProgressChart() {
     const {progressBar} = useColor()
     const [state] = useContext(CartContext);
+
     return (
         <div className="progressChart">
             <div className="borderCircle" style={{border: `1px solid var(--${progressBar})`}}>

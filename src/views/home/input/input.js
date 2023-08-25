@@ -1,16 +1,15 @@
 import {CartContext} from "../../../store/store";
-import {useState, useContext } from "react";
+import {useState, useContext} from "react";
 import "./input.scss";
 import {PlusOutlined} from "@ant-design/icons";
 import useColor from "../../../hook/useColor";
 
-export default function Input({className,color}) {
-    const {input}=useColor();
+export default function Input({className, color}) {
+    const {input} = useColor();
     const [state, dispatch] = useContext(CartContext);
     const [value, setValue] = useState("");
-    const cyclesNumber=state.cyclesNumber;
-    const date=new Date().getDate();
-
+    const cyclesNumber = state.cyclesNumber;
+    const date = new Date().getDate();
     const handleChange = (e) => {
         setValue(e.target.value);
     };
@@ -19,7 +18,7 @@ export default function Input({className,color}) {
             dispatch({
                 type: 'ADD_TODO',
                 payload: {
-                    value,cyclesNumber,date
+                    value, cyclesNumber, date
                 },
             })
             setValue("");
@@ -33,22 +32,20 @@ export default function Input({className,color}) {
     }
     localStorage.setItem("key", JSON.stringify(state.todoList));
 
-
-
     return (
-        <div className={`input${className ? ' ' + className : ''}`}  >
-        <input type="text"
-               value={value}
-               placeholder="ADD A NEW MISSION..."
-               className={`inputArea inputArea--${state.workCondition}`}
-               onChange={handleChange}
-               onKeyDown={handleKeyDown}
-               style={{color:`var(--${input})`}}
-        />
-        <PlusOutlined className="inputArea--plusIcon"
-                      onClick={addTodo}
-                      style={{color:`var(--${input})`}}
-        />
-    </div>
+        <div className={`input${className ? ' ' + className : ''}`}>
+            <input type="text"
+                   value={value}
+                   placeholder="ADD A NEW MISSION..."
+                   className={`inputArea inputArea--${state.workCondition}`}
+                   onChange={handleChange}
+                   onKeyDown={handleKeyDown}
+                   style={{color: `var(--${input})`}}
+            />
+            <PlusOutlined className="inputArea--plusIcon"
+                          onClick={addTodo}
+                          style={{color: `var(--${input})`}}
+            />
+        </div>
     )
 }
