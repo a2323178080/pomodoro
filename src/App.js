@@ -17,7 +17,7 @@ function App() {
         todoList: localTodoList,
         doneTodo: localDoneTodoList || [],
         showTodoList: [],
-        times: 2,
+        times: 20,
         handlePosition: () => {
         },
         cycles: [],

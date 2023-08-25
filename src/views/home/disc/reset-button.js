@@ -17,7 +17,7 @@ export default function ResetButton({bg}) {
                  })
                  dispatch({
                      type: 'TIME',
-                     payload: 2
+                     payload: 20
                  })
                  dispatch({
                      type: 'RESET_CONDITION',
