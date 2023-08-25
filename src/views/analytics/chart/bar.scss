@@ -32,13 +32,11 @@ $height-24: $height*24;
       flex-direction: column;
       justify-content: space-between;
       padding-bottom: 29.5px;
-
       font: normal normal bold 16px/24px Roboto;
       letter-spacing: 0px;
       color: #FFFFFF;
       text-transform: lowercase;
       opacity: 1;
-
     }
   }
 
@@ -56,7 +54,6 @@ $height-24: $height*24;
     .column {
       width: 28px;
       background-color: var(--white);
-
 
       &--1 {
         height: $height;

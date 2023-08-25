@@ -1,14 +1,13 @@
-.todoList{
-  width:445px;
-  height:32px;
+.todoList {
+  width: 445px;
+  height: 32px;
 
-  &.onHomePage{
+  &.onHomePage {
     position: absolute;
-    top:562px;
+    top: 562px;
   }
 
-
-  &--font{
+  &--font {
     font: normal normal bold 16px/24px Roboto;
     color: #003164;
     text-transform: uppercase;
@@ -18,22 +17,24 @@
     margin-bottom: 9px;
     padding-bottom: 9px;
   }
+
   &--icon {
     cursor: pointer;
     margin-right: 4px;
-
   }
-  &--li{
-    display:flex;
 
-    .playIcon{
+  &--li {
+    display: flex;
+
+    .playIcon {
       margin-left: auto;
     }
   }
-  .more{
+
+  .more {
     text-align: right;
     font: normal normal bold 16px/19px Roboto;
     letter-spacing: 0;
-    cursor:pointer;
+    cursor: pointer;
   }
 }

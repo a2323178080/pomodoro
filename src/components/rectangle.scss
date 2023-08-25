@@ -1,13 +1,11 @@
-.rectangle{
-
-  width:24px;
-  height:38px;
+.rectangle {
+  width: 24px;
+  height: 38px;
   display: flex;
   justify-content: space-between;
 
-  .element1,.element2{
-    width:8px;
+  .element1, .element2 {
+    width: 8px;
     background-color: white;
   }
-
 }

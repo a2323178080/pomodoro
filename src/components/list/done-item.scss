@@ -1,6 +1,6 @@
-.doneList{
-  .text{
-    width:445px;
+.doneList {
+  .text {
+    width: 445px;
     font: normal normal bold 16px/24px Roboto;
     color: white;
     text-transform: uppercase;
@@ -10,24 +10,25 @@
     margin-bottom: 9px;
     padding-bottom: 9px;
     display: flex;
-    .font{
+
+    .font {
       font: normal normal bold 16px/24px Roboto;
       letter-spacing: 0px;
       color: #FFFFFF;
       text-transform: uppercase;
       opacity: 1;
       margin-left: 4px;
-      vertical-align:top;
+      vertical-align: top;
 
     }
-    .material-icons{
+
+    .material-icons {
       cursor: pointer;
     }
-    .playIcon{
+
+    .playIcon {
       margin-left: auto;
-      display:flex;
+      display: flex;
     }
-
-
   }
 }
