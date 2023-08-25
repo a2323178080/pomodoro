@@ -1,5 +1,7 @@
 import {createContext} from "react";
+
 export const CartContext = createContext({});
+
 export function context(state, action) {
     switch (action.type) {
         case 'START_AND_STOP':
@@ -23,7 +25,7 @@ export function context(state, action) {
                 do: action.payload.value,
                 id: Date.now(),
                 number: action.payload.cyclesNumber,
-                date:action.payload.date,
+                date: action.payload.date,
             }
             return {
                 ...state,
@@ -48,7 +50,7 @@ export function context(state, action) {
                     do: item.do,
                     id: item.id,
                     number: action.payload.cyclesNumber,
-                    date:action.payload.date,
+                    date: action.payload.date,
                 }
             })
             return {
@@ -56,10 +58,8 @@ export function context(state, action) {
                 doneTodo: [
                     ...state.doneTodo,
                     ...newDoneTodo,
-
                 ]
             }
-
         case 'REMOVE_DONE_TODO':
             const afterRemoveDoneTodo = [...state.doneTodo].filter((item) => {
                 return item.id !== action.payload.id;
@@ -68,9 +68,6 @@ export function context(state, action) {
                 ...state,
                 doneTodo: afterRemoveDoneTodo
             }
-
-
-
         case 'SHOW_TODO':
             const newShowTodo = [...state.todoList].filter((item) => {
                 return item.id === action.payload.id;
@@ -112,8 +109,6 @@ export function context(state, action) {
                 ...state,
                 cyclesNumber: action.payload
             }
-
-
         case 'RESET_CONDITION':
             return {
                 ...state,
