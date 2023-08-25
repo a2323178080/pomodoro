@@ -13,14 +13,14 @@
     height: 540px;
     border-radius: 0px 270px 270px 0px;
     overflow: hidden;
-    animation: a1 20s linear 0s infinite;
+    animation: a1 2s linear 0s infinite;
 
     &--stop {
       animation-play-state: paused;
     }
 
     &--reset {
-      animation: reset-a1 20s linear 0s infinite;
+      animation: reset-a1 2s linear 0s infinite;
     }
   }
 
@@ -40,14 +40,14 @@
     transform-origin: 270px 270px;
     transform: rotate(-90deg);
     z-index: 1;
-    animation: a2 20s infinite linear;
+    animation: a2 2s infinite linear;
 
     &--stop {
       animation-play-state: paused;
     }
 
     &--reset {
-      animation: reset-a2 20s linear 0s infinite;
+      animation: reset-a2 2s linear 0s infinite;
     }
   }
 
@@ -66,14 +66,14 @@
     transform-origin: 270px 270px;
     transform: rotate(90deg);
     z-index: 2;
-    animation: a3 20s infinite linear;
+    animation: a3 2s infinite linear;
 
     &--stop {
       animation-play-state: paused;
     }
 
     &--reset {
-      animation: reset-a3 20s linear 0s infinite;
+      animation: reset-a3 2s linear 0s infinite;
     }
   }
 

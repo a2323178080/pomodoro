@@ -16,7 +16,7 @@
     height: 12px;
     border-radius: 0 12px 12px 0;
     overflow: hidden;
-    animation: b1 20s linear 0s infinite;
+    animation: b1 2s linear 0s infinite;
 
     &--stop {
       animation-play-state: paused;
@@ -39,7 +39,7 @@
     transform-origin: 6px 6px;
     transform: rotate(-90deg);
     z-index: 1;
-    animation: b2 20s infinite linear;
+    animation: b2 2s infinite linear;
 
     &--stop {
       animation-play-state: paused;
@@ -61,7 +61,7 @@
     transform-origin: 6px 6px;
     transform: rotate(90deg);
     z-index: 2;
-    animation: b3 20s infinite linear;
+    animation: b3 2s infinite linear;
 
     &--stop {
       animation-play-state: paused;

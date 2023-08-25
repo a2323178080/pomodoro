@@ -29,7 +29,7 @@ export default function Time({className, size}) {
                 type: 'START_AND_STOP', payload: 'stop'
             })
             dispatch({
-                type: 'TIME', payload: 20
+                type: 'TIME', payload: 2
             })
         }
     }, [state.times])
