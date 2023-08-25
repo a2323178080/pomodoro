@@ -1,4 +1,4 @@
-import React, {useContext, useEffect} from "react";
+import {useContext, useEffect} from "react";
 import {CartContext} from "../../store/store";
 import Sidebar from "../../components/sidebar";
 import FocusTime from "../analytics/focus-time/focus-time";

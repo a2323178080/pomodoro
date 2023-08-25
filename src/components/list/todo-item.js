@@ -42,23 +42,25 @@ export default function TodoItem({position, page, color, className, row}) {
     }
     localStorage.setItem("doneTodoKey", JSON.stringify(state.doneTodo));
 
-    return (<div className={state.handlePosition('todoList', className)}>
-            {localTodoList.slice(0, row).map((todo, index) => {
-                return (<ul key={todo.id} className="todoList--font" style={newStyle}>
-                    <li className="todoList--li">
-                                    <span className="material-icons todoList--icon"
-                                          onClick={() => removeTodo(todo.id)}
-                                    >radio_button_unchecked</span>
-                        <span>{todo.do}</span>
-
-
-                        <Link to='/' className="material-icons todoList--icon playIcon"
-                              onClick={() => showTodo(todo.id, todo.do)} style={newStyle}>
-                            play_circle_outline
-                        </Link>
-
-                    </li>
-                </ul>)
+    return (
+        <div className={state.handlePosition('todoList', className)}>
+            {localTodoList.slice(0, row).map((todo) => {
+                return (
+                    <ul key={todo.id} className="todoList--font" style={newStyle}>
+                        <li className="todoList--li">
+                            <span className="material-icons todoList--icon"
+                                  onClick={() => removeTodo(todo.id)}
+                            >radio_button_unchecked
+                            </span>
+                            <span>
+                                {todo.do}
+                            </span>
+                            <Link to='/' className="material-icons todoList--icon playIcon"
+                                  onClick={() => showTodo(todo.id, todo.do)} style={newStyle}>
+                                play_circle_outline
+                            </Link>
+                        </li>
+                    </ul>)
             })
             }
             {page === "home" && localTodoList.length > 3 ? <Link to='./backStage/todoListPage'>
