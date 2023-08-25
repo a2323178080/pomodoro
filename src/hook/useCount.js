@@ -2,7 +2,7 @@ import {useContext, useEffect} from "react";
 import {CartContext} from "../store/store";
 import moment from "moment/moment";
 
-const useWeekDate = () => {
+const useCount = () => {
     const [state, dispatch] = useContext(CartContext);
 
     const dates = [];
@@ -12,7 +12,7 @@ const useWeekDate = () => {
         dates.push(startDate.format('MM/DD'));
         startDate.add(1, 'days');
     }
-    const calDateMatchCount = (whichDate) => {
+    const countTomato = (whichDate) => {
         return state.doneTodo
             .filter((item) => {
                 return item.date === parseInt(whichDate)
@@ -26,7 +26,7 @@ const useWeekDate = () => {
     }
     useEffect(() => {
         const weekCount = dates
-            .map((date) => calDateMatchCount(date.slice(3, 5)))
+            .map((date) => countTomato(date.slice(3, 5)))
             .reduce((accumulator, currentValue) => {
                 return accumulator + currentValue
             }, 0)
@@ -35,6 +35,6 @@ const useWeekDate = () => {
         })
     }, [dates[0]])
 
-    return {dates,calDateMatchCount}
+    return {dates,countTomato}
 }
-export default useWeekDate;
+export default useCount;
