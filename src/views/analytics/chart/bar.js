@@ -5,7 +5,6 @@ import {useContext, useEffect} from "react";
 import useCount from "../../../hook/useCount";
 
 export default function Bar({firstDay, lastSevenDay}) {
-    const [state, dispatch] = useContext(CartContext);
     const count = [24, 20, 16, 12, 8, 4];
     const {dates,countTomato}=useCount();
 

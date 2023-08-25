@@ -2,7 +2,6 @@ import "./focus-time.scss";
 import {CartContext} from "../../../store/store";
 import {useContext} from "react";
 import useCount from "../../../hook/useCount";
-import moment from 'moment';
 
 export default function FocusTime() {
     const [state] = useContext(CartContext);
