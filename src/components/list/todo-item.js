@@ -4,7 +4,7 @@ import {useContext} from "react";
 import "./todo-item.scss";
 import useColor from "../../hook/useColor";
 
-export default function TodoItem({position, page, color, className, row}) {
+export default function TodoItem({position, page, color, className, row,border}) {
     const {word} = useColor();
     const [state, dispatch] = useContext(CartContext);
     const removeTodo = (id) => {
@@ -37,8 +37,14 @@ export default function TodoItem({position, page, color, className, row}) {
             color: 'var(--darkBlue)'
         }
     }
+    const newBorder = {
+        silver: {
+            borderBottom: '1px solid silver'
+        }
+    }
     const newStyle = {
-        ...newColor[color]
+        ...newColor[color],
+        ...newBorder[border]
     }
     localStorage.setItem("doneTodoKey", JSON.stringify(state.doneTodo));
 
@@ -46,8 +52,8 @@ export default function TodoItem({position, page, color, className, row}) {
         <div className={state.handlePosition('todoList', className)}>
             {localTodoList.slice(0, row).map((todo) => {
                 return (
-                    <ul key={todo.id} className="todoList--font" style={newStyle}>
-                        <li className="todoList--li" >
+                    <ul key={todo.id} className="todoList--font" style={newStyle} >
+                        <li className="todoList--li"  >
                             <span className="material-icons todoList--icon"
                                   onClick={() => removeTodo(todo.id)}
                             >radio_button_unchecked

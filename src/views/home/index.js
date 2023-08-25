@@ -38,7 +38,7 @@ export default function Home() {
                 <Time className="onHomePage"/>
                 <Task/>
                 <List>
-                    <TodoItem className="onHomePage" page="home" color="darkBlue" row={3}/>
+                    <TodoItem className="onHomePage" page="home" color="darkBlue" border="silver" row={3}/>
                 </List>
                 <Disc className="onHomePage"/>
                 <IconGroup/>
