@@ -3,7 +3,7 @@ import {useContext} from 'react';
 import {CartContext} from "../../../store/store";
 import useColor from "../../../hook/useColor";
 
-export default function ResetButton({bg}) {
+export default function ResetButton() {
     const {reset} = useColor();
     const [state, dispatch] = useContext(CartContext);
     const newColor = {backgroundColor: `var(--${reset})`}
