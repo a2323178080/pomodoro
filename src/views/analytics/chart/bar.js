@@ -5,9 +5,7 @@ import {useContext, useEffect} from "react";
 
 export default function Bar({firstDay, lastSevenDay}) {
     const [state, dispatch] = useContext(CartContext);
-
     const count = [24, 20, 16, 12, 8, 4];
-
     const dates = [];
     const startDate = moment(lastSevenDay.format('YYYY.MM.DD'));
     const endDate = moment(firstDay.format('YYYY.MM.DD'));
@@ -27,7 +25,6 @@ export default function Bar({firstDay, lastSevenDay}) {
                 return accumulator + currentValue.number
             }, 0)
     }
-
     useEffect(() => {
         const weekCount = dates
             .map((date) => calDateMatchCount(date.slice(3, 5)))
@@ -38,16 +35,14 @@ export default function Bar({firstDay, lastSevenDay}) {
             type: 'WEEK_COUNT', payload: weekCount
         })
     }, [dates[0]])
-
-    console.log(dates)
-    return (<div className="bar">
+    return (
+        <div className="bar">
             <div className="d-flex">
                 <div className="count">
                     {count.map((item, index) => {
                         return <p key={index}>{item}</p>
                     })}
                 </div>
-
                 <div className="content">
                     {dates.map((date, index) => (
                         <div key={index} className={`column column--${calDateMatchCount(date.slice(3, 5))} `}
@@ -56,11 +51,8 @@ export default function Bar({firstDay, lastSevenDay}) {
                         </div>))}
                 </div>
             </div>
-
             <div className="date">
-                {dates.map((date, index) => (<div key={index}>{date}</div>
-
-                ))}
+                {dates.map((date, index) => (<div key={index}>{date}</div>))}
             </div>
         </div>)
 }

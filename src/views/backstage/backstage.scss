@@ -1,20 +1,23 @@
-.backstage{
+.backstage {
   width: 1280px;
   height: 800px;
   padding-top: 48px;
   padding-left: 80px;
   background-color: var(--darkBlue);
-  .layout{
+
+  .layout {
     position: relative;
     display: flex;
 
   }
-  .col-5{
-    width:40%;
+
+  .col-5 {
+    width: 40%;
 
   }
-  .col-2{
-    width:16%;
+
+  .col-2 {
+    width: 16%;
     background-color: yellow;
   }
 }

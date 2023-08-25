@@ -1,16 +1,12 @@
-import "./analytics.scss";
 import React, {useContext, useEffect} from "react";
 import {CartContext} from "../../store/store";
 import Sidebar from "../../components/sidebar";
-
-import FocusTime from  "../analytics/focus-time/focus-time";
-import Bar from "./chart/bar";
+import FocusTime from "../analytics/focus-time/focus-time";
 import Header from "../../components/Header";
-import DateTest from "./chart/date-test";
 import Index from "./chart";
-export default function Analytics(){
-    const [state, dispatch] = useContext(CartContext);
 
+export default function Analytics() {
+    const [state, dispatch] = useContext(CartContext);
     const handlePosition = (type, className) => type + (className ? ' ' + className : '');
     useEffect(() => {
         dispatch({
@@ -19,18 +15,15 @@ export default function Analytics(){
         })
     }, [])
 
-    return(
-        <div className="analytics">
+    return (
+        <div>
             <Sidebar position="onAnalyticsPage"/>
             <Header title="FOCUS TIME"/>
             <FocusTime/>
-
             <br/>
             <br/>
             <br/>
-            <Index />
-
-
+            <Index/>
         </div>
     )
 }

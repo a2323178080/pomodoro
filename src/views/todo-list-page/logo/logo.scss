@@ -6,6 +6,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+
   .big_circle {
     position: absolute;
     bottom: 0;
@@ -14,6 +15,7 @@
     border-top-left-radius: 350px;
     border-top-right-radius: 350px;
     background-color: #FFEDF7;
+
     .small_circle {
       position: absolute;
       z-index: 3;
@@ -29,6 +31,7 @@
       display: flex;
       justify-content: center;
       align-items: center;
+
       .triangle {
         width: 0;
         height: 0;
@@ -36,6 +39,7 @@
         border-width: 20px 20px 20px 25px;
         border-color: transparent transparent transparent white;
       }
+
       .small_circle_border {
         position: absolute;
         z-index: 4;
@@ -49,19 +53,7 @@
         border-color: #FF4384;
       }
     }
-    //.clock {
-    //  position: absolute;
-    //  bottom: 43px;
-    //  left: 90px;
-    //  display: -webkit-box;
-    //  display: -ms-flexbox;
-    //  display: flex;
-    //  font-size: 76px;
-    //  color: #FF4384;
-    //  font: normal normal bold 64px/64px Roboto;
-    //  letter-spacing: 0;
-    //
-    //}
+
     .text {
       position: absolute;
       bottom: 24px;
