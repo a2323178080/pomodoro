@@ -1,6 +1,29 @@
 import {createContext} from "react";
+import moment from "moment";
 
+const localTodoList = JSON.parse(localStorage.getItem("key"));
+const localDoneTodoList = JSON.parse(localStorage.getItem("doneTodoKey"));
 export const CartContext = createContext({});
+
+export const initialState={
+    startCondition: 'stop',
+    workCondition: 'work',
+    todoList: localTodoList,
+    doneTodo: localDoneTodoList || [],
+    showTodoList: [],
+    times: 2,
+    handlePosition: () => {
+    },
+    cycles: [],
+    cyclesNumber: 0,
+    totalCyclesNumber: 0,
+    dropdownCondition: "dropdown",
+    open: "open",
+    weekCount: 0,
+    firstDay:moment(),
+    lastSevenDay:moment().subtract(6, 'days')
+}
+
 
 export function context(state, action) {
     switch (action.type) {
@@ -29,21 +52,18 @@ export function context(state, action) {
             }
             return {
                 ...state,
-                todoList: [
-                    ...state.todoList,
-                    newTodo
-                ]
+                todoList: state.todoList ? [...state.todoList, newTodo] : [newTodo]
             }
         case 'REMOVE_TODO':
-            const afterRemoveTodo = [...state.todoList].filter((item) => {
+            const afterRemoveTodo = state.todoList ? [...state.todoList].filter((item) => {
                 return item.id !== action.payload.id;
-            });
+            }) : [];
             return {
                 ...state,
                 todoList: afterRemoveTodo
             }
         case 'DONE_TODO':
-            const newDoneTodo = [...state.todoList].filter((item) => {
+            const newDoneTodo = state.todoList ? [...state.todoList].filter((item) => {
                 return item.id === action.payload.id
             }).map((item) => {
                 return {
@@ -52,7 +72,7 @@ export function context(state, action) {
                     number: action.payload.cyclesNumber,
                     date: action.payload.date,
                 }
-            })
+            }):[];
             return {
                 ...state,
                 doneTodo: [
@@ -69,9 +89,9 @@ export function context(state, action) {
                 doneTodo: afterRemoveDoneTodo
             }
         case 'SHOW_TODO':
-            const newShowTodo = [...state.todoList].filter((item) => {
+            const newShowTodo = state.todoList ? [...state.todoList].filter((item) => {
                 return item.id === action.payload.id;
-            });
+            }) : [];
             return {
                 ...state,
                 showTodoList: newShowTodo
