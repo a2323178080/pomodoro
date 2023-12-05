@@ -29,7 +29,7 @@ export default function TodoItem({position, page, color, className, row,border})
             type: 'REMOVE_CYCLES', payload: {}
         })
     }
-    const localTodoList = JSON.parse(localStorage.getItem("key" || "[]"));
+    const localTodoList = JSON.parse(localStorage.getItem(("key") || "[]"));
     const newColor = {
         white: {
             color: 'var(--white)'
@@ -69,7 +69,7 @@ export default function TodoItem({position, page, color, className, row,border})
                     </ul>)
             })
             }
-            {page === "home" && localTodoList.length > 3 ? <Link to='./backStage/todoListPage'>
+            {page === "home" && localTodoList.length > 3 ? <Link to='/backStage/todoListPage'>
                 <div className="more" style={{color: `var(--${word})`}}>MORE</div>
             </Link> : <div></div>}
         </div>)
